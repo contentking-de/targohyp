@@ -71,23 +71,27 @@ export default function Home() {
       {/* About Section */}
       <section className="w-full bg-gray-50 py-16 lg:py-24">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-[rgb(0,47,95)]">
+          <div className="w-full">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold mb-12 text-[rgb(0,47,95)] text-center max-w-4xl mx-auto">
               Finanzierung ist mehr als Zahlen. Es geht um Entscheidungen fürs Leben.
             </h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Eine Immobilie zu finanzieren ist kein kleiner Schritt. Es geht um große Summen, langfristige Verpflichtungen und viele Fragen, die man nicht jeden Tag trifft. <strong>Das wissen wir. Und genau deshalb nehmen wir uns Zeit, zuzuhören und zu verstehen, was Ihnen wirklich wichtig ist.</strong>
-              </p>
-              <p>
-                Ob Sie den Traum vom eigenen Zuhause verwirklichen möchten oder gezielt in Immobilien investieren wollen: Jede Situation ist anders. Lebenspläne, finanzielle Möglichkeiten und persönliche Ziele lassen sich nicht in starre Modelle pressen. Eine gute Finanzierung beginnt deshalb nicht mit einem Produkt, sondern mit einem Gespräch.
-              </p>
-              <p>
-                Eine eigene Immobilie kann Sicherheit geben, Freiheit schaffen und Werte für die Zukunft aufbauen. Für Eigennutzer ebenso wie für Kapitalanleger kann sie ein wichtiger Baustein einer soliden finanziellen Planung sein – wenn sie gut durchdacht und passend finanziert ist.
-              </p>
-              <p>
-                Wir begleiten Sie auf diesem Weg: transparent, verständlich und auf Augenhöhe. Schritt für Schritt. Damit aus einem komplexen Thema eine klare Entscheidung wird – und aus einer Idee ein gutes Gefühl.
-              </p>
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 text-lg text-gray-700 leading-relaxed max-w-7xl mx-auto">
+              <div className="space-y-6">
+                <p>
+                  Eine Immobilie zu finanzieren ist kein kleiner Schritt. Es geht um große Summen, langfristige Verpflichtungen und viele Fragen, die man nicht jeden Tag trifft. <strong>Das wissen wir. Und genau deshalb nehmen wir uns Zeit, zuzuhören und zu verstehen, was Ihnen wirklich wichtig ist.</strong>
+                </p>
+                <p>
+                  Ob Sie den Traum vom eigenen Zuhause verwirklichen möchten oder gezielt in Immobilien investieren wollen: Jede Situation ist anders. Lebenspläne, finanzielle Möglichkeiten und persönliche Ziele lassen sich nicht in starre Modelle pressen. Eine gute Finanzierung beginnt deshalb nicht mit einem Produkt, sondern mit einem Gespräch.
+                </p>
+              </div>
+              <div className="space-y-6">
+                <p>
+                  Eine eigene Immobilie kann Sicherheit geben, Freiheit schaffen und Werte für die Zukunft aufbauen. Für Eigennutzer ebenso wie für Kapitalanleger kann sie ein wichtiger Baustein einer soliden finanziellen Planung sein – wenn sie gut durchdacht und passend finanziert ist.
+                </p>
+                <p>
+                  Wir begleiten Sie auf diesem Weg: transparent, verständlich und auf Augenhöhe. Schritt für Schritt. Damit aus einem komplexen Thema eine klare Entscheidung wird – und aus einer Idee ein gutes Gefühl.
+                </p>
+              </div>
             </div>
           </div>
         </div>
