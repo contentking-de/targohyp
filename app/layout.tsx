@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/layout/testimonials";
 import { Newsletter } from "@/components/layout/newsletter";
+import { Providers } from "./providers";
 
 const handelGo = localFont({
   src: "./fonts/HandelGo.ttf",
@@ -29,13 +30,15 @@ export default function RootLayout({
   return (
     <html lang="de" className="scroll-smooth">
       <body className={`${handelGo.variable} antialiased bg-white`}>
-        <div className="flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Testimonials />
-          <Newsletter />
-          <Footer />
-        </div>
+        <Providers>
+          <div className="flex min-h-screen flex-col">
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Testimonials />
+            <Newsletter />
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );

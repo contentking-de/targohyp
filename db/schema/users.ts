@@ -36,7 +36,7 @@ export const userProfiles = pgTable("user_profiles", {
 export const cmsUsers = pgTable("cms_users", {
   id: uuid("id").primaryKey().defaultRandom(),
   email: varchar("email", { length: 255 }).notNull().unique(),
-  passwordHash: varchar("password_hash", { length: 255 }).notNull(),
+  passwordHash: varchar("password_hash", { length: 255 }), // Optional für Magic Link
   role: varchar("role", { length: 50 }).notNull(), // 'super_admin', 'content_manager', 'editor', 'reviewer', 'viewer'
   twoFactorEnabled: boolean("two_factor_enabled").default(false).notNull(),
   twoFactorSecret: varchar("two_factor_secret", { length: 255 }),
