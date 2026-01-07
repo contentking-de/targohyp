@@ -8,6 +8,13 @@
       "when": 1767791454156,
       "tag": "0000_overrated_legion",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1767794329156,
+      "tag": "0001_daffy_smasher",
+      "breakpoints": true
     }
   ]
 }

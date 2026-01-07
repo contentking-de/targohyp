@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, text, timestamp, pgEnum } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, text, timestamp, pgEnum, integer, numeric } from "drizzle-orm/pg-core";
 import { users } from "./users";
 
 export const newsletterStatusEnum = pgEnum("newsletter_status", ["pending", "confirmed", "unsubscribed"]);
@@ -46,5 +46,51 @@ export const auditLogs = pgTable("audit_logs", {
   userAgent: text("user_agent"),
   details: text("details"), // JSONB als TEXT
   createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const financingRequests = pgTable("financing_requests", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  userId: uuid("user_id").references(() => users.id), // Optional, wenn eingeloggt
+  
+  // Schritt 1: Art der Finanzierung
+  financingType: varchar("financing_type", { length: 100 }), // 'Kauf Bestandsimmobilie', 'Anschlussfinanzierung', etc.
+  
+  // Schritt 2: Art der Immobilie
+  propertyType: varchar("property_type", { length: 100 }), // 'Einfamilienhaus', 'Eigentumswohnung', etc.
+  
+  // Schritt 3: Nutzung
+  usage: varchar("usage", { length: 100 }), // 'Selbst genutzt', 'Teilweise vermietet', 'Vermietet'
+  
+  // Schritt 4: Schritt
+  step: varchar("step", { length: 100 }), // 'Auf Immobiliensuche', 'Immobilie gefunden', etc.
+  
+  // Schritt 5: Standort
+  postalCode: varchar("postal_code", { length: 10 }),
+  city: varchar("city", { length: 255 }),
+  
+  // Schritt 6: Finanzierungsbedarf
+  purchasePrice: numeric("purchase_price", { precision: 15, scale: 2 }), // Kaufpreis/Baupreis
+  equity: numeric("equity", { precision: 15, scale: 2 }), // Eigenkapital
+  
+  // Schritt 7: Beschäftigungsverhältnis
+  employmentType: varchar("employment_type", { length: 100 }),
+  
+  // Schritt 8: Einkommen
+  income: numeric("income", { precision: 15, scale: 2 }),
+  
+  // Schritt 9: Persönliche Daten
+  firstName: varchar("first_name", { length: 255 }),
+  lastName: varchar("last_name", { length: 255 }),
+  email: varchar("email", { length: 255 }),
+  phone: varchar("phone", { length: 50 }),
+  street: varchar("street", { length: 255 }),
+  addressPostalCode: varchar("address_postal_code", { length: 10 }),
+  addressCity: varchar("address_city", { length: 255 }),
+  
+  // Status
+  status: varchar("status", { length: 50 }).default("new").notNull(), // 'new', 'in_progress', 'contacted', 'completed'
+  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 

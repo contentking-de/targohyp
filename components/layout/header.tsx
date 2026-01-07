@@ -58,42 +58,42 @@ export function Header() {
           <nav className="hidden lg:flex items-center gap-10">
             <Link
               href="/produkte"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Produkte
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
               href="/rechner"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Rechner
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
               href="/ratgeber"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Ratgeber
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
               href="/lexikon"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Lexikon
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
               href="/vergleiche"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Vergleiche
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
               href="/kontakt"
-              className="text-base font-normal text-gray-900 hover:text-targo-blue transition-colors py-2 relative group"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Hilfe & Kontakt
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
