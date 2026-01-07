@@ -157,10 +157,14 @@ export default function ImmobilienbewertungPage() {
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Baujahr */}
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label 
+                htmlFor="constructionYear"
+                className="block text-sm font-medium mb-2"
+              >
                 Baujahr *
               </label>
               <Input
+                id="constructionYear"
                 type="number"
                 value={formData.constructionYear}
                 onChange={(e) =>
@@ -175,10 +179,14 @@ export default function ImmobilienbewertungPage() {
 
             {/* Quadratmeter */}
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label 
+                htmlFor="squareMeters"
+                className="block text-sm font-medium mb-2"
+              >
                 Anzahl der Quadratmeter *
               </label>
               <Input
+                id="squareMeters"
                 type="number"
                 value={formData.squareMeters}
                 onChange={(e) => updateFormData("squareMeters", e.target.value)}
@@ -191,10 +199,14 @@ export default function ImmobilienbewertungPage() {
 
             {/* Energieeffizienzklasse */}
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label 
+                htmlFor="energyEfficiencyClass"
+                className="block text-sm font-medium mb-2"
+              >
                 Energieeffizienzklasse *
               </label>
               <select
+                id="energyEfficiencyClass"
                 value={formData.energyEfficiencyClass}
                 onChange={(e) =>
                   updateFormData("energyEfficiencyClass", e.target.value)
@@ -213,10 +225,14 @@ export default function ImmobilienbewertungPage() {
 
             {/* Standort */}
             <div>
-              <label className="block text-sm font-medium mb-2">
+              <label 
+                htmlFor="location"
+                className="block text-sm font-medium mb-2"
+              >
                 Standort *
               </label>
               <Input
+                id="location"
                 type="text"
                 value={formData.location}
                 onChange={(e) => updateFormData("location", e.target.value)}

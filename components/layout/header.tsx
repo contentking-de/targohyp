@@ -2,12 +2,14 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home, ChevronDown } from "lucide-react";
+import { Home, ChevronDown, X, Menu } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
 import { useState } from "react";
 
 export function Header() {
   const [isFinanzierungOpen, setIsFinanzierungOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileFinanzierungOpen, setIsMobileFinanzierungOpen] = useState(false);
 
   return (
     <header className="w-full bg-white border-b border-gray-200">
@@ -37,7 +39,7 @@ export function Header() {
             </div>
             <div className="flex items-center gap-4">
               <Button
-                className="bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-6"
+                className="bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-6 min-h-[44px]"
                 asChild
               >
                 <Link href="/auth/signin">Login</Link>
@@ -164,23 +166,135 @@ export function Header() {
           </nav>
 
           {/* Mobile Menu Button */}
-          <button className="lg:hidden p-2">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+          <button 
+            className="lg:hidden p-3 min-w-[44px] min-h-[44px] flex items-center justify-center"
+            aria-label={isMobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
+            aria-expanded={isMobileMenuOpen}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" aria-hidden="true" />
+            ) : (
+              <Menu className="w-6 h-6" aria-hidden="true" />
+            )}
           </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden border-t border-gray-200 bg-white">
+          <nav className="container mx-auto px-4 py-4 space-y-2">
+            {/* Finanzierung mit Dropdown */}
+            <div>
+              <button
+                className="w-full flex items-center justify-between text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+                onClick={() => setIsMobileFinanzierungOpen(!isMobileFinanzierungOpen)}
+                aria-expanded={isMobileFinanzierungOpen}
+              >
+                <span>Finanzierung</span>
+                <ChevronDown 
+                  className={`w-4 h-4 transition-transform ${isMobileFinanzierungOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {isMobileFinanzierungOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                  <Link
+                    href="/finanzierung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Übersicht
+                  </Link>
+                  <Link
+                    href="/finanzierung/baufinanzierung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Baufinanzierung
+                  </Link>
+                  <Link
+                    href="/finanzierung/immobilienfinanzierung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Immobilienfinanzierung
+                  </Link>
+                  <Link
+                    href="/finanzierung/anschlussfinanzierung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Anschlussfinanzierung
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            {/* Weitere Navigation Links */}
+            <Link
+              href="/rechner"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Rechner
+            </Link>
+            <Link
+              href="/immobilienbewertung"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Immobilienbewertung
+            </Link>
+            <Link
+              href="/ratgeber"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Ratgeber
+            </Link>
+            <Link
+              href="/lexikon"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Lexikon
+            </Link>
+            <Link
+              href="/vergleiche"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Vergleiche
+            </Link>
+            <Link
+              href="/kontakt"
+              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Hilfe & Kontakt
+            </Link>
+
+            {/* SearchBox für Mobile */}
+            <div className="pt-2 border-t border-gray-200 mt-2">
+              <SearchBox />
+            </div>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }
