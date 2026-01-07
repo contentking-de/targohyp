@@ -14,6 +14,10 @@ const handelGo = localFont({
 export const metadata: Metadata = {
   title: "Targohyp - Baufinanzierung",
   description: "Content-Plattform für Baufinanzierung",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default function RootLayout({
