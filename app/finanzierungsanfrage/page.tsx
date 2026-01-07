@@ -594,8 +594,10 @@ export default function FinanzierungsanfragePage() {
                   disabled={!isStepValid(currentStep)}
                   className="bg-[#bb133e] hover:bg-[#a01135] text-white flex items-center gap-2"
                 >
-                  Weiter
-                  <ArrowRight className="w-4 h-4" />
+                  <span className="flex items-center whitespace-nowrap">
+                    Weiter
+                    <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
+                  </span>
                 </Button>
               ) : (
                 <Button

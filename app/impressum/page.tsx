@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Impressum - Targohyp",
-  description: "Impressum",
+  title: "Impressum - Rechtliche Angaben | Targohyp",
+  description: "Impressum und rechtliche Angaben der Targohyp. Angaben gemäß § 5 TMG und Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV.",
 };
 
 export default function ImpressumPage() {

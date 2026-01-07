@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
-  title: "Lexikon - Targohyp",
-  description: "Glossar mit Fachbegriffen zur Baufinanzierung",
+  title: "Lexikon Baufinanzierung - Fachbegriffe erklärt | Targohyp",
+  description: "Umfassendes Glossar mit allen wichtigen Fachbegriffen zur Baufinanzierung. Von Annuität bis Zinsbindung - verständlich erklärt für Ihre Immobilienfinanzierung.",
 };
 
 export default function LexikonPage() {
@@ -99,8 +99,7 @@ export default function LexikonPage() {
               {kategorien.map((kat) => (
                 <Button
                   key={kat}
-                  variant={kat === "Alle" ? "default" : "outline"}
-                  className="rounded-full"
+                  className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                 >
                   {kat}
                 </Button>
@@ -192,9 +191,9 @@ export default function LexikonPage() {
               className="bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-8 py-6 text-lg font-semibold"
               asChild
             >
-              <Link href="/kontakt">
+              <Link href="/kontakt" className="flex items-center whitespace-nowrap">
                 Kontakt aufnehmen
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>

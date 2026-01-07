@@ -4,8 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Mail, Lock, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Login - Targohyp",
-  description: "Melden Sie sich in Ihrem Kundenkonto an",
+  title: "Login - Kundenkonto | Targohyp",
+  description: "Melden Sie sich sicher in Ihrem Targohyp-Kundenkonto an. Verwalten Sie Ihre Baufinanzierung, Rechner-Ergebnisse und Anfragen bequem online.",
 };
 
 export default function SignInPage() {
@@ -78,10 +78,12 @@ export default function SignInPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-8 py-6 text-lg font-semibold"
+                  className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
                 >
-                  Anmelden
-                  <ArrowRight className="ml-2 w-5 h-5" />
+                  <span className="flex items-center whitespace-nowrap">
+                    Anmelden
+                    <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
+                  </span>
                 </Button>
               </form>
 
@@ -90,8 +92,7 @@ export default function SignInPage() {
                   Noch kein Konto?
                 </p>
                 <Button
-                  variant="outline"
-                  className="w-full rounded-full"
+                  className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                   asChild
                 >
                   <Link href="/auth/register">

@@ -3,11 +3,11 @@ import { Button } from "@/components/ui/button";
 import { FileText, ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "Produkte - Targohyp",
-  description: "Übersicht unserer Baufinanzierungsprodukte",
+  title: "Baufinanzierung & Immobilienfinanzierung | Targohyp",
+  description: "Übersicht aller Finanzierungsprodukte für Ihre Immobilie. Von der Baufinanzierung über Anschlussfinanzierung bis zur Immobilienfinanzierung - finden Sie die passende Lösung.",
 };
 
-export default function ProduktePage() {
+export default function FinanzierungPage() {
   // Beispiel-Produkte (später aus Datenbank)
   const produkte = [
     {
@@ -61,13 +61,13 @@ export default function ProduktePage() {
           {/* Filter & Sortierung */}
           <div className="mb-8 flex flex-col sm:flex-row gap-4 items-center justify-between">
             <div className="flex flex-wrap gap-2">
-              <Button variant="outline" className="rounded-full">
+              <Button className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full">
                 Alle Produkte
               </Button>
-              <Button variant="outline" className="rounded-full">
+              <Button className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full">
                 Feste Zinsen
               </Button>
-              <Button variant="outline" className="rounded-full">
+              <Button className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full">
                 Variable Zinsen
               </Button>
             </div>
@@ -121,16 +121,15 @@ export default function ProduktePage() {
 
                 <div className="flex gap-3">
                   <Button
-                    className="flex-1 bg-targo-blueLight hover:bg-targo-blue text-white rounded-full"
+                    className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                     asChild
                   >
-                    <Link href={`/produkte/${produkt.id}`}>
+                    <Link href={`/finanzierung/${produkt.id}`}>
                       Details ansehen
                     </Link>
                   </Button>
                   <Button
-                    variant="outline"
-                    className="rounded-full"
+                    className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                     asChild
                   >
                     <Link href="/vergleiche">
@@ -145,22 +144,22 @@ export default function ProduktePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full bg-targo-blue py-16 text-white">
+      <section className="w-full bg-[#003366] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
               Individuelle Beratung gewünscht?
             </h2>
-            <p className="text-lg mb-8 opacity-90">
+            <p className="text-lg mb-8 text-white/90">
               Unsere Experten helfen Ihnen dabei, die passende Baufinanzierung zu finden.
             </p>
             <Button
-              className="bg-white text-targo-blue hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold"
+              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
               asChild
             >
-              <Link href="/kontakt">
+              <Link href="/finanzierungsanfrage" className="flex items-center whitespace-nowrap">
                 Beratung anfragen
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>

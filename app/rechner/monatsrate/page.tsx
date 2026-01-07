@@ -342,14 +342,13 @@ export default function MonatsrateRechnerPage() {
               {/* Aktionen */}
               <div className="flex gap-3">
                 <Button
-                  variant="outline"
-                  className="flex-1"
+                  className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white"
                   onClick={() => window.print()}
                 >
                   <Download className="w-4 h-4 mr-2" />
                   PDF exportieren
                 </Button>
-                <Button variant="outline" className="flex-1">
+                <Button className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white">
                   <Share2 className="w-4 h-4 mr-2" />
                   Teilen
                 </Button>

@@ -179,30 +179,30 @@ export default function EigenkapitalrechnerPage() {
             {/* Ergebnisse */}
             <div className="space-y-6">
               {/* Zusammenfassung */}
-              <div className="bg-gradient-to-br from-targo-blue to-targo-blue/90 text-white rounded-lg p-6 lg:p-8">
-                <h2 className="text-2xl font-bold mb-6">Finanzierungsübersicht</h2>
+              <div className="bg-gradient-to-br from-[#003366] to-[#004d99] rounded-lg p-6 lg:p-8">
+                <h2 className="text-2xl font-bold mb-6 text-white">Finanzierungsübersicht</h2>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-4 border-b border-white/20">
                     <span className="text-white/90">Gesamtkosten</span>
-                    <span className="text-3xl font-bold">
+                    <span className="text-3xl font-bold text-white">
                       {formatCurrency(gesamtKosten)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-white/20">
                     <span className="text-white/90">Verfügbares Kapital</span>
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl font-semibold text-white">
                       {formatCurrency(verfuegbaresKapital)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-white/20">
                     <span className="text-white/90">Finanzierungsbedarf</span>
-                    <span className="text-xl font-semibold">
+                    <span className="text-xl font-semibold text-white">
                       {formatCurrency(finanzierungsbedarf)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-white/90">Eigenkapitalquote</span>
-                    <span className="text-2xl font-bold">
+                    <span className="text-2xl font-bold text-white">
                       {eigenkapitalQuote.toFixed(1)}%
                     </span>
                   </div>
@@ -277,14 +277,13 @@ export default function EigenkapitalrechnerPage() {
               {/* Aktionen */}
               <div className="flex gap-3">
                 <Button
-                  variant="outline"
-                  className="flex-1"
+                  className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white"
                   onClick={() => window.print()}
                 >
                   <Download className="w-4 h-4 mr-2" />
                   PDF exportieren
                 </Button>
-                <Button variant="outline" className="flex-1">
+                <Button className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white">
                   <Share2 className="w-4 h-4 mr-2" />
                   Teilen
                 </Button>

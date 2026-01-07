@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Calculator, TrendingUp, DollarSign, Percent, Calendar, ArrowRight } from "lucide-react";
 
 export const metadata = {
-  title: "Rechner - Targohyp",
-  description: "Interaktive Rechner für Ihre Baufinanzierung",
+  title: "Baufinanzierung berechnen - Kostenlose Rechner | Targohyp",
+  description: "Nutzen Sie unsere kostenlosen Rechner für Baufinanzierung, Tilgung, Eigenkapital und Monatsrate. Planen Sie Ihre Immobilienfinanzierung professionell und finden Sie die besten Konditionen.",
 };
 
 export default function RechnerPage() {

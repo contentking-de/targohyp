@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, BookOpen, FileText, Scale } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Targohyp - Ihr Finanzierungspartner für Bau und Immobilien",
+  description: "Finden Sie die passende Baufinanzierung für Ihr Vorhaben. Mit unseren Rechnern, umfassenden Informationen und professioneller Beratung machen wir Ihre Immobilienfinanzierung einfach und transparent.",
+};
 
 export default function Home() {
   return (
@@ -19,10 +25,10 @@ export default function Home() {
             {/* Tags */}
             <div className="flex flex-wrap gap-0 mb-6">
               <Link
-                href="/produkte"
+                href="/finanzierung"
                 className="text-sm font-medium text-targo-blue border-b-2 border-targo-blue pb-1 mr-4"
               >
-                Produkte
+                Finanzierung
               </Link>
               <Link
                 href="/rechner"
@@ -109,7 +115,7 @@ export default function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {/* Card 1 */}
               <Link
-                href="/produkte"
+                href="/finanzierung"
                 className="bg-white border border-gray-200 rounded-lg p-6 hover:border-targo-blue transition-all group cursor-pointer flex items-start justify-between"
               >
                 <div className="flex items-start gap-4 flex-1">
@@ -118,7 +124,7 @@ export default function Home() {
                   </div>
                   <div className="flex-1">
                     <h3 className="font-semibold mb-1 group-hover:text-targo-blue transition-colors">
-                      Produkte vergleichen
+                      Finanzierung vergleichen
                     </h3>
                     <p className="text-sm text-gray-600">
                       Finden Sie die passende Baufinanzierung

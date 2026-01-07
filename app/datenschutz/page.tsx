@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Datenschutz - Targohyp",
-  description: "Datenschutzerklärung",
+  title: "Datenschutzerklärung - DSGVO-konform | Targohyp",
+  description: "Umfassende Datenschutzerklärung der Targohyp. Informationen zur Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten gemäß DSGVO.",
 };
 
 export default function DatenschutzPage() {

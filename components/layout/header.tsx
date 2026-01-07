@@ -1,9 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Home } from "lucide-react";
+import { Home, ChevronDown } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
+import { useState } from "react";
 
 export function Header() {
+  const [isFinanzierungOpen, setIsFinanzierungOpen] = useState(false);
+
   return (
     <header className="w-full bg-white border-b border-gray-200">
       {/* Top Bar - Customer Segments & Actions */}
@@ -56,18 +61,75 @@ export function Header() {
 
           {/* Main Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
-            <Link
-              href="/produkte"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
+            <div
+              className="relative"
+              onMouseEnter={() => setIsFinanzierungOpen(true)}
+              onMouseLeave={() => setIsFinanzierungOpen(false)}
             >
-              Produkte
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
+              <Link
+                href="/finanzierung"
+                className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group flex items-center gap-1"
+              >
+                Finanzierung
+                <ChevronDown className={`w-4 h-4 transition-transform ${isFinanzierungOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {isFinanzierungOpen && (
+                <>
+                  {/* Unsichtbarer Bereich zum Überbrücken der Lücke */}
+                  <div className="absolute top-full left-0 w-full h-2"></div>
+                  <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
+                      <div className="py-2">
+                        <Link
+                          href="/finanzierung"
+                          className="block px-4 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Übersicht
+                        </Link>
+                        <div className="border-t border-gray-200 my-1"></div>
+                        <Link
+                          href="/finanzierung/baufinanzierung"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Baufinanzierung
+                        </Link>
+                        <Link
+                          href="/finanzierung/immobilienfinanzierung"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Immobilienfinanzierung
+                        </Link>
+                        <Link
+                          href="/finanzierung/anschlussfinanzierung"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Anschlussfinanzierung
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
             <Link
               href="/rechner"
               className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Rechner
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
+            </Link>
+            <Link
+              href="/immobilienbewertung"
+              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
+            >
+              Immobilienbewertung
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link

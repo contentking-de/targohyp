@@ -94,3 +94,20 @@ export const financingRequests = pgTable("financing_requests", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const propertyValuations = pgTable("property_valuations", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  userId: uuid("user_id").references(() => users.id), // Optional, wenn eingeloggt
+  
+  // Immobiliendaten
+  constructionYear: integer("construction_year").notNull(), // Baujahr
+  squareMeters: numeric("square_meters", { precision: 10, scale: 2 }).notNull(), // Quadratmeter
+  energyEfficiencyClass: varchar("energy_efficiency_class", { length: 10 }).notNull(), // Energieeffizienzklasse (A+, A, B, C, D, E, F, G, H)
+  location: varchar("location", { length: 255 }).notNull(), // Standort
+  
+  // Status
+  status: varchar("status", { length: 50 }).default("new").notNull(), // 'new', 'in_progress', 'completed'
+  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+

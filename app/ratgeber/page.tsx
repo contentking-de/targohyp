@@ -4,8 +4,8 @@ import { BookOpen, Clock, ArrowRight, Search } from "lucide-react";
 import { Input } from "@/components/ui/input";
 
 export const metadata = {
-  title: "Ratgeber - Targohyp",
-  description: "Umfassende Informationen und Ratgeber zur Baufinanzierung",
+  title: "Ratgeber zur Baufinanzierung - Tipps & Informationen | Targohyp",
+  description: "Umfassende Ratgeber und Informationen zur Baufinanzierung. Von der ersten Planung bis zur Umschuldung - alles was Sie über Immobilienfinanzierung wissen müssen.",
 };
 
 export default function RatgeberPage() {
@@ -83,8 +83,7 @@ export default function RatgeberPage() {
               {kategorien.map((kat) => (
                 <Button
                   key={kat}
-                  variant={kat === "Alle" ? "default" : "outline"}
-                  className="rounded-full"
+                  className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                 >
                   {kat}
                 </Button>
@@ -195,9 +194,9 @@ export default function RatgeberPage() {
               className="bg-white text-targo-blue hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold"
               asChild
             >
-              <Link href="/newsletter">
+              <Link href="/newsletter" className="flex items-center whitespace-nowrap">
                 Newsletter abonnieren
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>

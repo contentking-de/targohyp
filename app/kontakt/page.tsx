@@ -3,8 +3,8 @@ import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 
 export const metadata = {
-  title: "Kontakt - Targohyp",
-  description: "Kontaktieren Sie uns für Ihre Baufinanzierung",
+  title: "Kontakt & Beratung - Baufinanzierungsexperten | Targohyp",
+  description: "Kontaktieren Sie unsere Experten für Ihre Baufinanzierung. Persönliche Beratung per Telefon, E-Mail oder vor Ort. Wir helfen Ihnen bei allen Fragen zur Immobilienfinanzierung.",
 };
 
 export default function KontaktPage() {
@@ -166,7 +166,7 @@ export default function KontaktPage() {
 
                 <Button
                   type="submit"
-                  className="w-full bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-8 py-6 text-lg font-semibold"
+                  className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
                 >
                   Nachricht senden
                   <Send className="ml-2 w-5 h-5" />

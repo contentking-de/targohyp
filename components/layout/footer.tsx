@@ -15,11 +15,11 @@ export function Footer() {
             </p>
           </div>
           <div className="space-y-4">
-            <h4 className="text-sm font-semibold">Produkte</h4>
+            <h4 className="text-sm font-semibold">Finanzierung</h4>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link
-                  href="/produkte"
+                  href="/finanzierung"
                   className="text-gray-600 hover:text-targo-blue transition-colors"
                 >
                   Übersicht
@@ -27,7 +27,7 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  href="/produkte/vergleichen"
+                  href="/finanzierung/vergleichen"
                   className="text-gray-600 hover:text-targo-blue transition-colors"
                 >
                   Vergleichen

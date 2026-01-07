@@ -3,8 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Scale, ArrowRight, CheckCircle2, XCircle, Download } from "lucide-react";
 
 export const metadata = {
-  title: "Vergleiche - Targohyp",
-  description: "Vergleichen Sie verschiedene Baufinanzierungsprodukte und Optionen",
+  title: "Baufinanzierung vergleichen - Produkte & Optionen | Targohyp",
+  description: "Vergleichen Sie verschiedene Baufinanzierungsprodukte, Tilgungsmodelle und Zinsoptionen. Finden Sie die beste Lösung für Ihre Immobilienfinanzierung im direkten Vergleich.",
 };
 
 export default function VergleichePage() {
@@ -12,18 +12,21 @@ export default function VergleichePage() {
   const vergleiche = [
     {
       id: 1,
+      slug: "zinsvergleich",
       title: "Festzins vs. variabler Zins",
       description: "Vergleichen Sie die Vor- und Nachteile von festen und variablen Zinssätzen.",
       type: "Zinsvergleich",
     },
     {
       id: 2,
+      slug: "produktvergleich",
       title: "Baufinanzierungsprodukte im Vergleich",
       description: "Übersicht und Vergleich unserer verschiedenen Baufinanzierungsprodukte.",
       type: "Produktvergleich",
     },
     {
       id: 3,
+      slug: "tilgungsvergleich",
       title: "Tilgungsmodelle vergleichen",
       description: "Welches Tilgungsmodell passt zu Ihrer Situation? Ein detaillierter Vergleich.",
       type: "Tilgungsvergleich",
@@ -85,7 +88,7 @@ export default function VergleichePage() {
             {vergleiche.map((vergleich) => (
               <Link
                 key={vergleich.id}
-                href={`/vergleiche/${vergleich.id}`}
+                href={`/vergleiche/${vergleich.slug}`}
                 className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group"
               >
                 <div className="flex items-start gap-4 mb-4">
@@ -117,7 +120,7 @@ export default function VergleichePage() {
         <div className="container mx-auto px-4">
           <div className="mb-8 flex items-center justify-between">
             <h2 className="text-2xl font-bold">Produktvergleich</h2>
-            <Button variant="outline" className="rounded-full">
+            <Button className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full">
               <Download className="w-4 h-4 mr-2" />
               Als PDF exportieren
             </Button>
@@ -189,10 +192,10 @@ export default function VergleichePage() {
                       </td>
                       <td className="px-6 py-4">
                         <Button
-                          className="bg-targo-blueLight hover:bg-targo-blue text-white rounded-full"
+                          className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full"
                           asChild
                         >
-                          <Link href={`/produkte/${idx + 1}`}>
+                          <Link href={`/finanzierung/${idx + 1}`}>
                             Details
                           </Link>
                         </Button>
@@ -207,22 +210,22 @@ export default function VergleichePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="w-full bg-targo-blue py-16 text-white">
+      <section className="w-full bg-[#003366] py-16 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
               Individuelle Beratung gewünscht?
             </h2>
-            <p className="text-lg mb-8 opacity-90">
+            <p className="text-lg mb-8 text-white/90">
               Unsere Experten helfen Ihnen dabei, die passende Baufinanzierung zu finden und alle Optionen zu vergleichen.
             </p>
             <Button
-              className="bg-white text-targo-blue hover:bg-gray-100 rounded-full px-8 py-6 text-lg font-semibold"
+              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
               asChild
             >
-              <Link href="/kontakt">
+              <Link href="/finanzierungsanfrage" className="flex items-center whitespace-nowrap">
                 Beratung anfragen
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
               </Link>
             </Button>
           </div>
