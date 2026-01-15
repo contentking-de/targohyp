@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, X, Menu } from "lucide-react";
+import { ChevronDown, X, Menu, Home, Calendar } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
 import { useState } from "react";
 
@@ -16,7 +16,7 @@ export function Header() {
     <header className="w-full bg-white border-b border-gray-200">
       {/* Top Bar - Customer Segments & Actions */}
       <div className="border-b border-gray-200">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 py-[5px]">
           <div className="flex items-center justify-between h-12">
             <div className="flex items-center gap-6">
               <Link
@@ -38,12 +38,24 @@ export function Header() {
                 Firmenkunden
               </Link>
             </div>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 ml-auto">
               <Button
-                className="bg-targo-blueLight hover:bg-targo-blue text-white rounded-full px-6 min-h-[44px]"
+                className="bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-[5px] min-h-[44px] whitespace-nowrap"
                 asChild
               >
-                <Link href="/auth/signin">Login</Link>
+                <Link href="/auth/signin" className="flex items-center gap-2">
+                  <Home className="w-4 h-4 flex-shrink-0" />
+                  <span>TargoHome</span>
+                </Link>
+              </Button>
+              <Button
+                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-6 py-[5px] min-h-[44px] whitespace-nowrap"
+                asChild
+              >
+                <Link href="/termin-vereinbaren" className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4 flex-shrink-0" />
+                  <span>Termin vereinbaren</span>
+                </Link>
               </Button>
             </div>
           </div>

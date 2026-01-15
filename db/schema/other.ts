@@ -111,3 +111,26 @@ export const propertyValuations = pgTable("property_valuations", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const appointmentRequests = pgTable("appointment_requests", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  userId: uuid("user_id").references(() => users.id), // Optional, wenn eingeloggt
+  
+  // Persönliche Daten
+  firstName: varchar("first_name", { length: 255 }).notNull(),
+  lastName: varchar("last_name", { length: 255 }).notNull(),
+  email: varchar("email", { length: 255 }).notNull(),
+  phone: varchar("phone", { length: 50 }).notNull(),
+  
+  // Termindetails
+  preferredDate: timestamp("preferred_date").notNull(), // Gewünschtes Datum
+  preferredTime: varchar("preferred_time", { length: 50 }), // Gewünschte Uhrzeit (z.B. "Vormittag", "Nachmittag", "09:00")
+  topic: varchar("topic", { length: 255 }), // Thema/Beratungsanlass (optional)
+  message: text("message"), // Zusätzliche Nachricht (optional)
+  
+  // Status
+  status: varchar("status", { length: 50 }).default("pending").notNull(), // 'pending', 'confirmed', 'completed', 'cancelled'
+  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});
+
