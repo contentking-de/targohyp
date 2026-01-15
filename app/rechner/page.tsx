@@ -1,10 +1,10 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Calculator, TrendingUp, DollarSign, Percent, Calendar, ArrowRight } from "lucide-react";
+import { Calculator, TrendingUp, DollarSign, Percent, Calendar, ArrowRight, Wallet, Receipt, FileText, Home } from "lucide-react";
 
 export const metadata = {
   title: "Baufinanzierung berechnen - Kostenlose Rechner | Targohyp",
-  description: "Nutzen Sie unsere kostenlosen Rechner für Baufinanzierung, Tilgung, Eigenkapital und Monatsrate. Planen Sie Ihre Immobilienfinanzierung professionell und finden Sie die besten Konditionen.",
+  description: "Nutzen Sie unsere kostenlosen Rechner für Baufinanzierung, Tilgung, Eigenkapital, Budget, Nebenkosten, Zinsen, Darlehen, Bauzins, Rendite und Mieten/Kaufen. Planen Sie Ihre Immobilienfinanzierung professionell und finden Sie die besten Konditionen.",
 };
 
 export default function RechnerPage() {
@@ -17,11 +17,60 @@ export default function RechnerPage() {
       features: ["Monatliche Rate", "Gesamtkosten", "Tilgungsplan", "PDF-Export"],
     },
     {
+      id: "budgetrechner",
+      name: "Budgetrechner",
+      description: "Was kann ich mir leisten? Berechnen Sie den maximalen Kaufpreis und Darlehensbetrag basierend auf Ihrem Budget.",
+      icon: Wallet,
+      features: ["Max. Kaufpreis", "Max. Darlehen", "Belastbarkeit", "Empfehlungen"],
+    },
+    {
       id: "tilgung",
       name: "Tilgungsrechner",
       description: "Vergleichen Sie verschiedene Tilgungsmodelle und simulieren Sie Sondertilgungen.",
       icon: TrendingUp,
       features: ["Tilgungsmodelle", "Sondertilgungen", "Zinsänderungen", "Vergleich"],
+    },
+    {
+      id: "nebenkostenrechner",
+      name: "Nebenkostenrechner",
+      description: "Berechnen Sie die Kaufnebenkosten für Ihre Immobilie - Makler, Grunderwerbsteuer, Notar und Grundbuch.",
+      icon: Receipt,
+      features: ["Maklerprovision", "Grunderwerbsteuer", "Notar & Grundbuch", "Gesamtkosten"],
+    },
+    {
+      id: "zinsrechner",
+      name: "Zinsrechner",
+      description: "Berechnen Sie die Zinskosten für Ihr Darlehen - jährlich, monatlich und über die gesamte Laufzeit.",
+      icon: Percent,
+      features: ["Jährliche Zinsen", "Monatliche Zinsen", "Gesamtzinsen", "Zinsübersicht"],
+    },
+    {
+      id: "darlehensrechner",
+      name: "Darlehensrechner",
+      description: "Berechnen Sie Ihren Darlehensbetrag, monatliche Rate und Gesamtkosten für Ihre Immobilienfinanzierung.",
+      icon: FileText,
+      features: ["Darlehensbetrag", "Monatliche Rate", "Gesamtkosten", "Eigenkapitalquote"],
+    },
+    {
+      id: "bauzinsrechner",
+      name: "Bauzinsrechner",
+      description: "Berechnen Sie die Auswirkungen einer Zinsänderung nach Ablauf der Zinsbindung auf Ihre Baufinanzierung.",
+      icon: Home,
+      features: ["Zinsbindung", "Anschlussfinanzierung", "Rate-Unterschied", "Zinsvergleich"],
+    },
+    {
+      id: "renditerechner",
+      name: "Renditerechner",
+      description: "Berechnen Sie die Rendite Ihrer Kapitalanlage-Immobilie - Mietrendite, Cashflow und langfristige Rendite.",
+      icon: TrendingUp,
+      features: ["Mietrendite", "Cashflow", "Eigenkapitalrendite", "Langfristige Rendite"],
+    },
+    {
+      id: "mieten-kaufen-rechner",
+      name: "Mieten oder Kaufen?",
+      description: "Vergleichen Sie die Kosten und den Vermögenswert von Mieten und Kaufen über einen bestimmten Zeitraum.",
+      icon: Home,
+      features: ["Kostenvergleich", "Vermögenswert", "Langfristige Analyse", "Empfehlung"],
     },
     {
       id: "eigenkapital",
@@ -58,7 +107,7 @@ export default function RechnerPage() {
       {/* Rechner-Übersicht */}
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-2">
+          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {rechner.map((calc) => {
               const Icon = calc.icon;
               return (

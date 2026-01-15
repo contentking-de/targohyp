@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BookOpen, Search, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { lexikonBegriffe } from "@/lib/lexikon-data";
 
 export const metadata = {
   title: "Lexikon Baufinanzierung - Fachbegriffe erklärt | Targohyp",
@@ -9,57 +10,7 @@ export const metadata = {
 };
 
 export default function LexikonPage() {
-  // Beispiel-Begriffe (später aus Datenbank)
-  const begriffe = [
-    {
-      id: 1,
-      begriff: "Annuität",
-      kategorie: "Tilgung",
-      definition: "Die gleichbleibende monatliche Rate bei einer Baufinanzierung, die sich aus Zins- und Tilgungsanteil zusammensetzt.",
-    },
-    {
-      id: 2,
-      begriff: "Beleihungswert",
-      kategorie: "Bewertung",
-      definition: "Der Wert einer Immobilie, der von der Bank als Grundlage für die Kreditvergabe herangezogen wird.",
-    },
-    {
-      id: 3,
-      begriff: "Eigenkapital",
-      kategorie: "Finanzierung",
-      definition: "Das eigene Kapital, das ein Kreditnehmer für den Immobilienerwerb oder Bau einbringt.",
-    },
-    {
-      id: 4,
-      begriff: "Festzins",
-      kategorie: "Zinsen",
-      definition: "Ein für einen bestimmten Zeitraum fester Zinssatz, der während der Zinsbindungsfrist nicht verändert werden kann.",
-    },
-    {
-      id: 5,
-      begriff: "Grundschuld",
-      kategorie: "Sicherheit",
-      definition: "Ein Grundpfandrecht, das der Bank als Sicherheit für den Kredit dient.",
-    },
-    {
-      id: 6,
-      begriff: "Sondertilgung",
-      kategorie: "Tilgung",
-      definition: "Eine zusätzliche Tilgung außerhalb der regulären monatlichen Rate, die die Kreditlaufzeit verkürzt.",
-    },
-    {
-      id: 7,
-      begriff: "Tilgung",
-      kategorie: "Tilgung",
-      definition: "Die Rückzahlung des aufgenommenen Kredits in regelmäßigen Raten.",
-    },
-    {
-      id: 8,
-      begriff: "Zinsbindungsfrist",
-      kategorie: "Zinsen",
-      definition: "Der Zeitraum, für den ein fester Zinssatz vereinbart wird.",
-    },
-  ];
+  const begriffe = lexikonBegriffe;
 
   // Alphabet für Navigation
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
@@ -144,8 +95,8 @@ export default function LexikonPage() {
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                   {begriffeFuerBuchstabe.map((begriff) => (
                     <Link
-                      key={begriff.id}
-                      href={`/lexikon/${begriff.id}`}
+                      key={begriff.slug}
+                      href={`/lexikon/${begriff.slug}`}
                       className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group"
                     >
                       <div className="flex items-start gap-3 mb-3">

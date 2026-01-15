@@ -4,56 +4,46 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calculator, ArrowLeft, Download, Share2 } from "lucide-react";
+import { Percent, ArrowLeft, Download, Share2 } from "lucide-react";
 
-export default function BaufinanzierungsrechnerPage() {
+export default function ZinsrechnerPage() {
   const [darlehensbetrag, setDarlehensbetrag] = useState<string>("300000");
   const [zinssatz, setZinssatz] = useState<string>("3.5");
   const [laufzeit, setLaufzeit] = useState<string>("30");
-  const [anfangsTilgung, setAnfangsTilgung] = useState<string>("2.0");
 
   // Berechnungen
   const darlehen = parseFloat(darlehensbetrag) || 0;
   const zins = parseFloat(zinssatz) || 0;
   const jahre = parseInt(laufzeit) || 0;
-  const tilgung = parseFloat(anfangsTilgung) || 0;
 
-  // Monatliche Rate berechnen
+  // Zinsberechnungen
   const monatlicherZinssatz = zins / 100 / 12;
-  const monatlicheTilgung = tilgung / 100 / 12;
-  const monatlicheRate =
-    darlehen > 0 && zins > 0 && jahre > 0 && tilgung > 0
-      ? darlehen * (monatlicherZinssatz + monatlicheTilgung)
-      : 0;
+  const jaehrlicherZins = (darlehen * zins) / 100;
+  const monatlicherZins = jaehrlicherZins / 12;
 
-  // Gesamtkosten
-  const gesamtZinsen = monatlicheRate * jahre * 12 - darlehen;
-  const gesamtKosten = darlehen + gesamtZinsen;
+  // Gesamtzinsen über die Laufzeit
+  let gesamtZinsen = 0;
+  let restschuld = darlehen;
 
-  // Tilgungsplan (erste 12 Monate)
-  const tilgungsplan: Array<{
-    monat: number;
-    rate: number;
-    zinsanteil: number;
-    tilgungsanteil: number;
-    restschuld: number;
-  }> = [];
+  if (darlehen > 0 && zins > 0 && jahre > 0) {
+    // Annuität berechnen (vereinfacht mit 2% Tilgung)
+    const monatlicheTilgung = 0.02 / 12;
+    const monatlicheRate = darlehen * (monatlicherZinssatz + monatlicheTilgung);
 
-  if (darlehen > 0 && zins > 0 && jahre > 0 && tilgung > 0) {
-    let restschuld = darlehen;
-    for (let i = 1; i <= Math.min(12, jahre * 12); i++) {
-      const zinsanteil = restschuld * monatlicherZinssatz;
-      const tilgungsanteil = monatlicheRate - zinsanteil;
-      restschuld -= tilgungsanteil;
-      tilgungsplan.push({
-        monat: i,
-        rate: monatlicheRate,
-        zinsanteil,
-        tilgungsanteil,
-        restschuld: Math.max(0, restschuld),
-      });
+    for (let jahr = 1; jahr <= jahre; jahr++) {
+      for (let monat = 1; monat <= 12; monat++) {
+        const zinsanteil = restschuld * monatlicherZinssatz;
+        gesamtZinsen += zinsanteil;
+        const tilgungsanteil = monatlicheRate - zinsanteil;
+        restschuld -= tilgungsanteil;
+        if (restschuld <= 0) break;
+      }
+      if (restschuld <= 0) break;
     }
   }
+
+  // Effektiver Jahreszins (vereinfacht)
+  const effektiverJahreszins = zins; // Vereinfacht gleich dem Nominalzins
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("de-DE", {
@@ -78,15 +68,12 @@ export default function BaufinanzierungsrechnerPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center">
-                <Calculator className="w-6 h-6 text-targo-blue" />
+                <Percent className="w-6 h-6 text-targo-blue" />
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold">
-                Baufinanzierungsrechner
-              </h1>
+              <h1 className="text-3xl lg:text-4xl font-bold">Zinsrechner</h1>
             </div>
             <p className="text-lg text-gray-700">
-              Berechnen Sie Ihre monatliche Rate, Gesamtkosten und Tilgungsplan
-              für Ihre Baufinanzierung.
+              Berechnen Sie die Zinskosten für Ihr Darlehen - jährlich, monatlich und über die gesamte Laufzeit.
             </p>
           </div>
         </div>
@@ -98,7 +85,7 @@ export default function BaufinanzierungsrechnerPage() {
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Eingabeformular */}
             <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-              <h2 className="text-2xl font-bold mb-6">Finanzierungsdaten</h2>
+              <h2 className="text-2xl font-bold mb-6">Darlehensdaten</h2>
               <div className="space-y-6">
                 <div>
                   <label
@@ -115,9 +102,6 @@ export default function BaufinanzierungsrechnerPage() {
                     placeholder="300.000"
                     className="w-full"
                   />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Der Betrag, den Sie finanzieren möchten
-                  </p>
                 </div>
 
                 <div>
@@ -160,27 +144,6 @@ export default function BaufinanzierungsrechnerPage() {
                     Die Dauer der Finanzierung in Jahren
                   </p>
                 </div>
-
-                <div>
-                  <label
-                    htmlFor="tilgung"
-                    className="block text-sm font-semibold mb-2"
-                  >
-                    Anfängliche Tilgung (% p.a.)
-                  </label>
-                  <Input
-                    id="tilgung"
-                    type="number"
-                    step="0.1"
-                    value={anfangsTilgung}
-                    onChange={(e) => setAnfangsTilgung(e.target.value)}
-                    placeholder="2.0"
-                    className="w-full"
-                  />
-                  <p className="text-xs text-gray-500 mt-1">
-                    Die jährliche Tilgungsrate zu Beginn
-                  </p>
-                </div>
               </div>
             </div>
 
@@ -188,24 +151,30 @@ export default function BaufinanzierungsrechnerPage() {
             <div className="space-y-6">
               {/* Zusammenfassung */}
               <div className="bg-white border-4 border-[#003366] rounded-lg p-6 lg:p-8">
-                <h2 className="text-2xl font-bold mb-6 text-gray-900">Ihre Finanzierung</h2>
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">Zinsübersicht</h2>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Monatliche Rate</span>
+                    <span className="text-gray-700">Gesamtzinsen:</span>
                     <span className="text-3xl font-bold text-gray-900">
-                      {formatCurrency(monatlicheRate)}
-                    </span>
-                  </div>
-                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Gesamtzinsen</span>
-                    <span className="text-xl font-semibold text-gray-900">
                       {formatCurrency(gesamtZinsen)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-700">Gesamtkosten</span>
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Jährliche Zinsen:</span>
                     <span className="text-xl font-semibold text-gray-900">
-                      {formatCurrency(gesamtKosten)}
+                      {formatCurrency(jaehrlicherZins)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Monatliche Zinsen:</span>
+                    <span className="text-xl font-semibold text-gray-900">
+                      {formatCurrency(monatlicherZins)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center">
+                    <span className="text-gray-700">Zinssatz:</span>
+                    <span className="text-2xl font-bold text-gray-900">
+                      {zins}% p.a.
                     </span>
                   </div>
                 </div>
@@ -213,7 +182,7 @@ export default function BaufinanzierungsrechnerPage() {
 
               {/* Details */}
               <div className="bg-white border border-gray-200 rounded-lg p-6">
-                <h3 className="text-xl font-bold mb-4">Finanzierungsdetails</h3>
+                <h3 className="text-xl font-bold mb-4">Zinsdetails</h3>
                 <div className="space-y-3 text-sm">
                   <div className="flex justify-between">
                     <span className="text-gray-600">Darlehensbetrag:</span>
@@ -222,16 +191,24 @@ export default function BaufinanzierungsrechnerPage() {
                     </span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Zinssatz:</span>
+                    <span className="text-gray-600">Nominalzins:</span>
                     <span className="font-semibold">{zins}% p.a.</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600">Laufzeit:</span>
                     <span className="font-semibold">{jahre} Jahre</span>
                   </div>
+                  <div className="flex justify-between pt-2 border-t border-gray-200">
+                    <span className="text-gray-600">Gesamtzinsen:</span>
+                    <span className="font-semibold text-red-600">
+                      {formatCurrency(gesamtZinsen)}
+                    </span>
+                  </div>
                   <div className="flex justify-between">
-                    <span className="text-gray-600">Anfängliche Tilgung:</span>
-                    <span className="font-semibold">{tilgung}% p.a.</span>
+                    <span className="text-gray-600">Gesamtkosten:</span>
+                    <span className="font-semibold">
+                      {formatCurrency(darlehen + gesamtZinsen)}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -253,54 +230,6 @@ export default function BaufinanzierungsrechnerPage() {
             </div>
           </div>
 
-          {/* Tilgungsplan */}
-          {tilgungsplan.length > 0 && (
-            <div className="mt-8 bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-              <h2 className="text-2xl font-bold mb-6">Tilgungsplan (erste 12 Monate)</h2>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-200">
-                      <th className="text-left py-3 px-4 font-semibold">Monat</th>
-                      <th className="text-right py-3 px-4 font-semibold">Rate</th>
-                      <th className="text-right py-3 px-4 font-semibold">
-                        Zinsanteil
-                      </th>
-                      <th className="text-right py-3 px-4 font-semibold">
-                        Tilgungsanteil
-                      </th>
-                      <th className="text-right py-3 px-4 font-semibold">
-                        Restschuld
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tilgungsplan.map((row) => (
-                      <tr
-                        key={row.monat}
-                        className="border-b border-gray-100 hover:bg-gray-50"
-                      >
-                        <td className="py-3 px-4">{row.monat}</td>
-                        <td className="py-3 px-4 text-right">
-                          {formatCurrency(row.rate)}
-                        </td>
-                        <td className="py-3 px-4 text-right text-gray-600">
-                          {formatCurrency(row.zinsanteil)}
-                        </td>
-                        <td className="py-3 px-4 text-right text-green-600">
-                          {formatCurrency(row.tilgungsanteil)}
-                        </td>
-                        <td className="py-3 px-4 text-right">
-                          {formatCurrency(row.restschuld)}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          )}
-
           {/* Info Box */}
           <div className="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
             <h3 className="text-lg font-semibold mb-2 text-targo-blue">
@@ -308,19 +237,19 @@ export default function BaufinanzierungsrechnerPage() {
             </h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                • Die Berechnung erfolgt nach der Annuitätenmethode und dient
-                der ersten Orientierung.
+                • Die Berechnung erfolgt nach der Annuitätenmethode mit einer angenommenen Tilgung von 2% p.a.
               </li>
               <li>
-                • Die tatsächlichen Konditionen können abweichen und werden
-                individuell vereinbart.
+                • Die tatsächlichen Zinskosten können je nach Tilgungsrate variieren.
               </li>
               <li>
-                • Sondertilgungen und Zinsänderungen sind nicht berücksichtigt.
+                • Der effektive Jahreszins kann vom Nominalzins abweichen (Gebühren, etc.).
               </li>
               <li>
-                • Für eine detaillierte Beratung kontaktieren Sie bitte unsere
-                Experten.
+                • Die Berechnung dient der ersten Orientierung und ersetzt keine individuelle Beratung.
+              </li>
+              <li>
+                • Für eine detaillierte Beratung kontaktieren Sie bitte unsere Experten.
               </li>
             </ul>
           </div>
@@ -329,4 +258,3 @@ export default function BaufinanzierungsrechnerPage() {
     </div>
   );
 }
-

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -6,10 +7,13 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid gap-8 md:grid-cols-4">
           <div className="space-y-4">
-            <div className="flex items-center gap-2">
-              <span className="text-xl font-bold text-targo-red">TARGO</span>
-              <span className="text-xl font-bold text-targo-blue">HYP</span>
-            </div>
+            <Image
+              src="/targobank-logo-baufi.svg"
+              alt="Targohyp Logo"
+              width={140}
+              height={42}
+              className="h-8 w-auto"
+            />
             <p className="text-sm text-gray-600">
               Ihre Content-Plattform für Baufinanzierung
             </p>

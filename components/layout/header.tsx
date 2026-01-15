@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Home, ChevronDown, X, Menu } from "lucide-react";
+import { ChevronDown, X, Menu } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
 import { useState } from "react";
 
@@ -54,11 +55,14 @@ export function Header() {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="flex items-center gap-0.5">
-              <span className="text-2xl font-bold font-handel" style={{ color: '#002f5f' }}>TARGO</span>
-              <Home className="h-6 w-6 text-targo-blue" />
-              <span className="text-2xl font-bold font-handel" style={{ color: '#bb133e' }}>HYP</span>
-            </div>
+            <Image
+              src="/targobank-logo-baufi.svg"
+              alt="Targohyp Logo"
+              width={150}
+              height={45}
+              className="h-8 w-auto"
+              priority
+            />
           </Link>
 
           {/* Main Navigation */}
@@ -82,7 +86,7 @@ export function Header() {
                 <>
                   {/* Unsichtbarer Bereich zum Überbrücken der Lücke */}
                   <div className="absolute top-full left-0 w-full h-2"></div>
-                  <div className="absolute top-full left-0 pt-2 w-64 z-50">
+                  <div className="absolute top-full left-0 pt-2 w-80 z-50">
                     <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
                       <div className="py-2">
                         <Link
@@ -100,6 +104,29 @@ export function Header() {
                         >
                           Baufinanzierung
                         </Link>
+                        <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                          <Link
+                            href="/finanzierung/baufinanzierung/beamte"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Baufinanzierung für Beamte
+                          </Link>
+                          <Link
+                            href="/finanzierung/baufinanzierung/selbststaendige"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Baufinanzierung für Selbstständige
+                          </Link>
+                          <Link
+                            href="/finanzierung/baufinanzierung/ohne-eigenkapital"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Baufinanzierung ohne Eigenkapital
+                          </Link>
+                        </div>
                         <Link
                           href="/finanzierung/immobilienfinanzierung"
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
@@ -108,12 +135,79 @@ export function Header() {
                           Immobilienfinanzierung
                         </Link>
                         <Link
+                          href="/finanzierung/kapitalanlage-finanzieren"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Kapitalanlage finanzieren
+                        </Link>
+                        <Link
                           href="/finanzierung/anschlussfinanzierung"
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
                           onClick={() => setIsFinanzierungOpen(false)}
                         >
                           Anschlussfinanzierung
                         </Link>
+                        <Link
+                          href="/finanzierung/ablauf-unterlagen"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Ablauf & Unterlagen
+                        </Link>
+                        <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                          <Link
+                            href="/finanzierung/ablauf-unterlagen/checklisten"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Checklists
+                          </Link>
+                          <Link
+                            href="/finanzierung/ablauf-unterlagen/bonitaet-schufa"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Bonität / Schufa
+                          </Link>
+                        </div>
+                        <Link
+                          href="/finanzierung/darlehensarten"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Darlehensarten
+                        </Link>
+                        <Link
+                          href="/finanzierung/foerdermittel"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsFinanzierungOpen(false)}
+                        >
+                          Fördermittel
+                        </Link>
+                        <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                          <Link
+                            href="/finanzierung/foerdermittel/kfw"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            KfW
+                          </Link>
+                          <Link
+                            href="/finanzierung/foerdermittel/bafa"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Bafa
+                          </Link>
+                          <Link
+                            href="/finanzierung/foerdermittel/regionale-foerdermittel"
+                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                            onClick={() => setIsFinanzierungOpen(false)}
+                          >
+                            Regionale Fördermittel
+                          </Link>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -220,6 +314,38 @@ export function Header() {
                   >
                     Baufinanzierung
                   </Link>
+                  <div className="pl-6 space-y-1 border-l-2 border-gray-100 ml-2">
+                    <Link
+                      href="/finanzierung/baufinanzierung/beamte"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Baufinanzierung für Beamte
+                    </Link>
+                    <Link
+                      href="/finanzierung/baufinanzierung/selbststaendige"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Baufinanzierung für Selbstständige
+                    </Link>
+                    <Link
+                      href="/finanzierung/baufinanzierung/ohne-eigenkapital"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Baufinanzierung ohne Eigenkapital
+                    </Link>
+                  </div>
                   <Link
                     href="/finanzierung/immobilienfinanzierung"
                     className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
@@ -231,6 +357,16 @@ export function Header() {
                     Immobilienfinanzierung
                   </Link>
                   <Link
+                    href="/finanzierung/kapitalanlage-finanzieren"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Kapitalanlage finanzieren
+                  </Link>
+                  <Link
                     href="/finanzierung/anschlussfinanzierung"
                     className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
                     onClick={() => {
@@ -240,6 +376,90 @@ export function Header() {
                   >
                     Anschlussfinanzierung
                   </Link>
+                  <Link
+                    href="/finanzierung/ablauf-unterlagen"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Ablauf & Unterlagen
+                  </Link>
+                  <div className="pl-6 space-y-1 border-l-2 border-gray-100 ml-2">
+                    <Link
+                      href="/finanzierung/ablauf-unterlagen/checklisten"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Checklists
+                    </Link>
+                    <Link
+                      href="/finanzierung/ablauf-unterlagen/bonitaet-schufa"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Bonität / Schufa
+                    </Link>
+                  </div>
+                  <Link
+                    href="/finanzierung/darlehensarten"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Darlehensarten
+                  </Link>
+                  <Link
+                    href="/finanzierung/foerdermittel"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileFinanzierungOpen(false);
+                    }}
+                  >
+                    Fördermittel
+                  </Link>
+                  <div className="pl-6 space-y-1 border-l-2 border-gray-100 ml-2">
+                    <Link
+                      href="/finanzierung/foerdermittel/kfw"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      KfW
+                    </Link>
+                    <Link
+                      href="/finanzierung/foerdermittel/bafa"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Bafa
+                    </Link>
+                    <Link
+                      href="/finanzierung/foerdermittel/regionale-foerdermittel"
+                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileFinanzierungOpen(false);
+                      }}
+                    >
+                      Regionale Fördermittel
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>

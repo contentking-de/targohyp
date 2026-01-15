@@ -179,30 +179,30 @@ export default function EigenkapitalrechnerPage() {
             {/* Ergebnisse */}
             <div className="space-y-6">
               {/* Zusammenfassung */}
-              <div className="bg-gradient-to-br from-[#003366] to-[#004d99] rounded-lg p-6 lg:p-8">
-                <h2 className="text-2xl font-bold mb-6 text-white">Finanzierungsübersicht</h2>
+              <div className="bg-white border-4 border-[#003366] rounded-lg p-6 lg:p-8">
+                <h2 className="text-2xl font-bold mb-6 text-gray-900">Finanzierungsübersicht</h2>
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                    <span className="text-white/90">Gesamtkosten</span>
-                    <span className="text-3xl font-bold text-white">
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Gesamtkosten</span>
+                    <span className="text-3xl font-bold text-gray-900">
                       {formatCurrency(gesamtKosten)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                    <span className="text-white/90">Verfügbares Kapital</span>
-                    <span className="text-xl font-semibold text-white">
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Verfügbares Kapital</span>
+                    <span className="text-xl font-semibold text-gray-900">
                       {formatCurrency(verfuegbaresKapital)}
                     </span>
                   </div>
-                  <div className="flex justify-between items-center pb-4 border-b border-white/20">
-                    <span className="text-white/90">Finanzierungsbedarf</span>
-                    <span className="text-xl font-semibold text-white">
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Finanzierungsbedarf</span>
+                    <span className="text-xl font-semibold text-gray-900">
                       {formatCurrency(finanzierungsbedarf)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-white/90">Eigenkapitalquote</span>
-                    <span className="text-2xl font-bold text-white">
+                    <span className="text-gray-700">Eigenkapitalquote</span>
+                    <span className="text-2xl font-bold text-gray-900">
                       {eigenkapitalQuote.toFixed(1)}%
                     </span>
                   </div>

@@ -267,8 +267,8 @@ export default function TilgungsrechnerPage() {
 
               {/* Mit Sondertilgung */}
               {sondertilgungBetrag > 0 && (
-                <div className="bg-green-50 border-2 border-green-500 rounded-lg p-6">
-                  <h3 className="text-xl font-bold mb-4 text-green-700">
+                <div className="bg-white border-4 border-green-500 rounded-lg p-6">
+                  <h3 className="text-xl font-bold mb-4 text-gray-900">
                     Mit Sondertilgung
                   </h3>
                   <div className="space-y-3 text-sm">

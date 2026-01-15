@@ -4,67 +4,48 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Percent, ArrowLeft, Download, Share2, CheckCircle } from "lucide-react";
+import { Wallet, ArrowLeft, Download, Share2, TrendingUp } from "lucide-react";
 
-export default function MonatsrateRechnerPage() {
+export default function BudgetrechnerPage() {
   const [monatlichesEinkommen, setMonatlichesEinkommen] = useState<string>("4000");
   const [monatlicheAusgaben, setMonatlicheAusgaben] = useState<string>("2000");
-  const [darlehensbetrag, setDarlehensbetrag] = useState<string>("300000");
   const [zinssatz, setZinssatz] = useState<string>("3.5");
   const [laufzeit, setLaufzeit] = useState<string>("30");
   const [anfangsTilgung, setAnfangsTilgung] = useState<string>("2.0");
+  const [eigenkapital, setEigenkapital] = useState<string>("60000");
 
   // Berechnungen
   const einkommen = parseFloat(monatlichesEinkommen) || 0;
   const ausgaben = parseFloat(monatlicheAusgaben) || 0;
-  const darlehen = parseFloat(darlehensbetrag) || 0;
   const zins = parseFloat(zinssatz) || 0;
   const jahre = parseInt(laufzeit) || 0;
   const tilgung = parseFloat(anfangsTilgung) || 0;
+  const ek = parseFloat(eigenkapital) || 0;
 
   // Verfügbares Einkommen
   const verfuegbaresEinkommen = einkommen - ausgaben;
 
-  // Monatliche Rate berechnen
+  // Maximale monatliche Rate (35% des Nettoeinkommens als Empfehlung)
+  const maxRateEmpfohlen = einkommen * 0.35;
+  const maxRateMaximal = verfuegbaresEinkommen * 0.9; // 90% des verfügbaren Einkommens als absolute Obergrenze
+
+  // Maximaler Darlehensbetrag berechnen
   const monatlicherZinssatz = zins / 100 / 12;
   const monatlicheTilgung = tilgung / 100 / 12;
-  const monatlicheRate =
-    darlehen > 0 && zins > 0 && jahre > 0 && tilgung > 0
-      ? darlehen * (monatlicherZinssatz + monatlicheTilgung)
-      : 0;
+  const monatlicheRateProzent = monatlicherZinssatz + monatlicheTilgung;
 
-  // Belastbarkeit prüfen
-  const belastungsquote = einkommen > 0 ? (monatlicheRate / einkommen) * 100 : 0;
-  const verfuegbarNachRate = verfuegbaresEinkommen - monatlicheRate;
-  const istTragbar = verfuegbarNachRate >= 0;
+  const maxDarlehenEmpfohlen =
+    monatlicheRateProzent > 0 ? maxRateEmpfohlen / monatlicheRateProzent : 0;
+  const maxDarlehenMaximal =
+    monatlicheRateProzent > 0 ? maxRateMaximal / monatlicheRateProzent : 0;
 
-  // Empfehlungen
-  const empfehlungen: string[] = [];
-  if (belastungsquote > 40) {
-    empfehlungen.push(
-      "Die Belastungsquote ist sehr hoch (>40%). Erwägen Sie eine längere Laufzeit oder einen höheren Eigenkapitalanteil."
-    );
-  } else if (belastungsquote > 35) {
-    empfehlungen.push(
-      "Die Belastungsquote ist erhöht (>35%). Prüfen Sie Ihre finanzielle Flexibilität."
-    );
-  } else if (belastungsquote <= 35 && belastungsquote > 0) {
-    empfehlungen.push(
-      "Die Belastungsquote liegt im empfohlenen Bereich (≤35%). Die Finanzierung ist grundsätzlich tragbar."
-    );
-  }
+  // Maximaler Kaufpreis
+  const maxKaufpreisEmpfohlen = maxDarlehenEmpfohlen + ek;
+  const maxKaufpreisMaximal = maxDarlehenMaximal + ek;
 
-  if (verfuegbarNachRate < 500) {
-    empfehlungen.push(
-      "Nach Abzug der Rate bleibt wenig Spielraum. Planen Sie einen Puffer für unerwartete Ausgaben ein."
-    );
-  }
-
-  if (istTragbar && verfuegbarNachRate >= 500) {
-    empfehlungen.push(
-      "Gute finanzielle Situation! Die Rate ist gut tragbar und Sie haben ausreichend Puffer."
-    );
-  }
+  // Belastungsquote bei empfohlener Rate
+  const belastungsquoteEmpfohlen = einkommen > 0 ? (maxRateEmpfohlen / einkommen) * 100 : 0;
+  const belastungsquoteMaximal = einkommen > 0 ? (maxRateMaximal / einkommen) * 100 : 0;
 
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat("de-DE", {
@@ -89,15 +70,12 @@ export default function MonatsrateRechnerPage() {
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center">
-                <Percent className="w-6 h-6 text-targo-blue" />
+                <Wallet className="w-6 h-6 text-targo-blue" />
               </div>
-              <h1 className="text-3xl lg:text-4xl font-bold">
-                Monatsrate-Rechner
-              </h1>
+              <h1 className="text-3xl lg:text-4xl font-bold">Budgetrechner</h1>
             </div>
             <p className="text-lg text-gray-700">
-              Prüfen Sie Ihre Belastbarkeit und spielen Sie verschiedene
-              Finanzierungsszenarien durch.
+              Berechnen Sie, was Sie sich leisten können - finden Sie heraus, welcher Kaufpreis und Darlehensbetrag zu Ihrem Budget passt.
             </p>
           </div>
         </div>
@@ -147,7 +125,27 @@ export default function MonatsrateRechnerPage() {
                     className="w-full"
                   />
                   <p className="text-xs text-gray-500 mt-1">
-                    Ihre regelmäßigen monatlichen Ausgaben (ohne Rate)
+                    Ihre regelmäßigen monatlichen Ausgaben
+                  </p>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="eigenkapital"
+                    className="block text-sm font-semibold mb-2"
+                  >
+                    Verfügbares Eigenkapital (€)
+                  </label>
+                  <Input
+                    id="eigenkapital"
+                    type="number"
+                    value={eigenkapital}
+                    onChange={(e) => setEigenkapital(e.target.value)}
+                    placeholder="60.000"
+                    className="w-full"
+                  />
+                  <p className="text-xs text-gray-500 mt-1">
+                    Ihr verfügbares Eigenkapital
                   </p>
                 </div>
 
@@ -156,23 +154,6 @@ export default function MonatsrateRechnerPage() {
                     Finanzierungsdaten
                   </h3>
                   <div className="space-y-4">
-                    <div>
-                      <label
-                        htmlFor="darlehensbetrag"
-                        className="block text-sm font-semibold mb-2"
-                      >
-                        Darlehensbetrag (€)
-                      </label>
-                      <Input
-                        id="darlehensbetrag"
-                        type="number"
-                        value={darlehensbetrag}
-                        onChange={(e) => setDarlehensbetrag(e.target.value)}
-                        placeholder="300.000"
-                        className="w-full"
-                      />
-                    </div>
-
                     <div>
                       <label
                         htmlFor="zinssatz"
@@ -232,44 +213,77 @@ export default function MonatsrateRechnerPage() {
 
             {/* Ergebnisse */}
             <div className="space-y-6">
-              {/* Belastbarkeitsprüfung */}
-              <div
-                className={`bg-white rounded-lg p-6 lg:p-8 border-4 ${
-                  istTragbar
-                    ? "border-green-500"
-                    : "border-red-500"
-                }`}
-              >
+              {/* Empfohlener Kaufpreis */}
+              <div className="bg-white border-4 border-green-500 rounded-lg p-6 lg:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  {istTragbar ? (
-                    <CheckCircle className="w-8 h-8 text-green-600" />
-                  ) : (
-                    <Percent className="w-8 h-8 text-red-600" />
-                  )}
-                  <h2 className="text-2xl font-bold text-gray-900">
-                    {istTragbar ? "Finanzierung tragbar" : "Finanzierung kritisch"}
-                  </h2>
+                  <TrendingUp className="w-8 h-8 text-green-600" />
+                  <h2 className="text-2xl font-bold text-gray-900">Empfohlener Rahmen</h2>
                 </div>
                 <div className="space-y-4">
                   <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Monatliche Rate:</span>
+                    <span className="text-gray-700">Max. Kaufpreis:</span>
                     <span className="text-3xl font-bold text-gray-900">
-                      {formatCurrency(monatlicheRate)}
+                      {formatCurrency(maxKaufpreisEmpfohlen)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center pb-4 border-b border-gray-200">
-                    <span className="text-gray-700">Verfügbar nach Rate:</span>
+                    <span className="text-gray-700">Max. Darlehensbetrag:</span>
                     <span className="text-xl font-semibold text-gray-900">
-                      {formatCurrency(verfuegbarNachRate)}
+                      {formatCurrency(maxDarlehenEmpfohlen)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between items-center pb-4 border-b border-gray-200">
+                    <span className="text-gray-700">Monatliche Rate:</span>
+                    <span className="text-xl font-semibold text-gray-900">
+                      {formatCurrency(maxRateEmpfohlen)}
                     </span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-gray-700">Belastungsquote:</span>
                     <span className="text-2xl font-bold text-gray-900">
-                      {belastungsquote.toFixed(1)}%
+                      {belastungsquoteEmpfohlen.toFixed(1)}%
                     </span>
                   </div>
                 </div>
+                <p className="text-sm text-gray-600 mt-4">
+                  ✓ Empfohlene Belastungsquote von max. 35% des Nettoeinkommens
+                </p>
+              </div>
+
+              {/* Maximaler Rahmen */}
+              <div className="bg-white border-4 border-orange-500 rounded-lg p-6">
+                <h3 className="text-xl font-bold mb-4 text-gray-900">
+                  Maximaler Rahmen
+                </h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Max. Kaufpreis:</span>
+                    <span className="font-semibold">
+                      {formatCurrency(maxKaufpreisMaximal)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Max. Darlehensbetrag:</span>
+                    <span className="font-semibold">
+                      {formatCurrency(maxDarlehenMaximal)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Monatliche Rate:</span>
+                    <span className="font-semibold">
+                      {formatCurrency(maxRateMaximal)}
+                    </span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span className="text-gray-600">Belastungsquote:</span>
+                    <span className="font-semibold text-orange-600">
+                      {belastungsquoteMaximal.toFixed(1)}%
+                    </span>
+                  </div>
+                </div>
+                <p className="text-xs text-orange-600 mt-3">
+                  ⚠️ Sehr hohe Belastung - nur bei sehr stabiler finanzieller Situation empfohlen
+                </p>
               </div>
 
               {/* Details */}
@@ -297,47 +311,13 @@ export default function MonatsrateRechnerPage() {
                     </span>
                   </div>
                   <div className="flex justify-between pt-2 border-t border-gray-200">
-                    <span className="text-gray-600">Monatliche Rate:</span>
+                    <span className="text-gray-600">Eigenkapital:</span>
                     <span className="font-semibold">
-                      {formatCurrency(monatlicheRate)}
-                    </span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Verbleibend:</span>
-                    <span
-                      className={`font-semibold ${
-                        verfuegbarNachRate < 0
-                          ? "text-red-600"
-                          : verfuegbarNachRate < 500
-                          ? "text-orange-600"
-                          : "text-green-600"
-                      }`}
-                    >
-                      {formatCurrency(verfuegbarNachRate)}
+                      {formatCurrency(ek)}
                     </span>
                   </div>
                 </div>
               </div>
-
-              {/* Empfehlungen */}
-              {empfehlungen.length > 0 && (
-                <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
-                  <h3 className="text-lg font-semibold mb-3 text-targo-blue">
-                    Empfehlungen
-                  </h3>
-                  <ul className="space-y-2">
-                    {empfehlungen.map((empfehlung, idx) => (
-                      <li
-                        key={idx}
-                        className="text-sm text-gray-700 flex items-start"
-                      >
-                        <span className="text-targo-blue mr-2">•</span>
-                        <span>{empfehlung}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
 
               {/* Aktionen */}
               <div className="flex gap-3">
@@ -363,20 +343,19 @@ export default function MonatsrateRechnerPage() {
             </h3>
             <ul className="space-y-2 text-sm text-gray-700">
               <li>
-                • Eine Belastungsquote von maximal 35% des Nettoeinkommens wird
-                empfohlen.
+                • Eine Belastungsquote von maximal 35% des Nettoeinkommens wird empfohlen.
               </li>
               <li>
-                • Planen Sie einen Puffer für unerwartete Ausgaben und
-                Lebenshaltungskosten ein.
+                • Die Berechnung berücksichtigt keine Kaufnebenkosten (ca. 10-15% des Kaufpreises).
               </li>
               <li>
-                • Die Berechnung dient der ersten Orientierung und ersetzt keine
-                individuelle Beratung.
+                • Planen Sie einen Puffer für unerwartete Ausgaben und Lebenshaltungskosten ein.
               </li>
               <li>
-                • Für eine detaillierte Beratung kontaktieren Sie bitte unsere
-                Experten.
+                • Die Berechnung dient der ersten Orientierung und ersetzt keine individuelle Beratung.
+              </li>
+              <li>
+                • Für eine detaillierte Beratung kontaktieren Sie bitte unsere Experten.
               </li>
             </ul>
           </div>
@@ -385,4 +364,3 @@ export default function MonatsrateRechnerPage() {
     </div>
   );
 }
-
