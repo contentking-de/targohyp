@@ -1,0 +1,3723 @@
+[
+{
+    "Address": "Oppelner Str. 186, 90473 Nürnberg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-8630948019971574146",
+    "GoogleFID": "0x479f59897b10e7e3:0x8838b6812abbb67e",
+    "Keyword": "Targobank Nürnberg",
+    "Latitude": "49.4029193",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Nürnberg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.132371899999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 911 13136831",
+    "Placeid": "ChIJ4-cQe4lZn0cRfra7KoG2OIg",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "108",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ4-cQe4lZn0cRfra7KoG2OIg&q=Targobank+N%C3%BCrnberg&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ4-cQe4lZn0cRfra7KoG2OIg",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=301&city=Nürnberg-Langwasser&street=Oppelner Strasse 186&zip=90473"
+},
+{
+    "Address": "Osterstraße 141, 20255 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-4276166568523018691",
+    "GoogleFID": "0x47b18f562f7dc09b:0xc4a801297ac8ce3d",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.5762554",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.9494993",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 4017570",
+    "Placeid": "ChIJm8B9L1aPsUcRPc7IeikBqMQ",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "94",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJm8B9L1aPsUcRPc7IeikBqMQ&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJm8B9L1aPsUcRPc7IeikBqMQ",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=316&city=Hamburg&street=Osterstr. 141&zip=20255"
+},
+{
+    "Address": "Leonrodstraße 2, 80634 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-5702267284180981615",
+    "GoogleFID": "0x479e7616baf62b7b:0xb0dd7a1df00fa891",
+    "Keyword": "Targobank München",
+    "Latitude": "48.153124",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.5343108",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 164086",
+    "Placeid": "ChIJeyv2uhZ2nkcRkagP8B163bA",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "127",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJeyv2uhZ2nkcRkagP8B163bA&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJeyv2uhZ2nkcRkagP8B163bA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=157&city=München&street=Leonrodstr. 2&zip=80634"
+},
+{
+    "Address": "Wittenbergpl. 1, 10789 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "8571883624268778917",
+    "GoogleFID": "0x47a8515ba78ba671:0x76f572bd90874da5",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5010933",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3419352",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJcaaLp1tRqEcRpU2HkL1y9XY",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "7",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJcaaLp1tRqEcRpU2HkL1y9XY&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJcaaLp1tRqEcRpU2HkL1y9XY",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Alter Dorfweg 1, 28259 Bremen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "8852873044878032947",
+    "GoogleFID": "0x47b0d638e695c36d:0x7adbb92139960033",
+    "Keyword": "Targobank Bremen",
+    "Latitude": "53.047948",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Bremen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.7417869",
+    "Name": "TARGOBANK",
+    "Phone": "+49 421 5697910",
+    "Placeid": "ChIJbcOV5jjWsEcRMwCWOSG523o",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "89",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJbcOV5jjWsEcRMwCWOSG523o&q=Targobank+Bremen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJbcOV5jjWsEcRMwCWOSG523o",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=263&city=Bremen&street=Alter Dorfweg/Roland Center -&zip=28259"
+},
+{
+    "Address": "Knorrstraße 66, 80807 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-5538426316369536598",
+    "GoogleFID": "0x479e74289f26a45d:0xb3238e9bee1e59aa",
+    "Keyword": "Targobank München",
+    "Latitude": "48.1851529",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.573122699999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 95457219",
+    "Placeid": "ChIJXaQmnyh0nkcRqlke7puOI7M",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "223",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJXaQmnyh0nkcRqlke7puOI7M&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJXaQmnyh0nkcRqlke7puOI7M",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=369&city=München&street=Knorrstraße 66&zip=80807"
+},
+{
+    "Address": "Wilmersdorfer Str. 128, 10627 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-7272703498266077568",
+    "GoogleFID": "0x47a850df9062869f:0x9b122ab3651c1680",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5101665",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.305836399999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 3277040",
+    "Placeid": "ChIJn4ZikN9QqEcRgBYcZbMqEps",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "232",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJn4ZikN9QqEcRgBYcZbMqEps&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJn4ZikN9QqEcRgBYcZbMqEps",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=220&city=Berlin&street=Wilmersdorfer Str. 128&zip=10627"
+},
+{
+    "Address": "Friedrichstraße 194-199, 10117 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a851d05804bf69:0xa9ff4ecb5d9353d",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.509842",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.389738099999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 20616890",
+    "Placeid": "ChIJab8EWNBRqEcRPTXZtez0nwo",
+    "PriceRange": null,
+    "Rating": "3.3",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": null,
+    "Timing": [],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJab8EWNBRqEcRPTXZtez0nwo",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=401&city=Berlin&street=Friedrichstr. 194/199&zip=10117"
+},
+{
+    "Address": "Schillerpl. 6, 01309 Dresden, Germany",
+    "Category": "Bank",
+    "GoogleCID": "7550127450851110303",
+    "GoogleFID": "0x4709c89362b08ef1:0x68c770ea0ce7ed9f",
+    "Keyword": "Targobank Dresden",
+    "Latitude": "51.0526464",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Dresden/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.807813399999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 351 316840",
+    "Placeid": "ChIJ8Y6wYpPICUcRn-3nDOpwx2g",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "153",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ8Y6wYpPICUcRn-3nDOpwx2g&q=Targobank+Dresden&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ8Y6wYpPICUcRn-3nDOpwx2g",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=426&city=Dresden&street=Schillerplatz 6&zip=1309"
+},
+{
+    "Address": "Fuhlsbüttler Str. 389, 22309 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6102213014275606185",
+    "GoogleFID": "0x47b1893e34c7c08d:0x54af6a67d3a9c6a9",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.602024",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.0405622",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 6905561",
+    "Placeid": "ChIJjcDHND6JsUcRqcap02dqr1Q",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "160",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJjcDHND6JsUcRqcap02dqr1Q&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJjcDHND6JsUcRqcap02dqr1Q",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=103&city=Hamburg&street=Fuhlsbüttler Str. 389&zip=22309"
+},
+{
+    "Address": "Hefnerspl. 1, 90402 Nürnberg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6415637541027981267",
+    "GoogleFID": "0x479f57a8dfa9a6ad:0x5908ec5a20a227d3",
+    "Keyword": "Targobank Nürnberg",
+    "Latitude": "49.4505385",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Nürnberg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.0729203",
+    "Name": "TARGOBANK",
+    "Phone": "+49 911 2360080",
+    "Placeid": "ChIJraap36hXn0cR0yeiIFrsCFk",
+    "PriceRange": null,
+    "Rating": "3.9",
+    "Result_Type": null,
+    "Reviews": "75",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJraap36hXn0cR0yeiIFrsCFk&q=Targobank+N%C3%BCrnberg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJraap36hXn0cR0yeiIFrsCFk",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=202&city=Nürnberg&street=Hefnersplatz 1&zip=90402"
+},
+{
+    "Address": "Schloßstraße 111/3. Etage, 12163 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "3825753435162520307",
+    "GoogleFID": "0x47a85b285f1ef9a7:0x3517ce7ac517aaf3",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.461478899999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3257643",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJp_keXyhbqEcR86oXxXrOFzU",
+    "PriceRange": null,
+    "Rating": "2.3",
+    "Result_Type": null,
+    "Reviews": "6",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJp_keXyhbqEcR86oXxXrOFzU&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJp_keXyhbqEcR86oXxXrOFzU",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Carl-Schurz-Straße 46, 13597 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-2996299854041737827",
+    "GoogleFID": "0x47a85646e842182d:0xd66b01286749959d",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5379173",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.2045029",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 3539520",
+    "Placeid": "ChIJLRhC6EZWqEcRnZVJZygBa9Y",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "308",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJLRhC6EZWqEcRnZVJZygBa9Y&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJLRhC6EZWqEcRnZVJZygBa9Y",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=213&city=Berlin&street=Carl-Schurz-Str. 46&zip=13597"
+},
+{
+    "Address": "Marzahner Promenade 27, 12679 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a84bf43c00bf15:0xc0e0cadc978cc900",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5440245",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.5475932",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 9359907",
+    "Placeid": "ChIJFb8APPRLqEcRAMmMl9zK4MA",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJFb8APPRLqEcRAMmMl9zK4MA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=402&city=Berlin&street=Marzahner Promenade 27&zip=12679"
+},
+{
+    "Address": "Wittenbergpl. 1, 10789 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "1464851459359384015",
+    "GoogleFID": "0x47a85056a8caab83:0x145432a423d421cf",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.501098",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.342156",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 21298960",
+    "Placeid": "ChIJg6vKqFZQqEcRzyHUI6QyVBQ",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "154",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJg6vKqFZQqEcRzyHUI6QyVBQ&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJg6vKqFZQqEcRzyHUI6QyVBQ",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=211&city=Berlin&street=Wittenbergplatz 1&zip=10789"
+},
+{
+    "Address": "Tübinger Str. 13-15, 70178 Stuttgart, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-3387627353794585043",
+    "GoogleFID": "0x4799db490e41690d:0xd0fcbadec1ad5e2d",
+    "Keyword": "Targobank Stuttgart",
+    "Latitude": "48.772207099999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Stuttgart/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.174624",
+    "Name": "TARGOBANK",
+    "Phone": "+49 711 50536890",
+    "Placeid": "ChIJDWlBDknbmUcRLV6twd66_NA",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "241",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJDWlBDknbmUcRLV6twd66_NA&q=Targobank+Stuttgart&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJDWlBDknbmUcRLV6twd66_NA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=172&city=Stuttgart&street=Rotebühlplatz 5&zip=70178"
+},
+{
+    "Address": "Berliner Freiheit 11B, 28327 Bremen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "1669458509390689337",
+    "GoogleFID": "0x47b1270b54a39bc5:0x172b1bab4b7c3439",
+    "Keyword": "Targobank Bremen",
+    "Latitude": "53.0796207",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Bremen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.8938048",
+    "Name": "TARGOBANK",
+    "Phone": "+49 421 14629254",
+    "Placeid": "ChIJxZujVAsnsUcROTR8S6sbKxc",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "102",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJxZujVAsnsUcROTR8S6sbKxc&q=Targobank+Bremen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJxZujVAsnsUcROTR8S6sbKxc",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=337&city=Bremen&street=Berliner Freiheit 11 b-d&zip=28327"
+},
+{
+    "Address": "Berliner Str. 11, 13507 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a85468207235fb:0x99ca2f490dfbc571",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5879212",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.2850021",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 4309840",
+    "Placeid": "ChIJ-zVyIGhUqEcRccX7DUkvypk",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ-zVyIGhUqEcRccX7DUkvypk",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=221&city=Berlin&street=Berliner Str. 11&zip=13507"
+},
+{
+    "Address": "Bahnhofstraße 25, 12555 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-1043274915645870958",
+    "GoogleFID": "0x47a84972c49cb519:0xf1858afde1da2c92",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4579276",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.579171599999999",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJGbWcxHJJqEcRkiza4f2KhfE",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": "3",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJGbWcxHJJqEcRkiza4f2KhfE&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open 24 hours",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "Open 24 hours"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJGbWcxHJJqEcRkiza4f2KhfE",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Wilmersdorfer Str. 128, 10627 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-2683270952068198748",
+    "GoogleFID": "0x47a851276c1794c5:0xdac31b4921d9cea4",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.510178499999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.305945999999999",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJxZQXbCdRqEcRpM7ZIUkbw9o",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": "2",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJxZQXbCdRqEcRpM7ZIUkbw9o&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 8 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "8 AM - 8 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "8 AM - 8 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "8 AM - 8 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "8 AM - 8 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "8 AM - 8 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "8 AM - 8 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJxZQXbCdRqEcRpM7ZIUkbw9o",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Viktualienmarkt 8, 80331 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "3129972331615231197",
+    "GoogleFID": "0x479e758ab8d566a5:0x2b6fe54096ba1cdd",
+    "Keyword": "Targobank München",
+    "Latitude": "48.135745299999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.5755328",
+    "Name": "TARGOBANK Vermögenscenter",
+    "Phone": "+49 89 21909859",
+    "Placeid": "ChIJpWbVuIp1nkcR3Ry6lkDlbys",
+    "PriceRange": null,
+    "Rating": "3.9",
+    "Result_Type": null,
+    "Reviews": "14",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJpWbVuIp1nkcR3Ry6lkDlbys&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Vermögenscenter&query_place_id=ChIJpWbVuIp1nkcR3Ry6lkDlbys",
+    "Website": "https://www.targobank.de/de/filialen/filialsuche/index.html"
+},
+{
+    "Address": "Leipziger Str. 53, 60487 Frankfurt am Main, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-8578751865994957717",
+    "GoogleFID": "0x47bd0942771ccb45:0x88f226a14b26ac6b",
+    "Keyword": "Targobank Frankfurt",
+    "Latitude": "50.1227005",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Frankfurt/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.6449307",
+    "Name": "TARGOBANK",
+    "Phone": "+49 69 58809964",
+    "Placeid": "ChIJRcscd0IJvUcRa6wmS6Em8og",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "279",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJRcscd0IJvUcRa6wmS6Em8og&q=Targobank+Frankfurt&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJRcscd0IJvUcRa6wmS6Em8og",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=299&city=Frankfurt-Bockenheim&street=Leipziger Str. 53&zip=60487"
+},
+{
+    "Address": "Landsberger Str. 521, 81241 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6506015322110460368",
+    "GoogleFID": "0x479e77e2ab187a8b:0x5a4a027711a481d0",
+    "Keyword": "Targobank München",
+    "Latitude": "48.146506699999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.4602492",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 8292500",
+    "Placeid": "ChIJi3oYq-J3nkcR0IGkEXcCSlo",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "246",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJi3oYq-J3nkcR0IGkEXcCSlo&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJi3oYq-J3nkcR0IGkEXcCSlo",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=428&city=München&street=Landsberger Str. 521&zip=81241"
+},
+{
+    "Address": "Clayallee 344, 14169 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a85a310ec17505:0x9fa9f0b18d0c6c2d",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4363691",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.261580799999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 72006980",
+    "Placeid": "ChIJBXXBDjFaqEcRLWwMjbHwqZ8",
+    "PriceRange": null,
+    "Rating": "4.3",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJBXXBDjFaqEcRLWwMjbHwqZ8",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=437&city=Berlin&street=Clayallee 344&zip=14169"
+},
+{
+    "Address": "Alte Holstenstraße 76, 21029 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-2873633374292448962",
+    "GoogleFID": "0x47b1f28ec62a292f:0xd81ecdabd697693e",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.4890611",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.2099107",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 7243091",
+    "Placeid": "ChIJLykqxo7ysUcRPmmX1qvNHtg",
+    "PriceRange": null,
+    "Rating": "4.3",
+    "Result_Type": null,
+    "Reviews": "52",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJLykqxo7ysUcRPmmX1qvNHtg&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJLykqxo7ysUcRPmmX1qvNHtg",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=351&city=Hamburg&street=Alte Holstenstr. 76&zip=21029"
+},
+{
+    "Address": "Möllner Landstraße 31, 22111 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-4523470110866892299",
+    "GoogleFID": "0x47b18c5a3eeae311:0xc13967e689ae99f5",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.5392745",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.1072154",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 7320014",
+    "Placeid": "ChIJEePqPlqMsUcR9ZmuieZnOcE",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "305",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJEePqPlqMsUcR9ZmuieZnOcE&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJEePqPlqMsUcR9ZmuieZnOcE",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=318&city=Hamburg&street=Möllner Landstr. 31&zip=22111"
+},
+{
+    "Address": "Kölner Str. 234, 40227 Düsseldorf, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-2110612429058298877",
+    "GoogleFID": "0x47b8cbca4c26d44b:0xe2b5992da374ac03",
+    "Keyword": "Targobank Düsseldorf",
+    "Latitude": "51.2146774",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Düsseldorf/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.805136999999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 211 784229",
+    "Placeid": "ChIJS9QmTMrLuEcRA6x0oy2ZteI",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "264",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJS9QmTMrLuEcRA6x0oy2ZteI&q=Targobank+D%C3%BCsseldorf&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJS9QmTMrLuEcRA6x0oy2ZteI",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=28&city=Düsseldorf&street=Kölner Str. 234&zip=40227"
+},
+{
+    "Address": "Wilmersdorfer Str. 128, 10627 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-2683270952068198748",
+    "GoogleFID": "0x47a851276c1794c5:0xdac31b4921d9cea4",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.510178499999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.305945999999999",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJxZQXbCdRqEcRpM7ZIUkbw9o",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Open · Closes 8 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "8 AM - 8 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJxZQXbCdRqEcRpM7ZIUkbw9o",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Knochenhauerstraße 15, 28195 Bremen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-1294529096161873479",
+    "GoogleFID": "0x47b128112fca36d3:0xee08e8a54fdd31b9",
+    "Keyword": "Targobank Bremen",
+    "Latitude": "53.0788194",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Bremen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.8073481",
+    "Name": "TARGOBANK",
+    "Phone": "+49 421 174500",
+    "Placeid": "ChIJ0zbKLxEosUcRuTHdT6XoCO4",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "220",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ0zbKLxEosUcRuTHdT6XoCO4&q=Targobank+Bremen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ0zbKLxEosUcRuTHdT6XoCO4",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=261&city=Bremen&street=Knochenhauerstr. 15&zip=28195"
+},
+{
+    "Address": "Altenessener Str. 368, 45326 Essen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "444160189415333387",
+    "GoogleFID": "0x47b8e86b3138d55f:0x629f956c9789e0b",
+    "Keyword": "Targobank Essen",
+    "Latitude": "51.49588",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Essen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "7.0084019",
+    "Name": "TARGOBANK",
+    "Phone": "+49 201 35941",
+    "Placeid": "ChIJX9U4MWvouEcRC554yVb5KQY",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "372",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJX9U4MWvouEcRC554yVb5KQY&q=Targobank+Essen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJX9U4MWvouEcRC554yVb5KQY",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=53&city=Essen&street=Altenessener Str. 368/372&zip=45326"
+},
+{
+    "Address": "Rüttenscheider Str. 139, 45130 Essen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "3098147526193727051",
+    "GoogleFID": "0x47b8c2d700ecb94f:0x2afed4c2a888464b",
+    "Keyword": "Targobank Essen",
+    "Latitude": "51.4349047",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Essen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "7.0049801",
+    "Name": "TARGOBANK",
+    "Phone": "+49 201 774028",
+    "Placeid": "ChIJT7nsANfCuEcRS0aIqMLU_io",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "236",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJT7nsANfCuEcRS0aIqMLU_io&q=Targobank+Essen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJT7nsANfCuEcRS0aIqMLU_io",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=58&city=Essen&street=Rüttenscheider Str. 139&zip=45130"
+},
+{
+    "Address": "Müllerstraße 138B, 13353 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "1733105251200897756",
+    "GoogleFID": "0x47a85301d745aaaf:0x180d3a0b283192dc",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.549607699999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3528962",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJr6pF1wFTqEcR3JIxKAs6DRg",
+    "PriceRange": null,
+    "Rating": "3.0",
+    "Result_Type": null,
+    "Reviews": "4",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJr6pF1wFTqEcR3JIxKAs6DRg&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJr6pF1wFTqEcR3JIxKAs6DRg",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Innere Wiener Straße 61, 81667 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-6439887517681246271",
+    "GoogleFID": "0x479e75805493a227:0xa6a0ec6c33231fc1",
+    "Keyword": "Targobank München",
+    "Latitude": "48.134990099999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.597386",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 475086",
+    "Placeid": "ChIJJ6KTVIB1nkcRwR8jM2zsoKY",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "129",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJJ6KTVIB1nkcRwR8jM2zsoKY&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJJ6KTVIB1nkcRwR8jM2zsoKY",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=153&city=München&street=Innere Wienerstr. 61&zip=81667"
+},
+{
+    "Address": "Bahnhofstraße 15, 12305 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6889727557178516026",
+    "GoogleFID": "0x47a84461943839e5:0x5f9d3ab5bcd8623a",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.3868796",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4035136",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 22012827",
+    "Placeid": "ChIJ5Tk4lGFEqEcROmLYvLU6nV8",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "87",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ5Tk4lGFEqEcROmLYvLU6nV8&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ5Tk4lGFEqEcROmLYvLU6nV8",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=493&city=Berlin-Lichtenrade&street=Bahnhofstraße 15&zip=12305"
+},
+{
+    "Address": "Badstraße 8, 13357 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-2443913269418167483",
+    "GoogleFID": "0x47a85399aab124ef:0xde1579d472777345",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5499064",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3862145",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJ7ySxqplTqEcRRXN3ctR5Fd4",
+    "PriceRange": null,
+    "Rating": "4.1",
+    "Result_Type": null,
+    "Reviews": "8",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ7ySxqplTqEcRRXN3ctR5Fd4&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJ7ySxqplTqEcRRXN3ctR5Fd4",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Kasernenstraße 12, 40213 Düsseldorf, Germany",
+    "Category": "Bank",
+    "GoogleCID": "8896614912576255690",
+    "GoogleFID": "0x47b8ca17e54ba599:0x7b7720206f8cf6ca",
+    "Keyword": "Targobank Düsseldorf",
+    "Latitude": "51.2238286",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Düsseldorf/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.775854799999999",
+    "Name": "Targo Finanzberatung GmbH",
+    "Phone": "+49 211 89840",
+    "Placeid": "ChIJmaVL5RfKuEcRyvaMbyAgd3s",
+    "PriceRange": null,
+    "Rating": "2.3",
+    "Result_Type": null,
+    "Reviews": "6",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJmaVL5RfKuEcRyvaMbyAgd3s&q=Targobank+D%C3%BCsseldorf&authuser=0&hl=en&gl=US",
+    "Status": null,
+    "Timing": [],
+    "Url": "https://www.google.com/maps/search/?api=1&query=Targo Finanzberatung GmbH&query_place_id=ChIJmaVL5RfKuEcRyvaMbyAgd3s",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Breite Str. 10, 28757 Bremen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-1398645460233450092",
+    "GoogleFID": "0x47b6d3539a4290ef:0xec97035d40128d94",
+    "Keyword": "Targobank Bremen",
+    "Latitude": "53.1715075",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Bremen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.6204182",
+    "Name": "TARGOBANK",
+    "Phone": "+49 421 658280",
+    "Placeid": "ChIJ75BCmlPTtkcRlI0SQF0Dl-w",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "70",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ75BCmlPTtkcRlI0SQF0Dl-w&q=Targobank+Bremen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ75BCmlPTtkcRlI0SQF0Dl-w",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=267&city=Bremen&street=Breite Str. 10&zip=28757"
+},
+{
+    "Address": "Prielmayerstraße 3, 80335 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-3870194625907197969",
+    "GoogleFID": "0x479e75f98ac997c3:0xca4a4e7e2f2cf7ef",
+    "Keyword": "Targobank München",
+    "Latitude": "48.140984599999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.561870899999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 55999880",
+    "Placeid": "ChIJw5fJivl1nkcR7_csL35OSso",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "129",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJw5fJivl1nkcR7_csL35OSso&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJw5fJivl1nkcR7_csL35OSso",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=159&city=München&street=Prielmayer Str. 3&zip=80335"
+},
+{
+    "Address": "Badstraße 9, 70372 Stuttgart, Germany",
+    "Category": "Bank",
+    "GoogleCID": "1171886744591547442",
+    "GoogleFID": "0x4799c522a547e369:0x104360c9085e3c32",
+    "Keyword": "Targobank Stuttgart",
+    "Latitude": "48.803071599999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Stuttgart/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.2156825",
+    "Name": "TARGOBANK",
+    "Phone": "+49 711 52088780",
+    "Placeid": "ChIJaeNHpSLFmUcRMjxeCMlgQxA",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "175",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJaeNHpSLFmUcRMjxeCMlgQxA&q=Targobank+Stuttgart&authuser=0&hl=en&gl=US",
+    "Status": null,
+    "Timing": [],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJaeNHpSLFmUcRMjxeCMlgQxA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=173&city=Stuttgart&street=Badstr. 9&zip=70372"
+},
+{
+    "Address": "Plinganserstraße 53, 81369 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-7565044729179687973",
+    "GoogleFID": "0x479ddf3534536bc1:0x97038fe66f4db3db",
+    "Keyword": "Targobank München",
+    "Latitude": "48.1167349",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.540415099999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 7670870",
+    "Placeid": "ChIJwWtTNDXfnUcR27NNb-aPA5c",
+    "PriceRange": null,
+    "Rating": "4.2",
+    "Result_Type": null,
+    "Reviews": "118",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJwWtTNDXfnUcR27NNb-aPA5c&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJwWtTNDXfnUcR27NNb-aPA5c",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=429&city=München&street=Plinganser Str. 53&zip=81369"
+},
+{
+    "Address": "Bochumer Str. 24, 45276 Essen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-3950569206522898790",
+    "GoogleFID": "0x47b8dda1c96f54f9:0xc92cc23cd89b169a",
+    "Keyword": "Targobank Essen",
+    "Latitude": "51.4462355",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Essen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "7.0772831",
+    "Name": "TARGOBANK",
+    "Phone": "+49 201 851300",
+    "Placeid": "ChIJ-VRvyaHduEcRmhab2DzCLMk",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "124",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ-VRvyaHduEcRmhab2DzCLMk&q=Targobank+Essen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ-VRvyaHduEcRmhab2DzCLMk",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=52&city=Essen&street=Kaiser-Otto-Platz 11&zip=45276"
+},
+{
+    "Address": "Bahnhofstraße 15, 12305 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-5961710455866398345",
+    "GoogleFID": "0x47a845c8b18f55a3:0xad43bfed4859e977",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.3868796",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4035136",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJo1WPschFqEcRd-lZSO2_Q60",
+    "PriceRange": null,
+    "Rating": "2.0",
+    "Result_Type": null,
+    "Reviews": "1",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJo1WPschFqEcRd-lZSO2_Q60&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "6 AM - 11 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJo1WPschFqEcRd-lZSO2_Q60",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Karl-Marx-Straße 118, 12043 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "7527336866797512015",
+    "GoogleFID": "0x47a84fa3bf89ffe5:0x687678ffb22ae54f",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.478173",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4378744",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 68989910",
+    "Placeid": "ChIJ5f-Jv6NPqEcRT-Uqsv94dmg",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "177",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ5f-Jv6NPqEcRT-Uqsv94dmg&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ5f-Jv6NPqEcRT-Uqsv94dmg",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=219&city=Berlin&street=Karl-Marx-Str. 118&zip=12043"
+},
+{
+    "Address": "Rathausstraße 2, 20095 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "9098412545891072625",
+    "GoogleFID": "0x47b18f1cf5127e0f:0x7e440e0149cb7a71",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.5498811",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.9940679",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 30296202",
+    "Placeid": "ChIJD34S9RyPsUcRcXrLSQEORH4",
+    "PriceRange": null,
+    "Rating": "4.4",
+    "Result_Type": null,
+    "Reviews": "135",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJD34S9RyPsUcRcXrLSQEORH4&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJD34S9RyPsUcRcXrLSQEORH4",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=102&city=Hamburg&street=Rathausstr. 2&zip=20095"
+},
+{
+    "Address": "Heegbarg 2, 22391 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "7792983602567658395",
+    "GoogleFID": "0x47b189f93d8a7495:0x6c263d4c2b7d3b9b",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.6523702",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.0930857",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 21111680",
+    "Placeid": "ChIJlXSKPfmJsUcRmzt9K0w9Jmw",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "149",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJlXSKPfmJsUcRmzt9K0w9Jmw&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJlXSKPfmJsUcRmzt9K0w9Jmw",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=435&city=Hamburg&street=Heegbarg 2&zip=22391"
+},
+{
+    "Address": "Tempelhofer Damm 203, 12099 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "82929515278540328",
+    "GoogleFID": "0x47a845561aabff2b:0x1269ff46b929e28",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4579084",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3844541",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 75448390",
+    "Placeid": "ChIJK_-rGlZFqEcRKJ6Sa_SfJgE",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "338",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJK_-rGlZFqEcRKJ6Sa_SfJgE&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJK_-rGlZFqEcRKJ6Sa_SfJgE",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=217&city=Berlin&street=Tempelhofer Damm 203&zip=12099"
+},
+{
+    "Address": "Schloßstraße 111, 12163 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "7555686720628137828",
+    "GoogleFID": "0x47a85a83bc04b28d:0x68db310a692d1f64",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.461478899999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3257643",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 7908640",
+    "Placeid": "ChIJjbIEvINaqEcRZB8taQox22g",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "253",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJjbIEvINaqEcRZB8taQox22g&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJjbIEvINaqEcRZB8taQox22g",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=222&city=Berlin&street=Schloßstr. 111&zip=12163"
+},
+{
+    "Address": "Königsteiner Str. 5, 65929 Frankfurt am Main, Germany",
+    "Category": "Bank",
+    "GoogleCID": "8993384615347720754",
+    "GoogleFID": "0x47bda0a47ddbcd45:0x7cceeba89e439232",
+    "Keyword": "Targobank Frankfurt",
+    "Latitude": "50.101051999999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Frankfurt/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.5491523",
+    "Name": "TARGOBANK",
+    "Phone": "+49 69 3140820",
+    "Placeid": "ChIJRc3bfaSgvUcRMpJDnqjrznw",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "212",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJRc3bfaSgvUcRMpJDnqjrznw&q=Targobank+Frankfurt&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJRc3bfaSgvUcRMpJDnqjrznw",
+    "Website": "https://www.targobank.de/filialen/index.html?amcbid=65&city=Frankfurt&street=Koenigsteiner Str. 5&zip=65929&utm_source=googlemaps&utm_medium=organic&utm_campaign=localbranch&koop_id=seakamp00"
+},
+{
+    "Address": "Marktstraße 57, 45355 Essen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-4815517574334547166",
+    "GoogleFID": "0x47b8c2766c1d5183:0xbd2bd847a4237b22",
+    "Keyword": "Targobank Essen",
+    "Latitude": "51.475943099999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Essen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.953106699999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 201 865610",
+    "Placeid": "ChIJg1EdbHbCuEcRInsjpEfYK70",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "338",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJg1EdbHbCuEcRInsjpEfYK70&q=Targobank+Essen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJg1EdbHbCuEcRInsjpEfYK70",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=57&city=Essen&street=Marktstr. 57&zip=45355"
+},
+{
+    "Address": "Orleanspl. 6A, 81667 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-7594404022185410342",
+    "GoogleFID": "0x479ddf812d69e44f:0x969b41c758d740da",
+    "Keyword": "Targobank München",
+    "Latitude": "48.1288628",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.604449599999999",
+    "Name": "Targo Bank",
+    "Phone": "+49 89 4587470",
+    "Placeid": "ChIJT-RpLYHfnUcR2kDXWMdBm5Y",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "257",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJT-RpLYHfnUcR2kDXWMdBm5Y&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=Targo Bank&query_place_id=ChIJT-RpLYHfnUcR2kDXWMdBm5Y",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=195&city=München&street=Orleansplatz 6a&zip=81667"
+},
+{
+    "Address": "Badstraße 8, 13357 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-6660276545154233479",
+    "GoogleFID": "0x47a8522177e189bf:0xa391f1c514374b79",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.5499064",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3862145",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 4930610",
+    "Placeid": "ChIJv4nhdyFSqEcReUs3FMXxkaM",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "221",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJv4nhdyFSqEcReUs3FMXxkaM&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJv4nhdyFSqEcReUs3FMXxkaM",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=214&city=Berlin&street=Badstraße 8&zip=13357"
+},
+{
+    "Address": "Kennedypl. 5, 45127 Essen, Germany",
+    "Category": "Bank",
+    "GoogleCID": "7253034592115430551",
+    "GoogleFID": "0x47b8c2b71ec9e6fd:0x64a7f48886a91497",
+    "Keyword": "Targobank Essen",
+    "Latitude": "51.456162799999994",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Essen/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "7.0103297",
+    "Name": "TARGOBANK",
+    "Phone": "+49 201 820610",
+    "Placeid": "ChIJ_ebJHrfCuEcRlxSphoj0p2Q",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "236",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ_ebJHrfCuEcRlxSphoj0p2Q&q=Targobank+Essen&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ_ebJHrfCuEcRlxSphoj0p2Q",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=51&city=Essen&street=Kennedyplatz 5&zip=45127"
+},
+{
+    "Address": "Lüneburger Str. 47, 21073 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "8530793011842591407",
+    "GoogleFID": "0x47b191a5576f8b57:0x7663770bd3432aaf",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.4603408",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.98199",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 76798680",
+    "Placeid": "ChIJV4tvV6WRsUcRrypD0wt3Y3Y",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "253",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJV4tvV6WRsUcRrypD0wt3Y3Y&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJV4tvV6WRsUcRrypD0wt3Y3Y",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=106&city=Hamburg&street=Lüneburger Strasse 47&zip=21073"
+},
+{
+    "Address": "Prager Str. 4, 01069 Dresden, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-8143254171427318620",
+    "GoogleFID": "0x4709cf607356f857:0x8efd5979d45b54a4",
+    "Keyword": "Targobank Dresden",
+    "Latitude": "51.044331899999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Dresden/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.735978999999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 351 4842410",
+    "Placeid": "ChIJV_hWc2DPCUcRpFRb1HlZ_Y4",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "324",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJV_hWc2DPCUcRpFRb1HlZ_Y4&q=Targobank+Dresden&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJV_hWc2DPCUcRpFRb1HlZ_Y4",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=421&city=Dresden&street=Prager Str. 4&zip=1069"
+},
+{
+    "Address": "Berliner Allee 36, 13088 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a84ddd5465ff47:0x36d4173ed37a0199",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.548218899999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4514559",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 9279550",
+    "Placeid": "ChIJR_9lVN1NqEcRmQF60z4X1DY",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJR_9lVN1NqEcRmQF60z4X1DY",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=404&city=Berlin&street=Berliner Allee 36-38&zip=13088"
+},
+{
+    "Address": "Brandenburger Str. 28, 14467 Potsdam, Germany",
+    "Category": "Bank",
+    "GoogleCID": "2990750010760382368",
+    "GoogleFID": "0x47a8f5da830a681f:0x2981474a035e47a0",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4004364",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.055860299999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 331 2013880",
+    "Placeid": "ChIJH2gKg9r1qEcRoEdeA0pHgSk",
+    "PriceRange": null,
+    "Rating": "4.1",
+    "Result_Type": null,
+    "Reviews": "91",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJH2gKg9r1qEcRoEdeA0pHgSk&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJH2gKg9r1qEcRoEdeA0pHgSk",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=434&city=Potsdam&street=Brandenburger Str. 28&zip=14467"
+},
+{
+    "Address": "Neue Große Bergstraße 6, 22767 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-492659911921618431",
+    "GoogleFID": "0x47b18587c49c8e65:0xf929b86b9ad63201",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.551447499999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.9373799",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 381976",
+    "Placeid": "ChIJZY6cxIeFsUcRATLWmmu4Kfk",
+    "PriceRange": null,
+    "Rating": "4.4",
+    "Result_Type": null,
+    "Reviews": "128",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJZY6cxIeFsUcRATLWmmu4Kfk&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJZY6cxIeFsUcRATLWmmu4Kfk",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=310&city=Hamburg&street=Neue Große Bergstr. 6&zip=22767"
+},
+{
+    "Address": "Prohliser Allee 10, 01239 Dresden, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-4609421156662311492",
+    "GoogleFID": "0x4709c7f85f99cc7d:0xc0080be138f905bc",
+    "Keyword": "Targobank Dresden",
+    "Latitude": "51.005744199999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Dresden/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.797817199999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 351 21150149",
+    "Placeid": "ChIJfcyZX_jHCUcRvAX5OOELCMA",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "57",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJfcyZX_jHCUcRvAX5OOELCMA&q=Targobank+Dresden&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJfcyZX_jHCUcRvAX5OOELCMA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=239&city=Dresden&street=Prohliser Allee 10&zip=01239"
+},
+{
+    "Address": "Karl-Marx-Straße 118, 12043 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "7338176062316734292",
+    "GoogleFID": "0x47a84fa964feb553:0x65d6703fd5a9e754",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4780853",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4378242",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJU7X-ZKlPqEcRVOep1T9w1mU",
+    "PriceRange": null,
+    "Rating": "3.7",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Open · Closes 11 PM",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "6 AM - 11 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJU7X-ZKlPqEcRVOep1T9w1mU",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Kopernikuspl. 2, 90459 Nürnberg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-29387903155919875",
+    "GoogleFID": "0x479f570c12f7cc47:0xff9797db97b2a3fd",
+    "Keyword": "Targobank Nürnberg",
+    "Latitude": "49.4400475",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Nürnberg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.0801854",
+    "Name": "TARGOBANK",
+    "Phone": "+49 911 944470",
+    "Placeid": "ChIJR8z3EgxXn0cR_aOyl9uXl_8",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "136",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJR8z3EgxXn0cR_aOyl9uXl_8&q=Targobank+N%C3%BCrnberg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJR8z3EgxXn0cR_aOyl9uXl_8",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=209&city=Nürnberg&street=Kopernikusplatz 2&zip=90459"
+},
+{
+    "Address": "Schadowstraße 74, 40212 Düsseldorf, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6991693638603773163",
+    "GoogleFID": "0x47b8ca24419c8495:0x61077c521b5614eb",
+    "Keyword": "Targobank Düsseldorf",
+    "Latitude": "51.2275701",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Düsseldorf/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.7861047999999995",
+    "Name": "TARGOBANK",
+    "Phone": "+49 211 350336",
+    "Placeid": "ChIJlYScQSTKuEcR6xRWG1J8B2E",
+    "PriceRange": null,
+    "Rating": "4.6",
+    "Result_Type": null,
+    "Reviews": "297",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJlYScQSTKuEcR6xRWG1J8B2E&q=Targobank+D%C3%BCsseldorf&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJlYScQSTKuEcR6xRWG1J8B2E",
+    "Website": "https://www.targobank.de/filialen/index.html?amcbid=27&city=D�sseldorf&street=Schadowstr. 74&zip=40212&utm_source=googlemaps&utm_medium=organic&utm_campaign=localbranch&koop_id=seakamp00"
+},
+{
+    "Address": "Berger Str. 175, 60385 Frankfurt am Main, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-483109125651617039",
+    "GoogleFID": "0x47bd0eecadfa847b:0xf94ba6cf51c92af1",
+    "Keyword": "Targobank Frankfurt",
+    "Latitude": "50.1254011",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Frankfurt/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.7061411",
+    "Name": "TARGOBANK",
+    "Phone": "+49 69 9450530",
+    "Placeid": "ChIJe4T6rewOvUcR8SrJUc-mS_k",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "111",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJe4T6rewOvUcR8SrJUc-mS_k&q=Targobank+Frankfurt&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJe4T6rewOvUcR8SrJUc-mS_k",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=74&city=Frankfurt&street=Berger Str. 175-177&zip=60385"
+},
+{
+    "Address": "Groot Enn 2, 21149 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-5621524752330836866",
+    "GoogleFID": "0x47b19ae2d187b111:0xb1fc55059941347e",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.472007399999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.8536761",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 999987910",
+    "Placeid": "ChIJEbGH0eKasUcRfjRBmQVV_LE",
+    "PriceRange": null,
+    "Rating": "4.4",
+    "Result_Type": null,
+    "Reviews": "80",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJEbGH0eKasUcRfjRBmQVV_LE&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJEbGH0eKasUcRfjRBmQVV_LE",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=228&city=Hamburg&street=Groot Enn 2&zip=21149"
+},
+{
+    "Address": "Karolinenstraße 15-19, 90402 Nürnberg, Germany",
+    "Category": "Financial consultant",
+    "GoogleCID": "-6031088735783610144",
+    "GoogleFID": "0x479f57c89a92298b:0xac4d44bfb6c218e0",
+    "Keyword": "Targobank Nürnberg",
+    "Latitude": "49.450849899999994",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Nürnberg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.0761449",
+    "Name": "TARGOBANK Vermögenscenter",
+    "Phone": "+49 911 94890610",
+    "Placeid": "ChIJiymSmshXn0cR4BjCtr9ETaw",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": "4",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJiymSmshXn0cR4BjCtr9ETaw&q=Targobank+N%C3%BCrnberg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Vermögenscenter&query_place_id=ChIJiymSmshXn0cR4BjCtr9ETaw",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Frankfurter Allee 108, 10247 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "8113422453505390429",
+    "GoogleFID": "0x47a84e8cca5ae0eb:0x7098aabc15ddf75d",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.513411",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.474981",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 2940821",
+    "Placeid": "ChIJ6-BayoxOqEcRXffdFbyqmHA",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "356",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ6-BayoxOqEcRXffdFbyqmHA&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ6-BayoxOqEcRXffdFbyqmHA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=405&city=Berlin&street=Frankfurter Allee 108&zip=10247"
+},
+{
+    "Address": "Bahnhofstraße 15, 12305 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": null,
+    "GoogleFID": "0x47a84461943839e5:0x5f9d3ab5bcd8623a",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.3868796",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4035136",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 22012827",
+    "Placeid": "ChIJ5Tk4lGFEqEcROmLYvLU6nV8",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ5Tk4lGFEqEcROmLYvLU6nV8",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=493&city=Berlin-Lichtenrade&street=Bahnhofstraße 15&zip=12305"
+},
+{
+    "Address": "Alte Elbgaustraße 14, 22523 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-2603427401871437656",
+    "GoogleFID": "0x47b1866052998b87:0xdbdec49250ef50a8",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.607014799999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.902664699999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 60590819",
+    "Placeid": "ChIJh4uZUmCGsUcRqFDvUJLE3ts",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "236",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJh4uZUmCGsUcRqFDvUJLE3ts&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJh4uZUmCGsUcRqFDvUJLE3ts",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=484&city=Hamburg-Eidelstedt&street=Alte Elbgaustraße 14-18&zip=22523"
+},
+{
+    "Address": "Große Eschenheimer Str. 1, 60313 Frankfurt am Main, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-2040576384015070419",
+    "GoogleFID": "0x47bd0eafa9b8a7cf:0xe3ae6a9715bb0b2d",
+    "Keyword": "Targobank Frankfurt",
+    "Latitude": "50.1142483",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Frankfurt/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "8.6791394",
+    "Name": "TARGOBANK",
+    "Phone": "+49 69 280841",
+    "Placeid": "ChIJz6e4qa8OvUcRLQu7FZdqruM",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "536",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJz6e4qa8OvUcRLQu7FZdqruM&q=Targobank+Frankfurt&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJz6e4qa8OvUcRLQu7FZdqruM",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=61&city=Frankfurt&street=Grosse Eschenheimer Str. 1&zip=60313"
+},
+{
+    "Address": "Hauptstraße 46, 40597 Düsseldorf, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-5593705307904959094",
+    "GoogleFID": "0x47b8ccc1f4226795:0xb25f2aa8c01b9d8a",
+    "Keyword": "Targobank Düsseldorf",
+    "Latitude": "51.165209999999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Düsseldorf/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.8743799999999995",
+    "Name": "TARGOBANK",
+    "Phone": "+49 211 971560",
+    "Placeid": "ChIJlWci9MHMuEcRip0bwKgqX7I",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "265",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJlWci9MHMuEcRip0bwKgqX7I&q=Targobank+D%C3%BCsseldorf&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJlWci9MHMuEcRip0bwKgqX7I",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=21&city=Düsseldorf&street=Hauptstr. 46&zip=40597"
+},
+{
+    "Address": "Bahnhofstraße 25, 12555 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "3861476774805167765",
+    "GoogleFID": "0x47a848429f29b323:0x3596b8aaeeaede95",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4580376",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.5791606",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 6533112",
+    "Placeid": "ChIJI7Mpn0JIqEcRld6u7qq4ljU",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "641",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJI7Mpn0JIqEcRld6u7qq4ljU&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJI7Mpn0JIqEcRld6u7qq4ljU",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=406&city=Berlin&street=Bahnhofstr. 25&zip=12555"
+},
+{
+    "Address": "Alte Elbgaustraße 14, 22523 Hamburg, Germany",
+    "Category": "ATM",
+    "GoogleCID": "3289282749234482996",
+    "GoogleFID": "0x47b186604d9c633d:0x2da5e13ba9f10f34",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.6070851",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "9.9025726",
+    "Name": "Targobank Geldautomat",
+    "Phone": null,
+    "Placeid": "ChIJPWOcTWCGsUcRNA_xqTvhpS0",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": "1",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJPWOcTWCGsUcRNA_xqTvhpS0&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Open 24 hours",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "Open 24 hours"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "Open 24 hours"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=Targobank Geldautomat&query_place_id=ChIJPWOcTWCGsUcRNA_xqTvhpS0",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Johannisthaler Ch 300, 12351 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "6630874753698242450",
+    "GoogleFID": "0x47a845ead72d3039:0x5c059974e44a1f92",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4311578",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.4565323",
+    "Name": "TargoBank",
+    "Phone": "+49 30 740755960",
+    "Placeid": "ChIJOTAt1-pFqEcRkh9K5HSZBVw",
+    "PriceRange": null,
+    "Rating": "4.9",
+    "Result_Type": null,
+    "Reviews": "418",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJOTAt1-pFqEcRkh9K5HSZBVw&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TargoBank&query_place_id=ChIJOTAt1-pFqEcRkh9K5HSZBVw",
+    "Website": "https://www.targobank.de/filialen/index.html?amcbid=125&city=Berlin&street=Johannisthaler Chaussee 300&zip=12351&utm_source=googlemaps&utm_medium=organic&utm_campaign=localbranch&koop_id=seakamp00"
+},
+{
+    "Address": "Kesselsdorfer Str. 2, 01159 Dresden, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-9176927225357927393",
+    "GoogleFID": "0x4709c57fb05f0c4b:0x80a5014f5aedfc1f",
+    "Keyword": "Targobank Dresden",
+    "Latitude": "51.043850199999994",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Dresden/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.7039882",
+    "Name": "TARGOBANK",
+    "Phone": "+49 351 42448290",
+    "Placeid": "ChIJSwxfsH_FCUcRH_ztWk8BpYA",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "118",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJSwxfsH_FCUcRH_ztWk8BpYA&q=Targobank+Dresden&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJSwxfsH_FCUcRH_ztWk8BpYA",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=481&city=Dresden&street=Kesselsdorfer Str. 2&zip=1159"
+},
+{
+    "Address": "Schweriner Str. 1, 22143 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "3095940751757304338",
+    "GoogleFID": "0x47b18b1cb2c5c94d:0x2af6fdb5f2266212",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.6053609",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.1559379",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 6777068",
+    "Placeid": "ChIJTcnFshyLsUcREmIm8rX99io",
+    "PriceRange": null,
+    "Rating": "4.7",
+    "Result_Type": null,
+    "Reviews": "124",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJTcnFshyLsUcREmIm8rX99io&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJTcnFshyLsUcREmIm8rX99io",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=354&city=Hamburg&street=Schweriner Str. 1&zip=22143"
+},
+{
+    "Address": "Frauenstraße 10, 80469 München, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-988938313791296090",
+    "GoogleFID": "0x479ddf2a92cac133:0xf24695d7ddb22da6",
+    "Keyword": "Targobank München",
+    "Latitude": "48.134315699999995",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+München/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "11.5770837",
+    "Name": "TARGOBANK",
+    "Phone": "+49 89 2366310",
+    "Placeid": "ChIJM8HKkirfnUcRpi2y3deVRvI",
+    "PriceRange": null,
+    "Rating": "4.8",
+    "Result_Type": null,
+    "Reviews": "165",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJM8HKkirfnUcRpi2y3deVRvI&q=Targobank+M%C3%BCnchen&authuser=0&hl=en&gl=US",
+    "Status": "Closed · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJM8HKkirfnUcRpi2y3deVRvI",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=158&city=München&street=Frauenstraße 10&zip=80469"
+},
+{
+    "Address": "Wandsbeker Marktstraße 30, 22041 Hamburg, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-3293579753265294523",
+    "GoogleFID": "0x47b18eab8bce96d1:0xd24adaaa1f341345",
+    "Keyword": "Targobank Hamburg",
+    "Latitude": "53.570735299999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Hamburg/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "10.062859099999999",
+    "Name": "TARGOBANK",
+    "Phone": "+49 40 6894190",
+    "Placeid": "ChIJ0ZbOi6uOsUcRRRM0H6raStI",
+    "PriceRange": null,
+    "Rating": "4.3",
+    "Result_Type": null,
+    "Reviews": "136",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJ0ZbOi6uOsUcRRRM0H6raStI&q=Targobank+Hamburg&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJ0ZbOi6uOsUcRRRM0H6raStI",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=312&city=Hamburg&street=Wandsbeker Markstraße 30&zip=22041"
+},
+{
+    "Address": "Bahnhofstraße 25, 12555 Berlin, Germany",
+    "Category": "ATM",
+    "GoogleCID": "-1043274915645870958",
+    "GoogleFID": "0x47a84972c49cb519:0xf1858afde1da2c92",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.4579276",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.579171599999999",
+    "Name": "TARGOBANK Geldautomat",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJGbWcxHJJqEcRkiza4f2KhfE",
+    "PriceRange": null,
+    "Rating": "5.0",
+    "Result_Type": null,
+    "Reviews": null,
+    "Reviews_Link": null,
+    "Status": "Open 24 hours",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "Open 24 hours"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK Geldautomat&query_place_id=ChIJGbWcxHJJqEcRkiza4f2KhfE",
+    "Website": "https://www.targobank.de/"
+},
+{
+    "Address": "Kasernenstraße 10-12, 40213 Düsseldorf, Germany",
+    "Category": "Bank",
+    "GoogleCID": "-4626945615400506931",
+    "GoogleFID": "0x47b8cb73238dc17f:0xbfc9c97a370069cd",
+    "Keyword": "Targobank Düsseldorf",
+    "Latitude": "51.2240827",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Düsseldorf/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "6.7758774",
+    "Name": "TARGOBANK AG",
+    "Phone": "+49 211 90020111",
+    "Placeid": "ChIJf8GNI3PLuEcRzWkAN3rJyb8",
+    "PriceRange": null,
+    "Rating": "1.7",
+    "Result_Type": null,
+    "Reviews": "102",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJf8GNI3PLuEcRzWkAN3rJyb8&q=Targobank+D%C3%BCsseldorf&authuser=0&hl=en&gl=US",
+    "Status": null,
+    "Timing": [],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK AG&query_place_id=ChIJf8GNI3PLuEcRzWkAN3rJyb8",
+    "Website": "https://www.targobank.de/de/index.html"
+},
+{
+    "Address": "Müllerstraße 138B, 13353 Berlin, Germany",
+    "Category": "Bank",
+    "GoogleCID": "3055970119733699000",
+    "GoogleFID": "0x47a853d5ee085259:0x2a68fca1f6ef61b8",
+    "Keyword": "Targobank Berlin",
+    "Latitude": "52.549607699999996",
+    "Listing_Url": "https://www.google.com/maps/search/Targobank+Berlin/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTAyMy4wIKXMDSoASAFQAw%3D%3D",
+    "Longitude": "13.3528962",
+    "Name": "TARGOBANK",
+    "Phone": "+49 30 4548880",
+    "Placeid": "ChIJWVII7tVTqEcRuGHv9qH8aCo",
+    "PriceRange": null,
+    "Rating": "4.5",
+    "Result_Type": null,
+    "Reviews": "148",
+    "Reviews_Link": "https://search.google.com/local/reviews?placeid=ChIJWVII7tVTqEcRuGHv9qH8aCo&q=Targobank+Berlin&authuser=0&hl=en&gl=US",
+    "Status": "Closes soon · 6 PM · Opens 10 AM Fri",
+    "Timing": [
+        {
+            "day": "Thursday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Friday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Saturday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Sunday",
+            "open_interval": "Closed"
+        },
+        {
+            "day": "Monday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Tuesday",
+            "open_interval": "10 AM - 1 PM"
+        },
+        {
+            "day": "Wednesday",
+            "open_interval": "10 AM - 1 PM"
+        }
+    ],
+    "Url": "https://www.google.com/maps/search/?api=1&query=TARGOBANK&query_place_id=ChIJWVII7tVTqEcRuGHv9qH8aCo",
+    "Website": "https://www.targobank.de/de/filialen/index.html?amcbid=216&city=Berlin&street=Müllerstr. 138b&zip=13353"
+}
+]

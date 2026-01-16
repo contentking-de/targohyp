@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, X, Menu, Home, Calendar, HelpCircle } from "lucide-react";
+import { ChevronDown, X, Menu, Home, Calendar, HelpCircle, MapPin } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
 import { useState } from "react";
 
@@ -39,6 +39,13 @@ export function Header() {
               </Link>
             </div>
             <div className="flex items-center gap-4 ml-auto">
+              <Link
+                href="/standorte"
+                className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1 flex items-center gap-1.5"
+              >
+                <MapPin className="w-4 h-4 flex-shrink-0" />
+                Standorte
+              </Link>
               <Link
                 href="/kontakt"
                 className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1 flex items-center gap-1.5"
