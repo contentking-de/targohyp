@@ -82,7 +82,7 @@ export function HeroSection() {
 
       {/* Content Container */}
       <div className="container mx-auto px-4 relative z-10 py-16 lg:py-24">
-        <div className="max-w-4xl bg-white rounded-lg shadow-lg p-8 lg:p-12 min-h-[500px] flex flex-col">
+        <div className="max-w-4xl bg-white rounded-lg shadow-lg p-4 sm:p-6 lg:p-12 min-h-[500px] flex flex-col overflow-hidden">
           {/* Tags */}
           <div className="flex flex-wrap gap-0 mb-6">
             <button
@@ -123,8 +123,8 @@ export function HeroSection() {
             {activeView === "default" && (
               <div className="flex-1 flex flex-col">
                 {/* Headline */}
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
-                  IHR FINANZIERUNGSPARTER FÜR BAU UND IMMOBILIEN
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight break-words hyphens-auto">
+                  IHR FINANZIERUNGSPARTNER FÜR BAU UND IMMOBILIEN
                 </h1>
 
                 {/* Description */}
@@ -138,11 +138,12 @@ export function HeroSection() {
                 {/* CTA Button */}
                 <div className="flex flex-col sm:flex-row items-start sm:items-start gap-6 mt-auto">
                   <Button
-                    className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
+                    className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-4 sm:px-8 py-6 text-base sm:text-lg font-semibold whitespace-normal break-words w-full sm:w-auto"
                     asChild
                   >
                     <Link href="/finanzierungsanfrage">
-                      Jetzt von unsere Experten beraten lassen
+                      <span className="sm:hidden">Jetzt beraten lassen</span>
+                      <span className="hidden sm:inline">Jetzt von unsere Experten beraten lassen</span>
                     </Link>
                   </Button>
                   <div className="flex-shrink-0 sm:ml-auto sm:-mt-8">
