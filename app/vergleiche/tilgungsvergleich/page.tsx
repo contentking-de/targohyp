@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, XCircle, Download, TrendingUp, Calendar, Target } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Tilgungsmodelle vergleichen - Annuität, Raten & tilgungsfrei | Targohyp",
   description: "Welches Tilgungsmodell passt zu Ihrer Situation? Detaillierter Vergleich von Annuitätentilgung, Ratentilgung und tilgungsfreien Jahren. Vor- und Nachteile im Überblick.",
-};
+}, { path: "/vergleiche/tilgungsvergleich" });
 
 export default function TilgungsvergleichPage() {
   const tilgungsmodelle = [

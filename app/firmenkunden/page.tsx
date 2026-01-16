@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building, Calculator, BookOpen } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Firmenkunden - Unternehmensimmobilien | Targohyp",
   description: "Professionelle Baufinanzierung für Firmenkunden. Spezialisierte Lösungen für Unternehmensimmobilien, Produktionsstätten und gewerbliche Objekte. Maßgeschneiderte Konditionen.",
-};
+}, { path: "/firmenkunden" });
 
 export default function FirmenkundenPage() {
   return (

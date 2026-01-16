@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, CreditCard, Shield, TrendingUp } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Bonität & Schufa für Baufinanzierung | Targohyp",
   description: "Alles Wichtige zur Bonitätsprüfung und Schufa-Auskunft bei der Baufinanzierung. Erfahren Sie, wie Ihre Bonität die Konditionen beeinflusst.",
-};
+}, { path: "/finanzierung/ablauf-unterlagen/bonitaet-schufa" });
 
 export default function BonitaetSchufaPage() {
   const faktoren = [

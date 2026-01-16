@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Ihr Eigenheim | Günstige Zinsen | Targohyp",
   description: "Finanzierung für den Neubau oder Kauf Ihres Eigenheims. Günstige Zinsen, flexible Konditionen und individuelle Beratung für Ihre Baufinanzierung. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/finanzierung/baufinanzierung" });
 
 export default function BaufinanzierungPage() {
   const vorteile = [

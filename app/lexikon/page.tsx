@@ -3,11 +3,12 @@ import { BookOpen, Search, ArrowRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { lexikonBegriffe } from "@/lib/lexikon-data";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Lexikon Baufinanzierung - Fachbegriffe erklärt | Targohyp",
   description: "Umfassendes Glossar mit allen wichtigen Fachbegriffen zur Baufinanzierung. Von Annuität bis Zinsbindung - verständlich erklärt für Ihre Immobilienfinanzierung.",
-};
+}, { path: "/lexikon" });
 
 export default function LexikonPage() {
   const begriffe = lexikonBegriffe;

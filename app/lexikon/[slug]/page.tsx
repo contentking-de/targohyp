@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { findBegriffBySlug, findVerwandteBegriffe, lexikonBegriffe } from "@/lib/lexikon-data";
 import type { Metadata } from "next";
+import { createMetadata } from "@/lib/utils";
 
 // Generiere statische Pfade für alle Begriffe
 export async function generateStaticParams() {
@@ -21,15 +22,16 @@ export async function generateMetadata({
   const begriff = findBegriffBySlug(slug);
 
   if (!begriff) {
-    return {
+    return createMetadata({
       title: "Begriff nicht gefunden | Targohyp",
-    };
+      description: "Der angeforderte Begriff konnte im Lexikon nicht gefunden werden.",
+    }, { path: `/lexikon/${slug}` });
   }
 
-  return {
+  return createMetadata({
     title: `${begriff.begriff} - Lexikon Baufinanzierung | Targohyp`,
     description: begriff.definition,
-  };
+  }, { path: `/lexikon/${slug}` });
 }
 
 export default async function LexikonDetailPage({

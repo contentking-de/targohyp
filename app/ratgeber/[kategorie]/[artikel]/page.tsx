@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { kategorien, getKategorieById, getArtikelById, getAllArtikel } from "@/lib/ratgeber-data";
 import { notFound } from "next/navigation";
 import { getArtikelContent, getAuthorInfo, getAuthorSlug } from "@/lib/ratgeber-content";
+import { createMetadata } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{
@@ -19,15 +20,16 @@ export async function generateMetadata({ params }: PageProps) {
   const kategorie = getKategorieById(kategorieId);
   
   if (!artikel || !kategorie) {
-    return {
+    return createMetadata({
       title: "Artikel nicht gefunden | Targohyp",
-    };
+      description: "Der angeforderte Artikel konnte im Ratgeber nicht gefunden werden.",
+    }, { path: `/ratgeber/${kategorieId}/${artikelId}` });
   }
 
-  return {
+  return createMetadata({
     title: `${artikel.title} - ${kategorie.title} | Targohyp`,
     description: artikel.subtitle || kategorie.description,
-  };
+  }, { path: `/ratgeber/${kategorieId}/${artikelId}` });
 }
 
 export async function generateStaticParams() {

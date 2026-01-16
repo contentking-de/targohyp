@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Gift, TrendingUp, Building2 } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Fördermittel für Baufinanzierung | KfW, Bafa & mehr | Targohyp",
   description: "Übersicht der Fördermittel für Ihre Baufinanzierung. Von KfW-Förderung über Bafa bis zu regionalen Fördermitteln - nutzen Sie alle Möglichkeiten.",
-};
+}, { path: "/finanzierung/foerdermittel" });
 
 export default function FoerdermittelPage() {
   const foerdermittel = [

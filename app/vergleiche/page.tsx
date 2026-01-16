@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Scale, ArrowRight, CheckCircle2, XCircle, Download } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung vergleichen - Produkte & Optionen | Targohyp",
   description: "Vergleichen Sie verschiedene Baufinanzierungsprodukte, Tilgungsmodelle und Zinsoptionen. Finden Sie die beste Lösung für Ihre Immobilienfinanzierung im direkten Vergleich.",
-};
+}, { path: "/vergleiche" });
 
 export default function VergleichePage() {
   // Beispiel-Vergleiche (später aus Datenbank)

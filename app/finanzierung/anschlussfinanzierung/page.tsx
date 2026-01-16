@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw, TrendingUp, Shield, Calculator } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Anschlussfinanzierung - Günstige Zinsen sichern | Targohyp",
   description: "Günstige Anschlussfinanzierung für Ihre bestehende Immobilie. Profitieren Sie von aktuellen Zinssätzen, besseren Konditionen und flexiblen Laufzeiten. Jetzt umschulden und sparen.",
-};
+}, { path: "/finanzierung/anschlussfinanzierung" });
 
 export default function AnschlussfinanzierungPage() {
   const vorteile = [

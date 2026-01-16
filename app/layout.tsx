@@ -21,6 +21,20 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  openGraph: {
+    title: "Targohyp - Baufinanzierung",
+    description: "Content-Plattform für Baufinanzierung",
+    type: "website",
+    locale: "de_DE",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Targohyp - Baufinanzierung",
+    description: "Content-Plattform für Baufinanzierung",
+  },
+  alternates: {
+    canonical: "https://www.targohyp.de/",
+  },
 };
 
 export default function RootLayout({

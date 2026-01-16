@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, MapPin, TrendingUp, Shield } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Regionale Fördermittel für Baufinanzierung | Bundesländer & Kommunen | Targohyp",
   description: "Übersicht regionaler Fördermittel für Baufinanzierungen. Förderprogramme der Bundesländer und Kommunen nutzen.",
-};
+}, { path: "/finanzierung/foerdermittel/regionale-foerdermittel" });
 
 export default function RegionaleFoerdermittelPage() {
   const regionen = [

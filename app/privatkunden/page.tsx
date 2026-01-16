@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Home, Calculator, BookOpen } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Privatkunden - Individuelle Lösungen | Targohyp",
   description: "Baufinanzierung speziell für Privatkunden. Individuelle Lösungen für Ihr Eigenheim, günstige Zinsen und persönliche Beratung. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/privatkunden" });
 
 export default function PrivatkundenPage() {
   return (

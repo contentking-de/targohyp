@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { kategorien, getKategorieById } from "@/lib/ratgeber-data";
 import { getArtikelContent } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
+import { createMetadata } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{
@@ -18,15 +19,16 @@ export async function generateMetadata({ params }: PageProps) {
   const kategorie = getKategorieById(kategorieId);
   
   if (!kategorie) {
-    return {
+    return createMetadata({
       title: "Kategorie nicht gefunden | Targohyp",
-    };
+      description: "Die angeforderte Kategorie konnte im Ratgeber nicht gefunden werden.",
+    }, { path: `/ratgeber/${kategorieId}` });
   }
 
-  return {
+  return createMetadata({
     title: `${kategorie.title} - Ratgeber | Targohyp`,
     description: kategorie.description,
-  };
+  }, { path: `/ratgeber/${kategorieId}` });
 }
 
 export async function generateStaticParams() {

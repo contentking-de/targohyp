@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, TrendingUp, Building2, Calculator, Shield } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Kapitalanlage finanzieren | Immobilien als Investment | Targohyp",
   description: "Finanzierung für Immobilien als Kapitalanlage. Attraktive Konditionen für Investoren. Mieteinnahmen werden bei der Finanzierung berücksichtigt. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/finanzierung/kapitalanlage-finanzieren" });
 
 export default function KapitalanlageFinanzierenPage() {
   const vorteile = [

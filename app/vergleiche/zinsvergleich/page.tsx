@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, XCircle, Download, TrendingUp, TrendingDown, Shield } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Festzins vs. variabler Zins - Vor- und Nachteile im Vergleich | Targohyp",
   description: "Detaillierter Vergleich von festen und variablen Zinssätzen für Ihre Baufinanzierung. Planungssicherheit vs. Flexibilität - welche Option ist die richtige für Sie?",
-};
+}, { path: "/vergleiche/zinsvergleich" });
 
 export default function ZinsvergleichPage() {
   const festzins = {

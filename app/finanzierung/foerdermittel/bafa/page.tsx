@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Zap, TrendingUp, Shield } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Bafa-Förderung für Baufinanzierung | Heizung & Sanierung | Targohyp",
   description: "Bafa-Förderung für energieeffiziente Heizungsanlagen und energetische Sanierung. Direkte Zuschüsse für Ihre Baufinanzierung nutzen.",
-};
+}, { path: "/finanzierung/foerdermittel/bafa" });
 
 export default function BafaFoerdermittelPage() {
   const foerderungen = [

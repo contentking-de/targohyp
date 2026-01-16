@@ -2,11 +2,12 @@ import { MapWrapper } from '@/components/standorte/map-wrapper';
 import { MapPin } from 'lucide-react';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: 'Standorte - TARGOBANK Filialen finden | Targohyp',
   description: 'Finden Sie die nächste TARGOBANK Filiale in Ihrer Nähe. Übersicht aller Standorte mit interaktiver Karte, Adressen und Öffnungszeiten.',
-};
+}, { path: "/standorte" });
 
 interface Standort {
   Address: string;

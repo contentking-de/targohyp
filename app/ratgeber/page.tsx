@@ -5,11 +5,12 @@ import { ArrowRight, Search, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { kategorien } from "@/lib/ratgeber-data";
 import { getArtikelContent } from "@/lib/ratgeber-content";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Ratgeber zur Baufinanzierung - Tipps & Informationen | Targohyp",
   description: "Umfassende Ratgeber und Informationen zur Baufinanzierung. Von der ersten Planung bis zur Umschuldung - alles was Sie über Immobilienfinanzierung wissen müssen.",
-};
+}, { path: "/ratgeber" });
 
 export default function RatgeberPage() {
 

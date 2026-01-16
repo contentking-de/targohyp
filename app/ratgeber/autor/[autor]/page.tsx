@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { getArtikelByAuthor } from "@/lib/ratgeber-data";
 import { getAuthorInfo, getAuthorNameFromSlug, getAllAuthors } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
+import { createMetadata } from "@/lib/utils";
 
 interface PageProps {
   params: Promise<{
@@ -17,15 +18,16 @@ export async function generateMetadata({ params }: PageProps) {
   const authorName = getAuthorNameFromSlug(autorSlug);
   
   if (!authorName) {
-    return {
+    return createMetadata({
       title: "Autor nicht gefunden | Targohyp",
-    };
+      description: "Der angeforderte Autor konnte im Ratgeber nicht gefunden werden.",
+    }, { path: `/ratgeber/autor/${autorSlug}` });
   }
 
-  return {
+  return createMetadata({
     title: `Artikel von ${authorName} - Ratgeber | Targohyp`,
     description: `Alle Ratgeber-Artikel von ${authorName} zum Thema Immobilienfinanzierung.`,
-  };
+  }, { path: `/ratgeber/autor/${autorSlug}` });
 }
 
 export async function generateStaticParams() {

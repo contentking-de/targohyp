@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, FileText, ClipboardList, CreditCard } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Ablauf & Unterlagen für Baufinanzierung | Targohyp",
   description: "Alles Wichtige zum Ablauf einer Baufinanzierung und welche Unterlagen Sie benötigen. Von der ersten Beratung bis zur Auszahlung - wir begleiten Sie durch den gesamten Prozess.",
-};
+}, { path: "/finanzierung/ablauf-unterlagen" });
 
 export default function AblaufUnterlagenPage() {
   const schritte = [

@@ -3,11 +3,12 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, BookOpen, FileText, Scale } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createMetadata({
   title: "Targohyp - Ihr Finanzierungspartner für Bau und Immobilien",
   description: "Finden Sie die passende Baufinanzierung für Ihr Vorhaben. Mit unseren Rechnern, umfassenden Informationen und professioneller Beratung machen wir Ihre Immobilienfinanzierung einfach und transparent.",
-};
+}, { path: "/" });
 
 export default function Home() {
   return (

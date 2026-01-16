@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Briefcase } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Selbstständige | Flexible Lösungen | Targohyp",
   description: "Spezielle Baufinanzierung für Selbstständige und Freiberufler. Flexible Lösungen trotz variabler Einkommen. Individuelle Beratung für Ihre Baufinanzierung. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/finanzierung/baufinanzierung/selbststaendige" });
 
 export default function BaufinanzierungSelbststaendigePage() {
   const vorteile = [

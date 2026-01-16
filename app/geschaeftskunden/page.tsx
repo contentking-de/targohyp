@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Calculator, BookOpen } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Geschäftskunden - Gewerbeimmobilien | Targohyp",
   description: "Spezialisierte Baufinanzierung für Geschäftskunden. Finanzierungslösungen für Gewerbeimmobilien, Bürogebäude und gewerbliche Nutzung. Individuelle Konditionen.",
-};
+}, { path: "/geschaeftskunden" });
 
 export default function GeschaeftskundenPage() {
   return (

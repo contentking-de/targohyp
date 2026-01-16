@@ -1,7 +1,9 @@
-export const metadata = {
+import { createMetadata } from "@/lib/utils";
+
+export const metadata = createMetadata({
   title: "Impressum - Rechtliche Angaben | Targohyp",
   description: "Impressum und rechtliche Angaben der Targohyp. Angaben gemäß § 5 TMG und Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV.",
-};
+}, { path: "/impressum" });
 
 export default function ImpressumPage() {
   return (

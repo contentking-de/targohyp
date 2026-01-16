@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Kontakt & Beratung - Baufinanzierungsexperten | Targohyp",
   description: "Kontaktieren Sie unsere Experten für Ihre Baufinanzierung. Persönliche Beratung per Telefon, E-Mail oder vor Ort. Wir helfen Ihnen bei allen Fragen zur Immobilienfinanzierung.",
-};
+}, { path: "/kontakt" });
 
 export default function KontaktPage() {
   return (

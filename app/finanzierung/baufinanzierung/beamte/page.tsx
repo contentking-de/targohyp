@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Award } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung für Beamte | Günstige Zinsen | Targohyp",
   description: "Spezielle Baufinanzierung für Beamte mit besonders günstigen Konditionen. Nutzen Sie Ihre sichere berufliche Situation für attraktive Zinssätze. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/finanzierung/baufinanzierung/beamte" });
 
 export default function BaufinanzierungBeamtePage() {
   const vorteile = [

@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, FileText, TrendingUp, Shield } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Darlehensarten für Baufinanzierung | Übersicht | Targohyp",
   description: "Übersicht der verschiedenen Darlehensarten für Ihre Baufinanzierung. Von Annuitätendarlehen bis Bauspardarlehen - finden Sie die passende Lösung.",
-};
+}, { path: "/finanzierung/darlehensarten" });
 
 export default function DarlehensartenPage() {
   const darlehensarten = [

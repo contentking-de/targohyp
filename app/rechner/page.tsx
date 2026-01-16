@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingUp, DollarSign, Percent, Calendar, ArrowRight, Wallet, Receipt, FileText, Home } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung berechnen - Kostenlose Rechner | Targohyp",
   description: "Nutzen Sie unsere kostenlosen Rechner für Baufinanzierung, Tilgung, Eigenkapital, Budget, Nebenkosten, Zinsen, Darlehen, Bauzins, Rendite und Mieten/Kaufen. Planen Sie Ihre Immobilienfinanzierung professionell und finden Sie die besten Konditionen.",
-};
+}, { path: "/rechner" });
 
 export default function RechnerPage() {
   const rechner = [

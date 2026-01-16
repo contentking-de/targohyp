@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Download, FileText, ClipboardList } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Checklisten für Baufinanzierung | Download | Targohyp",
   description: "Praktische Checklisten für Ihre Baufinanzierung zum Download. Von der ersten Beratung bis zur Auszahlung - behalten Sie den Überblick.",
-};
+}, { path: "/finanzierung/ablauf-unterlagen/checklisten" });
 
 export default function ChecklistsPage() {
   const checklisten = [

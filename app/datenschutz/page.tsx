@@ -1,7 +1,9 @@
-export const metadata = {
+import { createMetadata } from "@/lib/utils";
+
+export const metadata = createMetadata({
   title: "Datenschutzerklärung - DSGVO-konform | Targohyp",
   description: "Umfassende Datenschutzerklärung der Targohyp. Informationen zur Erhebung, Verarbeitung und Nutzung Ihrer personenbezogenen Daten gemäß DSGVO.",
-};
+}, { path: "/datenschutz" });
 
 export default function DatenschutzPage() {
   return (

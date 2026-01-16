@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Percent } from "lucide-react";
+import { createMetadata } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = createMetadata({
   title: "Baufinanzierung ohne Eigenkapital | 100% Finanzierung | Targohyp",
   description: "Baufinanzierung auch ohne Eigenkapital möglich. 100% Finanzierung für Ihr Eigenheim. Flexible Lösungen und individuelle Beratung. Jetzt unverbindlich anfragen.",
-};
+}, { path: "/finanzierung/baufinanzierung/ohne-eigenkapital" });
 
 export default function BaufinanzierungOhneEigenkapitalPage() {
   const vorteile = [
