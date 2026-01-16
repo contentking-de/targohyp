@@ -7,6 +7,9 @@ import { Testimonials } from "@/components/layout/testimonials";
 import { Newsletter } from "@/components/layout/newsletter";
 import { ExitIntentPopup } from "@/components/layout/exit-intent-popup";
 import { Providers } from "./providers";
+import { db } from "@/db";
+import { banksOrCreditUnions } from "@/db/schema/other";
+import { eq } from "drizzle-orm";
 
 const handelGo = localFont({
   src: "./fonts/HandelGo.ttf",
@@ -37,11 +40,20 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Lade Targobank-Daten aus der Datenbank
+  const targobankData = await db
+    .select()
+    .from(banksOrCreditUnions)
+    .where(eq(banksOrCreditUnions.name, "TARGOBANK"))
+    .limit(1);
+
+  const targobank = targobankData[0];
+
   // Organization Schema-Markup
   const organizationSchema = {
     "@context": "https://schema.org",
@@ -77,6 +89,51 @@ export default function RootLayout({
     }
   };
 
+  // BankOrCreditUnion Schema-Markup (falls Daten vorhanden)
+  const bankOrCreditUnionSchema = targobank ? (() => {
+    const schema: Record<string, any> = {
+      "@context": "https://schema.org",
+      "@type": "BankOrCreditUnion",
+      "name": targobank.name,
+      "legalName": targobank.legalName,
+      "description": targobank.description,
+      "logo": targobank.logo?.startsWith("http") ? targobank.logo : `https://www.targohyp.de${targobank.logo}`,
+      "url": targobank.url,
+      "foundingDate": targobank.foundingDate?.toString(),
+      "hasMap": targobank.hasMap,
+    };
+
+    if (targobank.awards && Array.isArray(targobank.awards) && targobank.awards.length > 0) {
+      schema.award = targobank.awards;
+    }
+
+    if (targobank.sameAs && Array.isArray(targobank.sameAs) && targobank.sameAs.length > 0) {
+      schema.sameAs = targobank.sameAs;
+    }
+
+    if (targobank.address && typeof targobank.address === "object") {
+      schema.address = targobank.address;
+    }
+
+    if (targobank.aggregateRating && typeof targobank.aggregateRating === "object") {
+      schema.aggregateRating = targobank.aggregateRating;
+    }
+
+    if (targobank.areaServed && Array.isArray(targobank.areaServed) && targobank.areaServed.length > 0) {
+      schema.areaServed = targobank.areaServed;
+    }
+
+    if (targobank.contactPoint && Array.isArray(targobank.contactPoint) && targobank.contactPoint.length > 0) {
+      schema.contactPoint = targobank.contactPoint;
+    }
+
+    if (targobank.employee && Array.isArray(targobank.employee) && targobank.employee.length > 0) {
+      schema.employee = targobank.employee;
+    }
+
+    return schema;
+  })() : null;
+
   return (
     <html lang="de" className="scroll-smooth">
       <body className={`${handelGo.variable} antialiased bg-white`}>
@@ -87,6 +144,15 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema)
           }}
         />
+        {/* BankOrCreditUnion Schema-Markup */}
+        {bankOrCreditUnionSchema && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(bankOrCreditUnionSchema)
+            }}
+          />
+        )}
         <Providers>
           <div className="flex min-h-screen flex-col">
             <Header />
