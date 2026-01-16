@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, X, Menu, Home, Calendar } from "lucide-react";
+import { ChevronDown, X, Menu, Home, Calendar, HelpCircle } from "lucide-react";
 import { SearchBox } from "@/components/ui/search-box";
 import { useState } from "react";
 
@@ -39,6 +39,13 @@ export function Header() {
               </Link>
             </div>
             <div className="flex items-center gap-4 ml-auto">
+              <Link
+                href="/kontakt"
+                className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1 flex items-center gap-1.5"
+              >
+                <HelpCircle className="w-4 h-4 flex-shrink-0" />
+                Hilfe & Kontakt
+              </Link>
               <Button
                 className="bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-[5px] min-h-[44px] whitespace-nowrap"
                 asChild
@@ -248,24 +255,10 @@ export function Header() {
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <Link
-              href="/lexikon"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
-            >
-              Lexikon
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
               href="/vergleiche"
               className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
             >
               Vergleiche
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
-            <Link
-              href="/kontakt"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
-            >
-              Hilfe & Kontakt
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
             <SearchBox />
@@ -499,25 +492,11 @@ export function Header() {
               Ratgeber
             </Link>
             <Link
-              href="/lexikon"
-              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Lexikon
-            </Link>
-            <Link
               href="/vergleiche"
               className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Vergleiche
-            </Link>
-            <Link
-              href="/kontakt"
-              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Hilfe & Kontakt
             </Link>
 
             {/* SearchBox für Mobile */}

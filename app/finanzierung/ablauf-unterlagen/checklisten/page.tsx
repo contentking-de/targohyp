@@ -54,7 +54,7 @@ export default function ChecklistsPage() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24">
+      <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <nav className="mb-6 text-sm">
             <Link href="/finanzierung" className="text-targo-blue hover:underline">

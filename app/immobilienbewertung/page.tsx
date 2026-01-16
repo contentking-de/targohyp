@@ -3,13 +3,26 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Check } from "lucide-react";
+import { Check, ArrowLeft, ArrowRight } from "lucide-react";
 
 type FormData = {
+  // Schritt 1: Immobiliendaten
+  propertyType: string;
   constructionYear: string;
   squareMeters: string;
+  plotArea: string;
   energyEfficiencyClass: string;
   location: string;
+  // Schritt 2: Weitere Details
+  isRenovated: string;
+  renovationDate: string;
+  hasPhotovoltaik: string;
+  heatingType: string;
+  // Schritt 3: Persönliche Daten
+  firstName: string;
+  lastName: string;
+  email: string;
+  userType: string;
 };
 
 const energyEfficiencyClasses = [
@@ -25,34 +38,83 @@ const energyEfficiencyClasses = [
 ];
 
 export default function ImmobilienbewertungPage() {
+  const [currentStep, setCurrentStep] = useState(1);
   const [formData, setFormData] = useState<FormData>({
+    propertyType: "",
     constructionYear: "",
     squareMeters: "",
+    plotArea: "",
     energyEfficiencyClass: "",
     location: "",
+    isRenovated: "",
+    renovationDate: "",
+    hasPhotovoltaik: "",
+    heatingType: "",
+    firstName: "",
+    lastName: "",
+    email: "",
+    userType: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [error, setError] = useState<string>("");
+
+  const totalSteps = 3;
 
   const updateFormData = (field: keyof FormData, value: string) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
     setError("");
   };
 
-  const isFormValid = (): boolean => {
-    return (
-      !!formData.constructionYear &&
-      !!formData.squareMeters &&
-      !!formData.energyEfficiencyClass &&
-      !!formData.location
-    );
+  const isStepValid = (step: number): boolean => {
+    if (step === 1) {
+      return (
+        !!formData.propertyType &&
+        !!formData.constructionYear &&
+        !!formData.squareMeters &&
+        !!formData.energyEfficiencyClass &&
+        !!formData.location
+      );
+    }
+    if (step === 2) {
+      // Schritt 2 ist gültig, wenn alle Felder ausgefüllt sind
+      // Wenn saniert = ja, dann muss auch das Datum angegeben werden
+      const isValid = !!formData.isRenovated && 
+                      !!formData.hasPhotovoltaik && 
+                      !!formData.heatingType;
+      
+      if (formData.isRenovated === "ja" && !formData.renovationDate) {
+        return false;
+      }
+      
+      return isValid;
+    }
+    if (step === 3) {
+      return (
+        !!formData.firstName &&
+        !!formData.lastName &&
+        !!formData.email
+      );
+    }
+    return false;
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!isFormValid()) {
+  const handleNext = () => {
+    if (currentStep < totalSteps && isStepValid(currentStep)) {
+      setCurrentStep(currentStep + 1);
+      setError("");
+    }
+  };
+
+  const handlePrevious = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+      setError("");
+    }
+  };
+
+  const handleSubmit = async () => {
+    if (!isStepValid(3)) {
       setError("Bitte füllen Sie alle Felder aus.");
       return;
     }
@@ -76,6 +138,13 @@ export default function ImmobilienbewertungPage() {
       return;
     }
 
+    // Validierung: E-Mail-Format
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setError("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+      return;
+    }
+
     setIsSubmitting(true);
     setError("");
 
@@ -85,11 +154,21 @@ export default function ImmobilienbewertungPage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
+          body: JSON.stringify({
+          propertyType: formData.propertyType,
           constructionYear: constructionYear,
           squareMeters: squareMeters,
+          plotArea: formData.plotArea ? parseFloat(formData.plotArea) : null,
           energyEfficiencyClass: formData.energyEfficiencyClass,
           location: formData.location,
+          isRenovated: formData.isRenovated,
+          renovationDate: formData.renovationDate || null,
+          hasPhotovoltaik: formData.hasPhotovoltaik,
+          heatingType: formData.heatingType,
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email.toLowerCase(),
+          userType: formData.userType,
         }),
       });
 
@@ -104,7 +183,7 @@ export default function ImmobilienbewertungPage() {
       setError(
         error instanceof Error
           ? error.message
-          : "Es ist ein Fehler aufgetreten. Bitte versuche es erneut."
+          : "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es erneut."
       );
     } finally {
       setIsSubmitting(false);
@@ -114,7 +193,7 @@ export default function ImmobilienbewertungPage() {
   if (isSubmitted) {
     return (
       <div className="w-full min-h-screen bg-gray-50 py-12">
-        <div className="container mx-auto px-4 max-w-2xl">
+        <div className="container mx-auto px-4 max-w-[722px]">
           <div className="bg-white rounded-lg shadow-lg p-8 lg:p-12 text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Check className="w-8 h-8 text-green-600" />
@@ -140,7 +219,7 @@ export default function ImmobilienbewertungPage() {
 
   return (
     <div className="w-full min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4 max-w-2xl">
+      <div className="container mx-auto px-4 max-w-[722px]">
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-[rgb(0,47,95)]">
@@ -152,113 +231,383 @@ export default function ImmobilienbewertungPage() {
           </p>
         </div>
 
+        {/* Progress Bar */}
+        {currentStep <= totalSteps && (
+          <div className="mb-8">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-sm font-medium text-gray-700">
+                Schritt {currentStep} von {totalSteps}
+              </span>
+              <span className="text-sm text-gray-500">
+                {Math.round((currentStep / totalSteps) * 100)}%
+              </span>
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div
+                className="bg-[#bb133e] h-2 rounded-full transition-all duration-300"
+                style={{ width: `${(currentStep / totalSteps) * 100}%` }}
+              />
+            </div>
+          </div>
+        )}
+
         {/* Form Card */}
         <div className="bg-white rounded-lg shadow-lg p-8 lg:p-12">
-          <form onSubmit={handleSubmit} className="space-y-6">
-            {/* Baujahr */}
-            <div>
-              <label 
-                htmlFor="constructionYear"
-                className="block text-sm font-medium mb-2"
-              >
-                Baujahr *
-              </label>
-              <Input
-                id="constructionYear"
-                type="number"
-                value={formData.constructionYear}
-                onChange={(e) =>
-                  updateFormData("constructionYear", e.target.value)
-                }
-                placeholder="z.B. 1995"
-                min="1800"
-                max={new Date().getFullYear()}
-                required
-              />
-            </div>
+          {currentStep === 1 && (
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold mb-6">Immobiliendaten</h2>
+              
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* Immobilienart */}
+                <div>
+                  <label 
+                    htmlFor="propertyType"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Art der Immobilie *
+                  </label>
+                  <select
+                    id="propertyType"
+                    value={formData.propertyType}
+                    onChange={(e) =>
+                      updateFormData("propertyType", e.target.value)
+                    }
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie</option>
+                    <option value="Haus">Haus</option>
+                    <option value="Wohnung">Wohnung</option>
+                    <option value="Gewerbeimmobilie">Gewerbeimmobilie</option>
+                  </select>
+                </div>
 
-            {/* Quadratmeter */}
-            <div>
-              <label 
-                htmlFor="squareMeters"
-                className="block text-sm font-medium mb-2"
-              >
-                Anzahl der Quadratmeter *
-              </label>
-              <Input
-                id="squareMeters"
-                type="number"
-                value={formData.squareMeters}
-                onChange={(e) => updateFormData("squareMeters", e.target.value)}
-                placeholder="z.B. 120"
-                min="1"
-                step="0.01"
-                required
-              />
-            </div>
+                {/* Baujahr */}
+                <div>
+                  <label 
+                    htmlFor="constructionYear"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Baujahr *
+                  </label>
+                  <Input
+                    id="constructionYear"
+                    type="number"
+                    value={formData.constructionYear}
+                    onChange={(e) =>
+                      updateFormData("constructionYear", e.target.value)
+                    }
+                    placeholder="z.B. 1995"
+                    min="1800"
+                    max={new Date().getFullYear()}
+                    required
+                  />
+                </div>
 
-            {/* Energieeffizienzklasse */}
-            <div>
-              <label 
-                htmlFor="energyEfficiencyClass"
-                className="block text-sm font-medium mb-2"
-              >
-                Energieeffizienzklasse *
-              </label>
-              <select
-                id="energyEfficiencyClass"
-                value={formData.energyEfficiencyClass}
-                onChange={(e) =>
-                  updateFormData("energyEfficiencyClass", e.target.value)
-                }
-                className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                required
-              >
-                <option value="">Bitte wählen Sie eine Energieeffizienzklasse</option>
-                {energyEfficiencyClasses.map((eec) => (
-                  <option key={eec} value={eec}>
-                    {eec}
-                  </option>
-                ))}
-              </select>
-            </div>
+                {/* Quadratmeter Wohnfläche */}
+                <div>
+                  <label 
+                    htmlFor="squareMeters"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Anzahl der Quadratmeter (Wohnfläche) *
+                  </label>
+                  <Input
+                    id="squareMeters"
+                    type="number"
+                    value={formData.squareMeters}
+                    onChange={(e) => updateFormData("squareMeters", e.target.value)}
+                    placeholder="z.B. 120"
+                    min="1"
+                    step="0.01"
+                    required
+                  />
+                </div>
 
-            {/* Standort */}
-            <div>
-              <label 
-                htmlFor="location"
-                className="block text-sm font-medium mb-2"
-              >
-                Standort *
-              </label>
-              <Input
-                id="location"
-                type="text"
-                value={formData.location}
-                onChange={(e) => updateFormData("location", e.target.value)}
-                placeholder="z.B. München oder 80331 München"
-                required
-              />
-            </div>
+                {/* Quadratmeter Grundstück */}
+                <div>
+                  <label 
+                    htmlFor="plotArea"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Anzahl Quadratmeter Grundstück
+                  </label>
+                  <Input
+                    id="plotArea"
+                    type="number"
+                    value={formData.plotArea}
+                    onChange={(e) => updateFormData("plotArea", e.target.value)}
+                    placeholder="z.B. 500"
+                    min="0"
+                    step="0.01"
+                  />
+                </div>
 
-            {/* Error Message */}
-            {error && (
-              <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md">
-                {error}
+                {/* Energieeffizienzklasse */}
+                <div>
+                  <label 
+                    htmlFor="energyEfficiencyClass"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Energieeffizienzklasse *
+                  </label>
+                  <select
+                    id="energyEfficiencyClass"
+                    value={formData.energyEfficiencyClass}
+                    onChange={(e) =>
+                      updateFormData("energyEfficiencyClass", e.target.value)
+                    }
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie eine Energieeffizienzklasse</option>
+                    {energyEfficiencyClasses.map((eec) => (
+                      <option key={eec} value={eec}>
+                        {eec}
+                      </option>
+                    ))}
+                    <option value="unbekannt">unbekannt</option>
+                  </select>
+                </div>
+
+                {/* Standort */}
+                <div>
+                  <label 
+                    htmlFor="location"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Standort *
+                  </label>
+                  <Input
+                    id="location"
+                    type="text"
+                    value={formData.location}
+                    onChange={(e) => updateFormData("location", e.target.value)}
+                    placeholder="z.B. München oder 80331 München"
+                    required
+                  />
+                </div>
               </div>
-            )}
-
-            {/* Submit Button */}
-            <div className="pt-4">
-              <Button
-                type="submit"
-                disabled={!isFormValid() || isSubmitting}
-                className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white py-6 text-lg font-semibold"
-              >
-                {isSubmitting ? "Wird gesendet..." : "Bewertung anfragen"}
-              </Button>
             </div>
-          </form>
+          )}
+
+          {currentStep === 2 && (
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold mb-6">Weitere Immobiliendetails</h2>
+              
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* Sanierung */}
+                <div>
+                  <label
+                    htmlFor="isRenovated"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Ist die Immobilie bereits saniert? *
+                  </label>
+                  <select
+                    id="isRenovated"
+                    value={formData.isRenovated}
+                    onChange={(e) => updateFormData("isRenovated", e.target.value)}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie</option>
+                    <option value="ja">Ja</option>
+                    <option value="nein">Nein</option>
+                    <option value="unbekannt">unbekannt</option>
+                  </select>
+                </div>
+
+                {/* Photovoltaik */}
+                <div>
+                  <label
+                    htmlFor="hasPhotovoltaik"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Wurde Photovoltaik umgesetzt? *
+                  </label>
+                  <select
+                    id="hasPhotovoltaik"
+                    value={formData.hasPhotovoltaik}
+                    onChange={(e) => updateFormData("hasPhotovoltaik", e.target.value)}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie</option>
+                    <option value="ja">Ja</option>
+                    <option value="nein">Nein</option>
+                    <option value="unbekannt">unbekannt</option>
+                  </select>
+                </div>
+
+                {/* Sanierungsdatum - nur anzeigen wenn "ja" gewählt */}
+                {formData.isRenovated === "ja" && (
+                  <div>
+                    <label
+                      htmlFor="renovationDate"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Wann wurde saniert? *
+                    </label>
+                    <Input
+                      id="renovationDate"
+                      type="date"
+                      value={formData.renovationDate}
+                      onChange={(e) => updateFormData("renovationDate", e.target.value)}
+                      max={new Date().toISOString().split("T")[0]}
+                      required
+                    />
+                  </div>
+                )}
+
+                {/* Heizung */}
+                <div className={formData.isRenovated === "ja" ? "" : "md:col-span-2"}>
+                  <label
+                    htmlFor="heatingType"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Art der Heizung *
+                  </label>
+                  <select
+                    id="heatingType"
+                    value={formData.heatingType}
+                    onChange={(e) => updateFormData("heatingType", e.target.value)}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie</option>
+                    <option value="Gas">Gas</option>
+                    <option value="Öl">Öl</option>
+                    <option value="Wärmepumpe">Wärmepumpe</option>
+                    <option value="unbekannt">unbekannt</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {currentStep === 3 && (
+            <div className="space-y-6">
+              <h2 className="text-2xl font-bold mb-6">Ihre Kontaktdaten</h2>
+              
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="firstName"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Vorname *
+                  </label>
+                  <Input
+                    id="firstName"
+                    type="text"
+                    value={formData.firstName}
+                    onChange={(e) => updateFormData("firstName", e.target.value)}
+                    placeholder="Max"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="lastName"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Nachname *
+                  </label>
+                  <Input
+                    id="lastName"
+                    type="text"
+                    value={formData.lastName}
+                    onChange={(e) => updateFormData("lastName", e.target.value)}
+                    placeholder="Mustermann"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    E-Mail-Adresse *
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    value={formData.email}
+                    onChange={(e) => updateFormData("email", e.target.value)}
+                    placeholder="max.mustermann@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="userType"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Ich bin *
+                  </label>
+                  <select
+                    id="userType"
+                    value={formData.userType}
+                    onChange={(e) => updateFormData("userType", e.target.value)}
+                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                    required
+                  >
+                    <option value="">Bitte wählen Sie</option>
+                    <option value="Käufer">Käufer</option>
+                    <option value="Verkäufer">Verkäufer</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error Message */}
+          {error && (
+            <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-md mt-6">
+              {error}
+            </div>
+          )}
+
+          {/* Navigation Buttons */}
+          {currentStep <= totalSteps && (
+            <div className="flex justify-between mt-8 pt-8 border-t">
+              <Button
+                variant="outline"
+                onClick={handlePrevious}
+                disabled={currentStep === 1}
+                className="flex items-center gap-2"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Zurück
+              </Button>
+
+              {currentStep < totalSteps ? (
+                <Button
+                  onClick={handleNext}
+                  disabled={!isStepValid(currentStep)}
+                  className="bg-[#bb133e] hover:bg-[#a01135] text-white flex items-center gap-2"
+                >
+                  <span className="flex items-center whitespace-nowrap">
+                    Weiter
+                    <ArrowRight className="ml-2 w-4 h-4 flex-shrink-0" />
+                  </span>
+                </Button>
+              ) : (
+                <Button
+                  onClick={handleSubmit}
+                  disabled={!isStepValid(currentStep) || isSubmitting}
+                  className="bg-[#bb133e] hover:bg-[#a01135] text-white"
+                >
+                  {isSubmitting ? "Wird gesendet..." : "Bewertung anfragen"}
+                </Button>
+              )}
+            </div>
+          )}
         </div>
       </div>
 

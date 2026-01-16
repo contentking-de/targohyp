@@ -99,10 +99,24 @@ export const propertyValuations = pgTable("property_valuations", {
   userId: uuid("user_id").references(() => users.id), // Optional, wenn eingeloggt
   
   // Immobiliendaten
+  propertyType: varchar("property_type", { length: 50 }), // 'Haus', 'Wohnung', 'Gewerbeimmobilie'
   constructionYear: integer("construction_year").notNull(), // Baujahr
-  squareMeters: numeric("square_meters", { precision: 10, scale: 2 }).notNull(), // Quadratmeter
+  squareMeters: numeric("square_meters", { precision: 10, scale: 2 }).notNull(), // Quadratmeter Wohnfläche
+  plotArea: numeric("plot_area", { precision: 10, scale: 2 }), // Quadratmeter Grundstück
   energyEfficiencyClass: varchar("energy_efficiency_class", { length: 10 }).notNull(), // Energieeffizienzklasse (A+, A, B, C, D, E, F, G, H)
   location: varchar("location", { length: 255 }).notNull(), // Standort
+  
+  // Weitere Immobiliendetails
+  isRenovated: varchar("is_renovated", { length: 10 }), // 'ja', 'nein'
+  renovationDate: timestamp("renovation_date"), // Sanierungsdatum (optional)
+  hasPhotovoltaik: varchar("has_photovoltaik", { length: 10 }), // 'ja', 'nein'
+  heatingType: varchar("heating_type", { length: 50 }), // 'Gas', 'Öl', 'Wärmepumpe'
+  
+  // Persönliche Daten
+  firstName: varchar("first_name", { length: 255 }),
+  lastName: varchar("last_name", { length: 255 }),
+  email: varchar("email", { length: 255 }),
+  userType: varchar("user_type", { length: 50 }), // 'Käufer', 'Verkäufer'
   
   // Status
   status: varchar("status", { length: 50 }).default("new").notNull(), // 'new', 'in_progress', 'completed'

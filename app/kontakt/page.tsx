@@ -24,55 +24,69 @@ export default function KontaktPage() {
         </div>
       </section>
 
-      {/* Kontakt-Informationen */}
+      {/* Kontakt-Informationen & Formular */}
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
-          <div className="grid gap-8 md:grid-cols-3 mb-16">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Phone className="w-8 h-8 text-targo-blue" />
+          <div className="grid gap-8 lg:grid-cols-2">
+            {/* Kontakt-Informationen */}
+            <div className="space-y-8">
+              <div>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-6 h-6 text-targo-blue" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Telefon</h3>
+                    <p className="text-gray-700 mb-2">Mo-Fr: 8:00 - 18:00 Uhr</p>
+                    <a
+                      href="tel:+4922112345678"
+                      className="text-targo-blue hover:underline font-semibold"
+                    >
+                      +49 (0) 221 123 456 78
+                    </a>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-2">Telefon</h3>
-              <p className="text-gray-700 mb-2">Mo-Fr: 8:00 - 18:00 Uhr</p>
-              <a
-                href="tel:+4922112345678"
-                className="text-targo-blue hover:underline font-semibold"
-              >
-                +49 (0) 221 123 456 78
-              </a>
+
+              <div>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Mail className="w-6 h-6 text-targo-blue" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">E-Mail</h3>
+                    <p className="text-gray-700 mb-2">Wir antworten innerhalb von 24h</p>
+                    <a
+                      href="mailto:info@targohyp.de"
+                      className="text-targo-blue hover:underline font-semibold"
+                    >
+                      info@targohyp.de
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-6 h-6 text-targo-blue" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2">Adresse</h3>
+                    <p className="text-gray-700">
+                      TARGOBANK AG<br />
+                      Kasernenstraße 10<br />
+                      40213 Düsseldorf
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div className="text-center">
-              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Mail className="w-8 h-8 text-targo-blue" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">E-Mail</h3>
-              <p className="text-gray-700 mb-2">Wir antworten innerhalb von 24h</p>
-              <a
-                href="mailto:info@targohyp.de"
-                className="text-targo-blue hover:underline font-semibold"
-              >
-                info@targohyp.de
-              </a>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MapPin className="w-8 h-8 text-targo-blue" />
-              </div>
-              <h3 className="text-xl font-bold mb-2">Adresse</h3>
-              <p className="text-gray-700">
-                TARGOBANK AG<br />
-                Kasernenstraße 10<br />
-                40213 Düsseldorf
-              </p>
-            </div>
-          </div>
-
-          {/* Kontaktformular */}
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-white border border-gray-200 rounded-lg p-8">
-              <h2 className="text-2xl font-bold mb-6">Nachricht senden</h2>
+            {/* Kontaktformular */}
+            <div>
+              <div className="bg-white border border-gray-200 rounded-lg p-8">
+                <h2 className="text-2xl font-bold mb-6">Nachricht senden</h2>
               <form className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
@@ -172,6 +186,7 @@ export default function KontaktPage() {
                   <Send className="ml-2 w-5 h-5" />
                 </Button>
               </form>
+              </div>
             </div>
           </div>
         </div>
