@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/layout/testimonials";
 import { Newsletter } from "@/components/layout/newsletter";
 import { ExitIntentPopup } from "@/components/layout/exit-intent-popup";
+import { CookieConsent } from "@/components/layout/cookie-consent";
 import { Providers } from "./providers";
 import { db } from "@/db";
 import { banksOrCreditUnions } from "@/db/schema/other";
@@ -162,6 +163,7 @@ export default async function RootLayout({
             <Footer />
           </div>
           <ExitIntentPopup />
+          <CookieConsent />
         </Providers>
       </body>
     </html>
