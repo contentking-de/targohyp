@@ -64,7 +64,7 @@ export default async function ArtikelPage({ params }: PageProps) {
         { name: artikel.title, url: `/ratgeber/${kategorie.id}/${artikel.id}` }
       ]} />
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white pt-6 lg:pt-8 pb-8">
+      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white pt-6 lg:pt-8 pb-8 overflow-hidden">
         <div className="container mx-auto px-4">
           <Link
             href={`/ratgeber/${kategorie.id}`}
@@ -73,70 +73,75 @@ export default async function ArtikelPage({ params }: PageProps) {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Zurück zu {kategorie.title}
           </Link>
-          {artikel.image && (
-            <div className="relative w-full h-64 lg:h-96 rounded-lg overflow-hidden mb-8">
-              <Image
-                src={artikel.image}
-                alt={artikel.title}
-                fill
-                className="object-cover"
-              />
-            </div>
-          )}
-          <div className="flex items-center gap-3 mb-4">
-            <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center">
-              <Icon className="w-6 h-6 text-targo-blue" />
-            </div>
-            <div className="flex-1">
-              <span className="inline-block text-sm font-semibold text-targo-blue bg-targo-blue/10 px-3 py-1 rounded-full mb-2">
-                {kategorie.title}
-              </span>
-              <h1 className="text-4xl lg:text-5xl font-bold mb-2">
-                {artikel.title}
-              </h1>
-              {content?.intro && (
-                <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                  {content.intro}
-                </p>
-              )}
-              {(content?.author || content?.createdAt) && (
-                <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 mb-0">
-                  {content.author && (
-                    <Link
-                      href="#author-box"
-                      className="flex items-center gap-3 hover:opacity-80 transition-opacity group"
-                    >
-                      {content.authorAvatar && (
-                        <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-targo-blue transition-colors">
-                          <Image
-                            src={content.authorAvatar}
-                            alt={content.author}
-                            fill
-                            className="object-cover"
-                          />
+          <div className="flex flex-col lg:flex-row lg:items-start lg:gap-8">
+            {/* Teaserbox - auf Mobile zuerst, auf Desktop rechts */}
+            <div className="flex items-start gap-3 mb-4 lg:mb-0 lg:flex-1 order-1 lg:order-2">
+              <div className="hidden lg:flex w-12 h-12 bg-targo-blue/10 rounded-lg items-center justify-center flex-shrink-0">
+                <Icon className="w-6 h-6 text-targo-blue" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <span className="inline-block text-sm font-semibold text-targo-blue bg-targo-blue/10 px-3 py-1 rounded-full mb-2">
+                  {kategorie.title}
+                </span>
+                <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-2 break-words hyphens-auto">
+                  {artikel.title}
+                </h1>
+                {content?.intro && (
+                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 break-words">
+                    {content.intro}
+                  </p>
+                )}
+                {(content?.author || content?.createdAt) && (
+                  <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-sm text-gray-600 mb-0 break-words">
+                    {content.author && (
+                      <Link
+                        href="#author-box"
+                        className="flex items-center gap-2 sm:gap-3 hover:opacity-80 transition-opacity group min-w-0"
+                      >
+                        {content.authorAvatar && (
+                          <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-gray-200 group-hover:border-targo-blue transition-colors flex-shrink-0">
+                            <Image
+                              src={content.authorAvatar}
+                              alt={content.author}
+                              fill
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
+                        <div className="min-w-0">
+                          <span className="font-semibold text-gray-700">Autor:</span>
+                          <span className="ml-1 text-targo-blue group-hover:underline break-words">{content.author}</span>
                         </div>
-                      )}
-                      <div>
-                        <span className="font-semibold text-gray-700">Autor:</span>
-                        <span className="ml-1 text-targo-blue group-hover:underline">{content.author}</span>
+                      </Link>
+                    )}
+                    {content.createdAt && (
+                      <div className="flex items-center gap-2 min-w-0">
+                        <span className="font-semibold text-gray-700 whitespace-nowrap">Veröffentlicht:</span>
+                        <span className="break-words">
+                          {new Date(content.createdAt).toLocaleDateString('de-DE', {
+                            year: 'numeric',
+                            month: 'long',
+                            day: 'numeric'
+                          })}
+                        </span>
                       </div>
-                    </Link>
-                  )}
-                  {content.createdAt && (
-                    <div className="flex items-center gap-2">
-                      <span className="font-semibold text-gray-700">Veröffentlicht:</span>
-                      <span>
-                        {new Date(content.createdAt).toLocaleDateString('de-DE', {
-                          year: 'numeric',
-                          month: 'long',
-                          day: 'numeric'
-                        })}
-                      </span>
-                    </div>
-                  )}
-                </div>
-              )}
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
+            
+            {/* Bild - auf Mobile nach der Teaserbox, auf Desktop links */}
+            {artikel.image && (
+              <div className="relative w-full lg:w-1/2 lg:flex-shrink-0 h-64 lg:h-96 rounded-lg overflow-hidden mb-8 lg:mb-0 order-2 lg:order-1">
+                <Image
+                  src={artikel.image}
+                  alt={artikel.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
