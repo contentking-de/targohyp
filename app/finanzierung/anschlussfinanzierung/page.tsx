@@ -38,8 +38,42 @@ export default function AnschlussfinanzierungPage() {
     },
   ];
 
+  // FinancialProduct Schema-Markup für alle Produkte
+  const financialProductsSchema = produkte.map((produkt) => ({
+    "@context": "https://schema.org",
+    "@type": "FinancialProduct",
+    "name": produkt.name,
+    "description": produkt.beschreibung,
+    "interestRate": parseFloat(produkt.zins.replace(",", ".")),
+    "provider": {
+      "@type": "Organization",
+      "name": "TARGOBANK AG",
+      "url": "https://www.targobank.de"
+    },
+    "offers": {
+      "@type": "Offer",
+      "description": `${produkt.name}: ${produkt.beschreibung}`,
+      "availability": "https://schema.org/InStock"
+    },
+    "category": "Anschlussfinanzierung",
+    "areaServed": {
+      "@type": "Country",
+      "name": "Deutschland"
+    }
+  }));
+
   return (
     <div className="w-full">
+      {/* FinancialProduct Schema-Markup */}
+      {financialProductsSchema.map((schema, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema)
+          }}
+        />
+      ))}
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
