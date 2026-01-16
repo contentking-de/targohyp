@@ -25,17 +25,17 @@ export interface AuthorInfo {
 
 // Mapping von Autorennamen zu Avatar-URLs
 const authorAvatars: Record<string, string> = {
-  "Dr. Michael Schmidt": "https://ui-avatars.com/api/?name=Michael+Schmidt&background=003366&color=fff&size=128&bold=true",
-  "Sarah Weber": "https://ui-avatars.com/api/?name=Sarah+Weber&background=bb133e&color=fff&size=128&bold=true",
-  "Thomas Müller": "https://ui-avatars.com/api/?name=Thomas+Müller&background=0066cc&color=fff&size=128&bold=true",
-  "Targohyp Redaktion": "https://ui-avatars.com/api/?name=Targohyp&background=003366&color=fff&size=128&bold=true",
+  "Dr. Michael Schmidt": "/autor1.avif",
+  "Sarah Weber": "/autor2.jpeg",
+  "Thomas Müller": "/autor3.webp",
+  "Targohyp Redaktion": "/autor4.jpg",
 };
 
 // Autor-Biographien
 const authorBios: Record<string, AuthorInfo> = {
   "Dr. Michael Schmidt": {
     name: "Dr. Michael Schmidt",
-    avatar: "https://ui-avatars.com/api/?name=Michael+Schmidt&background=003366&color=fff&size=256&bold=true",
+    avatar: "/autor1.avif",
     bio: "Dr. Michael Schmidt ist promovierter Wirtschaftswissenschaftler mit über 15 Jahren Erfahrung im Bereich Immobilienfinanzierung. Nach seinem Studium der Betriebswirtschaftslehre an der Universität Köln und seiner Promotion im Bereich Finanzwirtschaft spezialisierte er sich auf Baufinanzierungen und Immobilieninvestments. Als Senior-Berater bei Targohyp hat er bereits über 500 erfolgreiche Finanzierungen begleitet und ist Experte für komplexe Finanzierungsstrukturen, steuerliche Optimierung und Anschlussfinanzierungen.",
     expertise: [
       "Baufinanzierung & Erstfinanzierung",
@@ -47,7 +47,7 @@ const authorBios: Record<string, AuthorInfo> = {
   },
   "Sarah Weber": {
     name: "Sarah Weber",
-    avatar: "https://ui-avatars.com/api/?name=Sarah+Weber&background=bb133e&color=fff&size=256&bold=true",
+    avatar: "/autor2.jpeg",
     bio: "Sarah Weber ist zertifizierte Finanzberaterin und Immobilienexpertin mit langjähriger Erfahrung in der Beratung von Privatkunden und Kapitalanlegern. Nach ihrer Ausbildung zur Bankkauffrau absolvierte sie Weiterbildungen zur Immobilienfinanzierungsberaterin und Vermögensberaterin. Sie berät seit über 12 Jahren Kunden bei der Immobilienfinanzierung und hat sich insbesondere auf Budgetplanung, Kapitalanlagen und Immobilienbewertung spezialisiert. Ihre Stärke liegt in der verständlichen Vermittlung komplexer Finanzthemen.",
     expertise: [
       "Budgetplanung & Leistbarkeitsrechnung",
@@ -59,7 +59,7 @@ const authorBios: Record<string, AuthorInfo> = {
   },
   "Thomas Müller": {
     name: "Thomas Müller",
-    avatar: "https://ui-avatars.com/api/?name=Thomas+Müller&background=0066cc&color=fff&size=256&bold=true",
+    avatar: "/autor3.webp",
     bio: "Thomas Müller ist Experte für Immobilienfinanzierung und Darlehensprodukte mit über 10 Jahren Branchenerfahrung. Nach seinem Studium der Wirtschaftswissenschaften arbeitete er zunächst bei verschiedenen Banken im Bereich Privatkreditgeschäft, bevor er sich vollständig auf Immobilienfinanzierungen konzentrierte. Bei Targohyp ist er spezialisiert auf die Beratung zu verschiedenen Darlehensarten, Modernisierungsfinanzierungen und die Analyse von Markttrends. Er ist bekannt für seine fundierten Marktanalysen und praxisnahen Empfehlungen.",
     expertise: [
       "Darlehensarten & Finanzierungsprodukte",
@@ -71,7 +71,7 @@ const authorBios: Record<string, AuthorInfo> = {
   },
   "Targohyp Redaktion": {
     name: "Targohyp Redaktion",
-    avatar: "https://ui-avatars.com/api/?name=Targohyp&background=003366&color=fff&size=256&bold=true",
+    avatar: "/autor4.jpg",
     bio: "Das Redaktionsteam von Targohyp besteht aus erfahrenen Finanzexperten, Immobilienberatern und Fachjournalisten. Gemeinsam erstellen wir fundierte Ratgeber, Checklisten und Studien rund um das Thema Immobilienfinanzierung. Unser Ziel ist es, komplexe Finanzthemen verständlich aufzubereiten und Ihnen bei Ihrer Immobilienentscheidung zu helfen.",
     expertise: [
       "Immobilienfinanzierung",

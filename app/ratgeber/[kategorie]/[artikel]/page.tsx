@@ -154,9 +154,13 @@ export default async function ArtikelPage({ params }: PageProps) {
               {content ? (
                 <>
                   {/* Sections Grid oder vertikal */}
-                  <div className={kategorieId === "checklisten" && artikelId === "checkliste-sanierung" && content.sections?.length === 3 
-                    ? "grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8" 
-                    : "space-y-8"}>
+                  <div className={
+                    kategorieId === "checklisten" && content.sections?.length === 3
+                      ? "grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8"
+                      : kategorieId === "checklisten" && content.sections?.length === 2
+                      ? "grid gap-6 md:grid-cols-2 mb-8"
+                      : "space-y-8"
+                  }>
                     {content.sections && content.sections.map((section, index) => {
                     const iconMap: Record<string, any> = {
                       BookOpen,
@@ -237,10 +241,10 @@ export default async function ArtikelPage({ params }: PageProps) {
                     })}
                   </div>
 
-                  {/* Checkliste PDF CTA - nur für Checkliste-Sanierung, über volle Breite */}
-                  {kategorieId === "checklisten" && artikelId === "checkliste-sanierung" && (
+                  {/* Checkliste PDF CTA - für alle Checklisten-Artikel, über volle Breite */}
+                  {kategorieId === "checklisten" && (
                     <div className="mt-8 -mx-4 px-4">
-                      <ChecklistPdfForm checklistType="checkliste-sanierung" />
+                      <ChecklistPdfForm checklistType={artikelId} />
                     </div>
                   )}
 

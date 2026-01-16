@@ -64,7 +64,7 @@ export function ChecklistPdfForm({ checklistType = "checkliste-sanierung" }: Che
             Checkliste als PDF erhalten
           </h3>
           <p className="text-gray-700">
-            Geben Sie Ihre E-Mail-Adresse ein und erhalten Sie die Checkliste zur Sanierung kostenlos und unverbindlich als PDF per E-Mail.
+            Geben Sie Ihre E-Mail-Adresse ein und erhalten Sie die Checkliste kostenlos und unverbindlich als PDF per E-Mail.
           </p>
         </div>
 
