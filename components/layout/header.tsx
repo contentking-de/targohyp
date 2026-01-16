@@ -10,34 +10,78 @@ import { useState } from "react";
 export function Header() {
   const [isFinanzierungOpen, setIsFinanzierungOpen] = useState(false);
   const [isVergleicheOpen, setIsVergleicheOpen] = useState(false);
+  const [isImmobilienOpen, setIsImmobilienOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileFinanzierungOpen, setIsMobileFinanzierungOpen] = useState(false);
   const [isMobileVergleicheOpen, setIsMobileVergleicheOpen] = useState(false);
+  const [isMobileImmobilienOpen, setIsMobileImmobilienOpen] = useState(false);
 
   return (
     <header className="w-full bg-white border-b border-gray-200">
       {/* Top Bar - Customer Segments */}
       <div className="border-b border-gray-200">
         <div className="container mx-auto px-4 py-[5px]">
-          <div className="flex items-center gap-4 sm:gap-6 h-12">
-            <Link
-              href="/privatkunden"
-              className="text-sm font-medium text-targo-blue border-b-2 border-targo-blue pb-1"
-            >
-              Privatkunden
-            </Link>
-            <Link
-              href="/geschaeftskunden"
-              className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1"
-            >
-              Geschäftskunden
-            </Link>
-            <Link
-              href="/firmenkunden"
-              className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1"
-            >
-              Firmenkunden
-            </Link>
+          <div className="flex items-center justify-between gap-4 sm:gap-6 h-12">
+            <div className="flex items-center gap-4 sm:gap-6">
+              <Link
+                href="/privatkunden"
+                className="text-sm font-medium text-targo-blue border-b-2 border-targo-blue pb-1"
+              >
+                Privatkunden
+              </Link>
+              <Link
+                href="/geschaeftskunden"
+                className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1"
+              >
+                Geschäftskunden
+              </Link>
+              <Link
+                href="/firmenkunden"
+                className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1"
+              >
+                Firmenkunden
+              </Link>
+            </div>
+            <div className="hidden lg:flex items-center gap-4">
+              <Link
+                href="/standorte"
+                className="text-sm text-gray-700 hover:text-targo-blue transition-colors flex items-center gap-1"
+              >
+                <MapPin className="w-4 h-4" />
+                Standorte
+              </Link>
+              <Link
+                href="/kontakt"
+                className="text-sm text-gray-700 hover:text-targo-blue transition-colors flex items-center gap-1"
+              >
+                <HelpCircle className="w-4 h-4" />
+                Hilfe & Kontakt
+              </Link>
+              <Link
+                href="/faqs-finanzierung"
+                className="text-sm text-gray-700 hover:text-targo-blue transition-colors"
+              >
+                FAQs
+              </Link>
+              <Button
+                className="bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-4 py-2 text-sm font-semibold min-h-[36px]"
+                asChild
+              >
+                <Link href="/auth/signin" className="flex items-center gap-2">
+                  <Home className="w-4 h-4" />
+                  TargoHome
+                </Link>
+              </Button>
+              <Button
+                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-4 py-2 text-sm font-semibold min-h-[36px]"
+                asChild
+              >
+                <Link href="/termin-vereinbaren" className="flex items-center gap-2">
+                  <Calendar className="w-4 h-4" />
+                  Termin vereinbaren
+                </Link>
+              </Button>
+            </div>
           </div>
         </div>
       </div>
@@ -213,13 +257,92 @@ export function Header() {
               Rechner
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
-            <Link
-              href="/immobilienbewertung"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
+            <div
+              className="relative"
+              onMouseEnter={() => setIsImmobilienOpen(true)}
+              onMouseLeave={() => setIsImmobilienOpen(false)}
             >
-              Immobilienbewertung
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
+              <Link
+                href="/immobilien"
+                className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group flex items-center gap-1"
+              >
+                Immobilien
+                <ChevronDown className={`w-4 h-4 transition-transform ${isImmobilienOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {isImmobilienOpen && (
+                <>
+                  {/* Unsichtbarer Bereich zum Überbrücken der Lücke */}
+                  <div className="absolute top-full left-0 w-full h-2"></div>
+                  <div className="absolute top-full left-0 pt-2 w-80 z-50">
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
+                      <div className="py-2">
+                        <Link
+                          href="/immobilien"
+                          className="block px-4 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Übersicht
+                        </Link>
+                        <div className="border-t border-gray-200 my-1"></div>
+                        <Link
+                          href="/immobilien/immobilie-finden"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilie finden
+                        </Link>
+                        <Link
+                          href="/immobilien/immobilie-kaufen"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilie kaufen
+                        </Link>
+                        <Link
+                          href="/immobilien/immobilie-vermieten"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilie vermieten
+                        </Link>
+                        <Link
+                          href="/immobilien/immobilie-verkaufen"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilie verkaufen
+                        </Link>
+                        <Link
+                          href="/immobilien/kapitalanlage"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilie als Kapitalanlage
+                        </Link>
+                        <Link
+                          href="/immobilien/auslandsimmobilien"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Auslandsimmobilien
+                        </Link>
+                        <div className="border-t border-gray-200 my-1"></div>
+                        <Link
+                          href="/immobilienbewertung"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsImmobilienOpen(false)}
+                        >
+                          Immobilienbewertung
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
             <Link
               href="/ratgeber"
               className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
@@ -557,13 +680,104 @@ export function Header() {
             >
               Rechner
             </Link>
-            <Link
-              href="/immobilienbewertung"
-              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Immobilienbewertung
-            </Link>
+            {/* Immobilien mit Dropdown */}
+            <div>
+              <button
+                className="w-full flex items-center justify-between text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+                onClick={() => setIsMobileImmobilienOpen(!isMobileImmobilienOpen)}
+                aria-expanded={isMobileImmobilienOpen}
+              >
+                <span>Immobilien</span>
+                <ChevronDown 
+                  className={`w-4 h-4 transition-transform ${isMobileImmobilienOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {isMobileImmobilienOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                  <Link
+                    href="/immobilien"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Übersicht
+                  </Link>
+                  <Link
+                    href="/immobilien/immobilie-finden"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilie finden
+                  </Link>
+                  <Link
+                    href="/immobilien/immobilie-kaufen"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilie kaufen
+                  </Link>
+                  <Link
+                    href="/immobilien/immobilie-vermieten"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilie vermieten
+                  </Link>
+                  <Link
+                    href="/immobilien/immobilie-verkaufen"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilie verkaufen
+                  </Link>
+                  <Link
+                    href="/immobilien/kapitalanlage"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilie als Kapitalanlage
+                  </Link>
+                  <Link
+                    href="/immobilien/auslandsimmobilien"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Auslandsimmobilien
+                  </Link>
+                  <Link
+                    href="/immobilienbewertung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileImmobilienOpen(false);
+                    }}
+                  >
+                    Immobilienbewertung
+                  </Link>
+                </div>
+              )}
+            </div>
             <Link
               href="/ratgeber"
               className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"

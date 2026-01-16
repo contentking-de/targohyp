@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Home, Wallet, TrendingUp, Lock, Receipt, ClipboardCheck, Search, ListChecks, RefreshCw, CheckCircle, Calculator, Scale, FileText, CreditCard, ArrowDown, PiggyBank, Target, Building2, BarChart, ArrowLeftRight, DollarSign, Handshake, Zap, Shield, FileCheck, ClipboardList, MapPin, Navigation, Star, AlertTriangle, XCircle, ShieldCheck, AlertCircle, Calendar, Clock, Hammer, Wrench, Brain, Lightbulb, LineChart, Percent, Building, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { kategorien, getKategorieById, getArtikelById, getAllArtikel } from "@/lib/ratgeber-data";
 import { notFound } from "next/navigation";
@@ -87,7 +87,7 @@ export default async function ArtikelPage({ params }: PageProps) {
                   {artikel.title}
                 </h1>
                 {content?.intro && (
-                  <p className="text-base sm:text-lg text-gray-700 leading-relaxed mb-4 break-words">
+                  <p className="text-base sm:text-lg font-bold text-gray-700 leading-relaxed mb-4 break-words">
                     {content.intro}
                   </p>
                 )}
@@ -147,39 +147,100 @@ export default async function ArtikelPage({ params }: PageProps) {
       </section>
 
       {/* Content */}
-      <section className="w-full pt-0 pb-16">
+      <section className="w-full pt-8 lg:pt-12 pb-16">
         <div className="container mx-auto px-4">
           <div className="prose prose-lg max-w-none">
               {content ? (
-                <div className="space-y-8 -mt-20">
-                  {content.sections && content.sections.map((section, index) => (
-                    <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-                      <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900">
-                        {section.title}
-                      </h2>
-                      {section.content && (
-                        <div className="text-gray-700 leading-relaxed whitespace-pre-line">
-                          {section.content}
+                <div className="space-y-8">
+                  {content.sections && content.sections.map((section, index) => {
+                    const iconMap: Record<string, any> = {
+                      BookOpen,
+                      Home,
+                      Wallet,
+                      TrendingUp,
+                      Lock,
+                      Receipt,
+                      ClipboardCheck,
+                      Search,
+                      ListChecks,
+                      RefreshCw,
+                      CheckCircle,
+                      Calculator,
+                      Scale,
+                      FileText,
+                      CreditCard,
+                      ArrowDown,
+                      PiggyBank,
+                      Target,
+                      Building2,
+                      BarChart,
+                      ArrowLeftRight,
+                      DollarSign,
+                      Handshake,
+                      Zap,
+                      Shield,
+                      FileCheck,
+                      ClipboardList,
+                      MapPin,
+                      Navigation,
+                      Star,
+                      AlertTriangle,
+                      XCircle,
+                      ShieldCheck,
+                      AlertCircle,
+                      Calendar,
+                      Clock,
+                      Hammer,
+                      Wrench,
+                      Brain,
+                      Lightbulb,
+                      LineChart,
+                      Percent,
+                      Building,
+                    };
+                    const IconComponent = section.icon ? iconMap[section.icon] : null;
+                    
+                    return (
+                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
+                        <div className="flex items-start gap-4 mb-4">
+                          {IconComponent && (
+                            <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <IconComponent className="w-6 h-6 text-targo-blue" />
+                            </div>
+                          )}
+                          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+                            {section.title}
+                          </h2>
                         </div>
-                      )}
-                      {section.points && section.points.length > 0 && (
-                        <ul className="mt-4 space-y-3">
-                          {section.points.map((point, pointIndex) => (
-                            <li key={pointIndex} className="flex items-start gap-3">
-                              <span className="text-targo-blue font-bold mt-1">•</span>
-                              <span className="text-gray-700">{point}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
-                    </div>
-                  ))}
+                        {section.content && (
+                          <div className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                            {section.content}
+                          </div>
+                        )}
+                        {section.points && section.points.length > 0 && (
+                          <ul className="mt-4 space-y-3">
+                            {section.points.map((point, pointIndex) => (
+                              <li key={pointIndex} className="flex items-start gap-3">
+                                <span className="text-targo-blue font-bold mt-1">•</span>
+                                <span className="text-gray-700">{point}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </div>
+                    );
+                  })}
 
                   {content.faqs && content.faqs.length > 0 && (
                     <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-                      <h2 className="text-2xl lg:text-3xl font-bold mb-6 text-gray-900">
-                        Häufige Fragen
-                      </h2>
+                      <div className="flex items-start gap-4 mb-6">
+                        <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <HelpCircle className="w-6 h-6 text-targo-blue" />
+                        </div>
+                        <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+                          Häufige Fragen
+                        </h2>
+                      </div>
                       <div className="space-y-6">
                         {content.faqs.map((faq, index) => (
                           <div key={index} className="border-b border-gray-200 last:border-b-0 pb-6 last:pb-0">

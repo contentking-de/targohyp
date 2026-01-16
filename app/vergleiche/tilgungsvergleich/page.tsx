@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, XCircle, Download, TrendingUp, Calendar, Target } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Tilgungsmodelle vergleichen - Annuität, Raten & tilgungsfrei | Targohyp",
@@ -98,6 +99,11 @@ export default function TilgungsvergleichPage() {
 
   return (
     <div className="w-full">
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Vergleiche", url: "/vergleiche" },
+        { name: "Tilgungsvergleich", url: "/vergleiche/tilgungsvergleich" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24">
         <div className="container mx-auto px-4">

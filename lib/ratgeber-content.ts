@@ -7,6 +7,8 @@ export interface ArtikelContent {
     title: string;
     content?: string;
     points?: string[];
+    twoColumn?: boolean;
+    icon?: string;
   }>;
   faqs?: Array<{
     question: string;
@@ -85,37 +87,64 @@ type ContentMap = Record<string, Record<string, ArtikelContent>>;
 const artikelContent: ContentMap = {
   erstfinanzierung: {
     "grundlagen-ablauf": {
-      intro: "Die Immobilienfinanzierung ist ein komplexer Prozess, der sorgfältige Planung und fundiertes Wissen erfordert. Dieser Artikel führt Sie durch die Grundlagen und den typischen Ablauf einer Immobilienfinanzierung.",
+      intro: "Eine Immobilie zu kaufen ist für viele die größte finanzielle Entscheidung ihres Lebens. Entsprechend wichtig ist es, die Mechanik einer Immobilienfinanzierung zu verstehen: Welche Bausteine gehören dazu, wie laufen Bankprüfung und Kreditvergabe ab, welche Kosten kommen neben dem Kaufpreis dazu – und an welchen Stellschrauben lässt sich drehen, um die Finanzierung stabil, bezahlbar und planbar zu machen. Der folgende Artikel führt Sie ausführlich durch die Grundlagen und den typischen Ablauf – von der ersten Budgetidee bis zur Auszahlung und darüber hinaus.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-01-15",
       sections: [
         {
+          title: "Grundlagen der Immobilienfinanzierung",
+          content: "Der Erwerb einer Immobilie stellt für die meisten Menschen eine der bedeutendsten finanziellen Entscheidungen im Leben dar. Entsprechend hoch sind die Anforderungen an Planung, Struktur und Verständnis der zugrunde liegenden Finanzierung. Eine Immobilienfinanzierung ist kein kurzfristiges Kreditgeschäft, sondern eine langfristige Verpflichtung, die sich häufig über mehrere Jahrzehnte erstreckt und maßgeblichen Einfluss auf die persönliche und wirtschaftliche Lebensgestaltung hat. Umso wichtiger ist es, die grundlegenden Mechanismen, Abläufe und Entscheidungsfaktoren zu kennen, die eine solide und tragfähige Finanzierung ausmachen.",
+          icon: "BookOpen",
+        },
+        {
           title: "Was ist eine Immobilienfinanzierung?",
-          content: "Eine Immobilienfinanzierung ist die Bereitstellung von Kapital zur Anschaffung, zum Bau oder zur Modernisierung einer Immobilie. Sie umfasst verschiedene Darlehensformen und wird in der Regel über einen langen Zeitraum zurückgezahlt.",
+          content: "Unter dem Begriff Immobilienfinanzierung versteht man die Finanzierung des Kaufs, Baus oder der Modernisierung einer Immobilie durch eine Kombination aus Eigenkapital und langfristigem Fremdkapital. Charakteristisch ist dabei die Absicherung des Darlehens über ein Grundpfandrecht, in der Regel in Form einer Grundschuld, die im Grundbuch eingetragen wird. Die Immobilie dient der finanzierenden Bank somit als Sicherheit, was im Vergleich zu unbesicherten Krediten deutlich günstigere Zinssätze ermöglicht. Gleichzeitig spielt der Wert und Zustand des Objekts eine zentrale Rolle bei der Kreditentscheidung.",
+          icon: "Home",
         },
         {
-          title: "Relevante Gesetze und Vorschriften",
-          content: "Bei der Immobilienfinanzierung sind verschiedene gesetzliche Rahmenbedingungen zu beachten:",
-          points: [
-            "Kreditwesengesetz (KWG) - regelt die Tätigkeit von Kreditinstituten",
-            "BGB - enthält Regelungen zu Darlehensverträgen",
-            "Verbraucherkreditgesetz - schützt Verbraucher bei Kreditgeschäften",
-            "Makler- und Bauträgerverordnung - regelt die Tätigkeit von Immobilienmaklern",
-            "Grundbuchordnung - regelt die Eintragung von Grundpfandrechten",
-          ],
+          title: "Eigenkapital",
+          content: "Ein wesentlicher Bestandteil jeder Immobilienfinanzierung ist das Eigenkapital. Hierunter fallen sämtliche Mittel, die der Käufer aus eigenen Ressourcen einbringt, etwa Ersparnisse, Tages- oder Festgelder, Wertpapiervermögen oder zweckgebundene Schenkungen. Eigenkapital reduziert die erforderliche Darlehenssumme, senkt das Risiko für die Bank und wirkt sich in der Regel positiv auf die Konditionen aus. In der Praxis wird empfohlen, zumindest die Kaufnebenkosten vollständig aus Eigenkapital zu bestreiten, da deren Mitfinanzierung häufig zu höheren Zinssätzen und einer ungünstigeren Beleihung führt.",
+          icon: "Wallet",
         },
         {
-          title: "Typischer Ablauf einer Finanzierung",
-          content: "Der Finanzierungsprozess gliedert sich in mehrere Phasen:",
-          points: [
-            "Erstberatung und Bedarfsanalyse",
-            "Ermittlung der Bonität und Finanzierungsfähigkeit",
-            "Angebotsvergleich verschiedener Finanzierungsinstitute",
-            "Auswahl des passenden Finanzierungsmodells",
-            "Beantragung und Prüfung der Finanzierung",
-            "Notarielle Beurkundung und Grundbucheintragung",
-            "Auszahlung und Übergabe der Immobilie",
-          ],
+          title: "Fremdkapital und Annuitätendarlehen",
+          content: "Das Fremdkapital wird üblicherweise in Form eines Annuitätendarlehens bereitgestellt. Dieses zeichnet sich durch eine gleichbleibende monatliche Rate aus, die sich aus einem Zins- und einem Tilgungsanteil zusammensetzt. Während der Zinsanteil im Zeitverlauf sinkt, steigt der Tilgungsanteil entsprechend an. Die anfängliche Tilgungshöhe ist dabei ein entscheidender Hebel für die Gesamtkosten der Finanzierung. Eine höhere Tilgung führt zwar zu einer höheren monatlichen Belastung, reduziert jedoch die Restschuld schneller und senkt langfristig die Zinskosten erheblich.",
+          icon: "TrendingUp",
+        },
+        {
+          title: "Zinsbindung",
+          content: "Von zentraler Bedeutung ist außerdem die Zinsbindung. Sie legt fest, für welchen Zeitraum der Zinssatz festgeschrieben ist und damit Planungssicherheit besteht. Übliche Zinsbindungen liegen bei zehn, fünfzehn oder zwanzig Jahren. Nach Ablauf dieser Frist ist eine Anschlussfinanzierung erforderlich, bei der die verbleibende Restschuld zu dann gültigen Marktkonditionen weiterfinanziert wird. Die Wahl der Zinsbindung stellt somit eine Abwägung zwischen langfristiger Sicherheit und möglicher Zinsersparnis dar.",
+          icon: "Lock",
+        },
+        {
+          title: "Kaufnebenkosten",
+          content: "Neben dem Kaufpreis der Immobilie müssen bei der Finanzierung zwingend auch die sogenannten Kaufnebenkosten berücksichtigt werden. Hierzu zählen insbesondere die Grunderwerbsteuer, Notar- und Grundbuchkosten sowie gegebenenfalls eine Maklerprovision. Diese Kosten können je nach Bundesland und Konstellation einen erheblichen Anteil des Gesamtaufwands ausmachen. Zusätzlich fallen häufig weitere Ausgaben an, etwa für Renovierungsmaßnahmen, Umzug, Einrichtung oder kurzfristige Instandsetzungen. Eine realistische Finanzierung berücksichtigt daher stets den gesamten Kapitalbedarf und nicht ausschließlich den reinen Kaufpreis.",
+          icon: "Receipt",
+        },
+        {
+          title: "Bonitätsprüfung",
+          content: "Bevor eine Bank eine Finanzierungszusage erteilt, prüft sie sowohl die persönliche Bonität des Kreditnehmers als auch die wirtschaftliche Tragfähigkeit der Finanzierung. Grundlage hierfür ist eine detaillierte Haushaltsrechnung, bei der das regelmäßige Nettoeinkommen den laufenden Ausgaben gegenübergestellt wird. Neben bestehenden Kreditverpflichtungen werden auch Lebenshaltungskosten, Versicherungen, Unterhaltszahlungen und weitere Fixkosten berücksichtigt. Ziel dieser Prüfung ist es sicherzustellen, dass die monatliche Darlehensrate dauerhaft tragbar ist und auch bei unvorhergesehenen Ereignissen ein ausreichender finanzieller Puffer verbleibt.",
+          icon: "ClipboardCheck",
+        },
+        {
+          title: "Objektbewertung",
+          content: "Parallel zur Bonitätsprüfung erfolgt die Bewertung des zu finanzierenden Objekts. Die Bank analysiert Lage, Zustand, Baujahr, Größe, Grundriss, energetischen Standard sowie die rechtliche Situation der Immobilie. Bei Eigentumswohnungen werden zusätzlich die Teilungserklärung, die Höhe des Hausgeldes, die Instandhaltungsrücklagen und die Protokolle der Eigentümerversammlungen geprüft. Das Ergebnis dieser Analyse ist der sogenannte Beleihungswert, der in der Regel unter dem Kaufpreis liegt und als Basis für die Risikoeinschätzung dient.",
+          icon: "Search",
+        },
+        {
+          title: "Ablauf einer Immobilienfinanzierung",
+          content: "Der Ablauf einer Immobilienfinanzierung beginnt idealerweise mit einer realistischen Budgetplanung. Auf Grundlage der persönlichen Einkommens- und Ausgabensituation wird eine monatlich tragbare Belastung ermittelt. Daraus lässt sich ableiten, welcher Kaufpreisrahmen sinnvoll ist, ohne die finanzielle Flexibilität übermäßig einzuschränken. Diese Vorüberlegung ist entscheidend, um Fehlentscheidungen und spätere Überlastungen zu vermeiden.\n\nIm nächsten Schritt werden Eigenkapital und Unterlagen zusammengestellt, die für eine Finanzierungsprüfung erforderlich sind. Dazu zählen Einkommensnachweise, Konto- und Depotauszüge, Angaben zu bestehenden Verbindlichkeiten sowie eine persönliche Selbstauskunft. Eine frühzeitige Finanzierungsbestätigung kann dabei helfen, die eigene Verhandlungsposition gegenüber Verkäufern zu stärken und realistische Kaufoptionen einzugrenzen.\n\nNach Auswahl eines konkreten Objekts folgt die detaillierte Prüfung durch die Bank. Auf Basis der Objektunterlagen und der persönlichen Finanzdaten wird ein verbindliches Kreditangebot erstellt. Dieses sollte nicht ausschließlich unter Zinsgesichtspunkten bewertet werden. Ebenso wichtig sind Flexibilitätsmerkmale wie Sondertilgungsmöglichkeiten, Anpassungsoptionen der Tilgung oder die Möglichkeit, bei Bedarf außerplanmäßige Rückzahlungen zu leisten.\n\nNach Abschluss des Kaufvertrags beim Notar wird die Grundschuld zugunsten der Bank bestellt. Erst wenn alle rechtlichen Voraussetzungen erfüllt sind, insbesondere die Eintragung der Auflassungsvormerkung und der Grundschuld, erfolgt die Auszahlung des Darlehens. Diese geschieht in der Regel direkt an den Verkäufer oder auf ein Notaranderkonto. Mit der Kaufpreiszahlung und der Übergabe der Immobilie beginnt die langfristige Rückzahlungsphase.",
+          icon: "ListChecks",
+        },
+        {
+          title: "Anschlussfinanzierung",
+          content: "Langfristig betrachtet endet die Immobilienfinanzierung nicht mit der ersten Zinsbindung. Die Anschlussfinanzierung ist ein integraler Bestandteil des Gesamtkonzepts. Je niedriger die Restschuld zu diesem Zeitpunkt ist, desto geringer ist das Risiko steigender Zinsen. Eine vorausschauende Tilgungsstrategie in den ersten Jahren trägt daher wesentlich zur Stabilität der Gesamtfinanzierung bei.",
+          icon: "RefreshCw",
+        },
+        {
+          title: "Zusammenfassung",
+          content: "Zusammenfassend lässt sich festhalten, dass eine erfolgreiche Immobilienfinanzierung weniger von maximaler Ausreizung der finanziellen Möglichkeiten als vielmehr von Stabilität, Weitsicht und realistischer Planung lebt. Eine tragfähige Monatsrate, ausreichende Eigenmittel, korrekt kalkulierte Nebenkosten und ein langfristig passendes Objekt bilden das Fundament für eine Finanzierung, die nicht nur heute, sondern auch in Zukunft Sicherheit bietet.",
+          icon: "CheckCircle",
         },
       ],
       faqs: [
@@ -144,6 +173,7 @@ const artikelContent: ContentMap = {
             "Maximale monatliche Rate berechnen (ca. 30-35% des Nettoeinkommens)",
             "Eigenkapital und dessen Verfügbarkeit prüfen",
           ],
+          icon: "Calculator",
         },
         {
           title: "Kaufen oder Mieten?",
@@ -155,10 +185,12 @@ const artikelContent: ContentMap = {
             "Steuerliche Aspekte: Absetzbarkeit von Zinsen",
             "Flexibilität: Wie wichtig ist räumliche Flexibilität?",
           ],
+          icon: "Scale",
         },
         {
           title: "Leistbarkeitsrechnung",
           content: "Die Leistbarkeitsrechnung hilft Ihnen, die maximale Finanzierungssumme zu ermitteln. Sie berücksichtigt Ihr Einkommen, vorhandenes Eigenkapital, laufende Verbindlichkeiten und die zu erwartenden monatlichen Belastungen.",
+          icon: "Calculator",
         },
       ],
       faqs: [
@@ -180,18 +212,22 @@ const artikelContent: ContentMap = {
         {
           title: "Annuitätendarlehen",
           content: "Das Annuitätendarlehen ist die häufigste Form der Baufinanzierung. Die monatliche Rate bleibt über die gesamte Laufzeit konstant und setzt sich aus Zins- und Tilgungsanteil zusammen.",
+          icon: "CreditCard",
         },
         {
           title: "Tilgungsdarlehen",
           content: "Beim Tilgungsdarlehen bleibt die Tilgung konstant, während die Zinsen sinken. Die monatliche Rate wird dadurch im Laufe der Zeit geringer.",
+          icon: "ArrowDown",
         },
         {
           title: "Bauspardarlehen",
           content: "Ein Bauspardarlehen kombiniert Sparen und Darlehen. Nach einer Ansparphase können Sie günstige Zinsen für die Finanzierung erhalten.",
+          icon: "PiggyBank",
         },
         {
           title: "Volltilger vs. Restschuld",
           content: "Bei einem Volltilger wird das Darlehen vollständig zurückgezahlt. Bei einer Restschuld bleibt am Ende der Zinsbindung eine Restsumme übrig, die dann neu finanziert werden muss.",
+          icon: "Target",
         },
       ],
       faqs: [
@@ -222,6 +258,7 @@ const artikelContent: ContentMap = {
             "Instandhaltungs- und Modernisierungskosten",
             "Makler- und Notarkosten bei Anschaffung",
           ],
+          icon: "Receipt",
         },
         {
           title: "Vermögensaufbau durch Immobilien",
@@ -233,6 +270,7 @@ const artikelContent: ContentMap = {
             "Steuerliche Vorteile",
             "Diversifikation des Portfolios",
           ],
+          icon: "TrendingUp",
         },
       ],
       faqs: [
@@ -259,6 +297,7 @@ const artikelContent: ContentMap = {
             "Eigenkapitalrendite: Gewinn / eingesetztes Eigenkapital",
             "Gesamtrendite: Berücksichtigt Wertsteigerung und Mieteinnahmen",
           ],
+          icon: "BarChart",
         },
         {
           title: "Cashflow-Analyse",
@@ -270,10 +309,12 @@ const artikelContent: ContentMap = {
             "Abzüglich: Nebenkosten und Rücklagen",
             "Ergebnis: Positiver oder negativer Cashflow",
           ],
+          icon: "ArrowLeftRight",
         },
         {
           title: "Finanzierung für Kapitalanlagen",
           content: "Bei Kapitalanlagen gelten oft andere Konditionen als bei selbstgenutzten Immobilien. Die Eigenkapitalanforderungen können höher sein, und die Zinssätze können variieren.",
+          icon: "Building2",
         },
       ],
       faqs: [
@@ -302,6 +343,7 @@ const artikelContent: ContentMap = {
             "Ihre maximale Preisgrenze festlegen",
             "Finanzierung bereits vorbereitet haben",
           ],
+          icon: "ClipboardCheck",
         },
         {
           title: "Verhandlungsstrategien",
@@ -313,6 +355,7 @@ const artikelContent: ContentMap = {
             "Flexibilität bei Zahlungsmodalitäten zeigen",
             "Nicht zu emotional werden",
           ],
+          icon: "Handshake",
         },
         {
           title: "Typische Verhandlungspunkte",
@@ -324,6 +367,7 @@ const artikelContent: ContentMap = {
             "Übergabetermin",
             "Gewährleistungsausschluss gegen Preisnachlass",
           ],
+          icon: "ListChecks",
         },
       ],
       faqs: [
@@ -352,6 +396,7 @@ const artikelContent: ContentMap = {
             "Recht auf Kündigung bei Vertragsverletzungen",
             "Recht auf Mieterhöhung unter bestimmten Voraussetzungen",
           ],
+          icon: "Shield",
         },
         {
           title: "Pflichten des Vermieters",
@@ -363,10 +408,12 @@ const artikelContent: ContentMap = {
             "Einhaltung von Kündigungsfristen",
             "Einhaltung des Mietrechts und aller gesetzlichen Bestimmungen",
           ],
+          icon: "FileCheck",
         },
         {
           title: "Mietvertrag und Dokumentation",
           content: "Ein schriftlicher Mietvertrag ist essentiell. Er sollte enthalten: Mietdauer, Mietpreis, Nebenkosten, Kündigungsfristen, Regelungen zu Schönheitsreparaturen und alle besonderen Vereinbarungen.",
+          icon: "FileText",
         },
       ],
       faqs: [
@@ -390,18 +437,22 @@ const artikelContent: ContentMap = {
         {
           title: "Eigentumswohnung",
           content: "Eigentumswohnungen bieten den Vorteil der geringeren Anschaffungskosten und weniger Verantwortung für Außenanlagen. Wichtig ist die WEG-Verwaltung und die Höhe der monatlichen Nebenkosten.",
+          icon: "Building",
         },
         {
           title: "Einfamilienhaus",
           content: "Ein Einfamilienhaus bietet maximale Freiheit und Gestaltungsmöglichkeiten, erfordert aber auch mehr Eigenverantwortung und höhere Kosten für Instandhaltung.",
+          icon: "Home",
         },
         {
           title: "Mehrfamilienhaus",
           content: "Mehrfamilienhäuser eignen sich besonders für Kapitalanleger. Sie bieten mehrere Mieteinnahmequellen, erfordern aber auch professionelles Management.",
+          icon: "Building2",
         },
         {
           title: "Gewerbeimmobilie",
           content: "Gewerbeimmobilien können höhere Renditen bieten, sind aber auch mit höheren Risiken verbunden. Die Mietverträge sind oft langfristiger, aber Leerstand kann teuer werden.",
+          icon: "Building2",
         },
       ],
       faqs: [
@@ -430,6 +481,7 @@ const artikelContent: ContentMap = {
             "Entwicklungspotenzial der Gegend",
             "Kriminalitätsrate und Sicherheit",
           ],
+          icon: "MapPin",
         },
         {
           title: "Werttreiber erkennen",
@@ -441,10 +493,12 @@ const artikelContent: ContentMap = {
             "Attraktive Freizeitmöglichkeiten",
             "Gute Schulen und Bildungseinrichtungen",
           ],
+          icon: "Star",
         },
         {
           title: "Wertmindernde Faktoren",
           content: "Achten Sie auf: Lärmquellen (Flughäfen, Autobahnen), Umweltschäden, schlechte Infrastruktur, hohe Kriminalität, fehlende Entwicklungsperspektiven.",
+          icon: "AlertTriangle",
         },
       ],
       faqs: [
@@ -466,14 +520,17 @@ const artikelContent: ContentMap = {
         {
           title: "Kaufvertrag",
           content: "Der Kaufvertrag sollte enthalten: genaue Beschreibung der Immobilie, Kaufpreis und Zahlungsmodalitäten, Übergabetermin, Gewährleistungsregelungen, Rücktrittsrechte und alle besonderen Vereinbarungen.",
+          icon: "FileText",
         },
         {
           title: "Grundbuch und Eigentumsübertragung",
           content: "Die Eigentumsübertragung erfolgt durch notarielle Beurkundung und Eintragung ins Grundbuch. Wichtig sind: Eigentumsverhältnisse prüfen, Lasten und Rechte im Grundbuch prüfen, Auflassungsvormerkung vereinbaren.",
+          icon: "BookOpen",
         },
         {
           title: "Gewährleistung und Mängelhaftung",
           content: "Bei Mängeln haben Sie Gewährleistungsansprüche. Wichtig: Mängel rechtzeitig rügen, Beweise sichern, Fristen beachten. Ein Gewährleistungsausschluss ist möglich, reduziert aber auch den Kaufpreis.",
+          icon: "ShieldCheck",
         },
       ],
       faqs: [
@@ -502,6 +559,7 @@ const artikelContent: ContentMap = {
             "Maklerprovision (wenn vorhanden, 3-7%)",
             "Gutachten und Dokumente",
           ],
+          icon: "Receipt",
         },
         {
           title: "Laufende Kosten",
@@ -513,10 +571,12 @@ const artikelContent: ContentMap = {
             "Instandhaltungsrücklagen (1-2% des Immobilienwerts pro Jahr)",
             "Verwaltungskosten (bei Vermietung)",
           ],
+          icon: "Clock",
         },
         {
           title: "Renovierungs- und Modernisierungskosten",
           content: "Je nach Zustand der Immobilie können Renovierungskosten anfallen. Planen Sie 10-20% des Kaufpreises als Puffer ein, besonders bei älteren Immobilien.",
+          icon: "Hammer",
         },
       ],
       faqs: [
@@ -545,6 +605,7 @@ const artikelContent: ContentMap = {
             "Wichtige Mängel übersehen",
             "Budget überschreiten",
           ],
+          icon: "Brain",
         },
         {
           title: "Strategische Entscheidungskriterien",
@@ -556,10 +617,12 @@ const artikelContent: ContentMap = {
             "Marktlage und Entwicklungspotenzial",
             "Objektiven Kriterien (Lage, Zustand, Preis)",
           ],
+          icon: "Target",
         },
         {
           title: "Checkliste vor der Entscheidung",
           content: "Bevor Sie zusagen, prüfen Sie: Finanzierung steht, Gutachten eingeholt, alle Kosten kalkuliert, rechtliche Prüfung erfolgt, Vergleichsobjekte analysiert, langfristige Tragfähigkeit geprüft.",
+          icon: "CheckCircle",
         },
       ],
       faqs: [
@@ -590,14 +653,17 @@ const artikelContent: ContentMap = {
             "Die Ersparnis die Kosten übersteigt",
             "Sie zusätzliche Flexibilität benötigen",
           ],
+          icon: "RefreshCw",
         },
         {
           title: "Kosten einer Umschuldung",
           content: "Bei einer Umschuldung fallen Kosten an: Vorfälligkeitsentschädigung (bei vorzeitiger Kündigung), neue Bereitstellungsprovision, Notarkosten, Grundbucheintragung, ggf. neue Absicherungen.",
+          icon: "DollarSign",
         },
         {
           title: "Rechnung: Ersparnis vs. Kosten",
           content: "Berechnen Sie genau: Wie viel sparen Sie durch niedrigere Zinsen? Wie hoch sind die Kosten der Umschuldung? Ab wann rechnet sich die Umschuldung? Berücksichtigen Sie auch die Restlaufzeit.",
+          icon: "Calculator",
         },
       ],
       faqs: [
@@ -619,6 +685,7 @@ const artikelContent: ContentMap = {
         {
           title: "Zinsentwicklung verstehen",
           content: "Zinsen werden von verschiedenen Faktoren beeinflusst: Leitzins der EZB, Inflationsrate, wirtschaftliche Entwicklung, Marktlage und Angebot/Nachfrage.",
+          icon: "LineChart",
         },
         {
           title: "Strategien bei steigenden Zinsen",
@@ -629,6 +696,7 @@ const artikelContent: ContentMap = {
             "Sondertilgungen nutzen, um schneller zu tilgen",
             "Umschuldung prüfen, bevor Zinsen weiter steigen",
           ],
+          icon: "TrendingUp",
         },
         {
           title: "Strategien bei sinkenden Zinsen",
@@ -639,6 +707,7 @@ const artikelContent: ContentMap = {
             "Auf weitere Zinssenkungen warten (mit Risiko)",
             "Konditionen regelmäßig vergleichen",
           ],
+          icon: "TrendingUp",
         },
       ],
       faqs: [
@@ -666,14 +735,17 @@ const artikelContent: ContentMap = {
             "Möglichkeit, auf Marktentwicklung zu reagieren",
             "Genug Zeit für Umschuldung falls nötig",
           ],
+          icon: "Calendar",
         },
         {
           title: "Fristen beachten",
           content: "Wichtige Fristen: Kündigungsfrist bei Ihrer Bank (meist 3-6 Monate), Zeit für Angebotsvergleich (2-4 Wochen), Zeit für Umschuldung falls gewünscht (4-8 Wochen), Notartermin und Grundbucheintragung.",
+          icon: "Clock",
         },
         {
           title: "Was passiert, wenn ich nichts tue?",
           content: "Wenn Sie nichts tun, läuft Ihr Darlehen meist in ein variabel verzinstes Darlehen über oder die Bank bietet Ihnen eine Anschlussfinanzierung an - oft zu weniger günstigen Konditionen als bei aktivem Vergleich.",
+          icon: "AlertCircle",
         },
       ],
       faqs: [
@@ -704,6 +776,7 @@ const artikelContent: ContentMap = {
             "Photovoltaik-Anlage",
             "Lüftungsanlage",
           ],
+          icon: "Wrench",
         },
         {
           title: "Fördermittel nutzen",
@@ -715,10 +788,12 @@ const artikelContent: ContentMap = {
             "Regionale Förderprogramme",
             "Zinsgünstige Kredite",
           ],
+          icon: "DollarSign",
         },
         {
           title: "Finanzierung der Modernisierung",
           content: "Modernisierungen können über verschiedene Wege finanziert werden: Modernisierungskredit, Aufstockung der bestehenden Finanzierung, Eigenkapital, Fördermittel kombinieren.",
+          icon: "Wallet",
         },
       ],
       faqs: [
@@ -742,10 +817,12 @@ const artikelContent: ContentMap = {
         {
           title: "Studienübersicht",
           content: "Diese Studie analysiert die Photovoltaik-Märkte in verschiedenen europäischen Ländern und vergleicht Förderstrukturen, Einspeisevergütungen und Marktentwicklungen.",
+          icon: "FileText",
         },
         {
           title: "Haupterkenntnisse",
           content: "Die Studie zeigt: Deutschland hat gute Rahmenbedingungen, aber andere Länder holen auf. Die Einspeisevergütungen variieren erheblich. Die Eigenverbrauchsquote wird immer wichtiger.",
+          icon: "Lightbulb",
         },
       ],
     },
@@ -757,10 +834,12 @@ const artikelContent: ContentMap = {
         {
           title: "Aktuelle Entwicklung",
           content: "Die Immobilienpreise in Deutschland haben sich in den letzten Jahren unterschiedlich entwickelt. Während Ballungsräume stark gestiegen sind, zeigen ländliche Regionen eine moderatere Entwicklung.",
+          icon: "TrendingUp",
         },
         {
           title: "Regionale Unterschiede",
           content: "Die Preisentwicklung variiert erheblich zwischen Regionen. Metropolen wie München, Hamburg und Berlin zeigen die stärkste Entwicklung, während strukturschwache Regionen zurückbleiben.",
+          icon: "MapPin",
         },
       ],
     },
@@ -772,10 +851,12 @@ const artikelContent: ContentMap = {
         {
           title: "Historische Entwicklung",
           content: "Die Zinsen für Baufinanzierungen haben in den letzten 25 Jahren erhebliche Schwankungen erlebt. Von hohen Zinsen in den 90er Jahren über historische Tiefstände bis hin zu aktuellen Entwicklungen.",
+          icon: "LineChart",
         },
         {
           title: "Trendanalyse",
           content: "Die Analyse zeigt langfristige Zyklen und hilft bei der Einschätzung, ob aktuelle Zinsen hoch oder niedrig sind im historischen Vergleich.",
+          icon: "BarChart",
         },
       ],
     },
@@ -789,10 +870,12 @@ const artikelContent: ContentMap = {
         {
           title: "Was ist die Grunderwerbsteuer?",
           content: "Die Grunderwerbsteuer ist eine Steuer, die beim Kauf einer Immobilie anfällt. Sie wird vom Käufer gezahlt und beträgt je nach Bundesland 3,5% bis 6,5% des Kaufpreises.",
+          icon: "Receipt",
         },
         {
           title: "Berechnung",
           content: "Die Grunderwerbsteuer wird auf den Kaufpreis berechnet. Bei einem Kaufpreis von 400.000€ und einem Steuersatz von 5% beträgt die Grunderwerbsteuer 20.000€.",
+          icon: "Calculator",
         },
       ],
     },
@@ -804,10 +887,12 @@ const artikelContent: ContentMap = {
         {
           title: "Definition",
           content: "Eine Rückauflassungsvormerkung sichert dem Verkäufer das Recht, die Immobilie zurück zu erwerben, falls bestimmte Bedingungen nicht erfüllt werden.",
+          icon: "FileText",
         },
         {
           title: "Wann wird sie verwendet?",
           content: "Sie wird häufig bei Ratenkäufen oder bei Verkäufen mit Rückkaufrecht verwendet, um den Verkäufer abzusichern.",
+          icon: "FileText",
         },
       ],
     },
@@ -829,6 +914,7 @@ const artikelContent: ContentMap = {
             "Rechtliche Prüfung (Grundbuch, Lasten)",
             "Kosten kalkulieren (Kaufpreis + Nebenkosten)",
           ],
+          icon: "ClipboardCheck",
         },
         {
           title: "Beim Kaufvertrag",
@@ -839,6 +925,7 @@ const artikelContent: ContentMap = {
             "Übergabetermin vereinbaren",
             "Notartermin vereinbaren",
           ],
+          icon: "FileText",
         },
         {
           title: "Nach dem Kauf",
@@ -849,6 +936,7 @@ const artikelContent: ContentMap = {
             "Nebenkostenabrechnung prüfen",
             "Mängel dokumentieren und reklamieren",
           ],
+          icon: "CheckCircle",
         },
       ],
     },
@@ -866,6 +954,7 @@ const artikelContent: ContentMap = {
             "Unterlagen zusammenstellen (Grundbuch, Energieausweis, etc.)",
             "Makler entscheiden (ja/nein)",
           ],
+          icon: "ClipboardCheck",
         },
         {
           title: "Verkaufsprozess",
@@ -876,6 +965,7 @@ const artikelContent: ContentMap = {
             "Kaufvertrag vorbereiten",
             "Notartermin vereinbaren",
           ],
+          icon: "Handshake",
         },
         {
           title: "Nach dem Verkauf",
@@ -886,6 +976,7 @@ const artikelContent: ContentMap = {
             "Steuerliche Aspekte klären",
             "Dokumente archivieren",
           ],
+          icon: "CheckCircle",
         },
       ],
     },
@@ -903,6 +994,7 @@ const artikelContent: ContentMap = {
             "Grundrisse und Pläne bereithalten",
             "Renovierungs- und Modernisierungsmaßnahmen dokumentieren",
           ],
+          icon: "ClipboardList",
         },
         {
           title: "Bei der Bewertung",
@@ -913,6 +1005,7 @@ const artikelContent: ContentMap = {
             "Fragen des Gutachters beantworten",
             "Vergleichsobjekte nennen",
           ],
+          icon: "Search",
         },
       ],
     },
@@ -931,6 +1024,7 @@ const artikelContent: ContentMap = {
             "Handwerker aussuchen und Angebote einholen",
             "Zeitplan erstellen",
           ],
+          icon: "ClipboardCheck",
         },
         {
           title: "Durchführung",
@@ -942,6 +1036,7 @@ const artikelContent: ContentMap = {
             "Qualität kontrollieren",
             "Zwischenzahlungen leisten",
           ],
+          icon: "Hammer",
         },
         {
           title: "Abschluss",
@@ -952,6 +1047,7 @@ const artikelContent: ContentMap = {
             "Fördermittel beantragen",
             "Dokumentation archivieren",
           ],
+          icon: "CheckCircle",
         },
       ],
     },

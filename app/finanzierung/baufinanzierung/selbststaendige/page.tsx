@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Briefcase } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Baufinanzierung für Selbstständige | Flexible Lösungen | Targohyp",
@@ -41,6 +42,12 @@ export default function BaufinanzierungSelbststaendigePage() {
 
   return (
     <div className="w-full">
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Baufinanzierung", url: "/finanzierung/baufinanzierung" },
+        { name: "Baufinanzierung für Selbstständige", url: "/finanzierung/baufinanzierung/selbststaendige" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
@@ -53,6 +60,7 @@ export default function BaufinanzierungSelbststaendigePage() {
               Baufinanzierung
             </Link>
             <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Baufinanzierung für Selbstständige</span>
             <span className="text-gray-700">Baufinanzierung für Selbstständige</span>
           </nav>
           <div className="max-w-3xl">

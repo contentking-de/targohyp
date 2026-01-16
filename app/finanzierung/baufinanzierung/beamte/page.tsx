@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Award } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Baufinanzierung für Beamte | Günstige Zinsen | Targohyp",
@@ -41,6 +42,12 @@ export default function BaufinanzierungBeamtePage() {
 
   return (
     <div className="w-full">
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Baufinanzierung", url: "/finanzierung/baufinanzierung" },
+        { name: "Baufinanzierung für Beamte", url: "/finanzierung/baufinanzierung/beamte" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
@@ -48,6 +55,12 @@ export default function BaufinanzierungBeamtePage() {
             <Link href="/finanzierung" className="text-targo-blue hover:underline">
               Finanzierung
             </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <Link href="/finanzierung/baufinanzierung" className="text-targo-blue hover:underline">
+              Baufinanzierung
+            </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Baufinanzierung für Beamte</span>
             <span className="mx-2 text-gray-400">/</span>
             <Link href="/finanzierung/baufinanzierung" className="text-targo-blue hover:underline">
               Baufinanzierung

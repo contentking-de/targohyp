@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Download, FileText, ClipboardList } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Checklisten für Baufinanzierung | Download | Targohyp",
@@ -54,6 +55,12 @@ export default function ChecklistsPage() {
 
   return (
     <div className="w-full">
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Ablauf & Unterlagen", url: "/finanzierung/ablauf-unterlagen" },
+        { name: "Checklisten", url: "/finanzierung/ablauf-unterlagen/checklisten" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
@@ -65,6 +72,8 @@ export default function ChecklistsPage() {
             <Link href="/finanzierung/ablauf-unterlagen" className="text-targo-blue hover:underline">
               Ablauf & Unterlagen
             </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Checklisten</span>
             <span className="mx-2 text-gray-400">/</span>
             <span className="text-gray-700">Checklisten</span>
           </nav>
