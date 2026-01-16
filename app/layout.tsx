@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Testimonials } from "@/components/layout/testimonials";
 import { Newsletter } from "@/components/layout/newsletter";
+import { ExitIntentPopup } from "@/components/layout/exit-intent-popup";
 import { Providers } from "./providers";
 
 const handelGo = localFont({
@@ -38,6 +39,7 @@ export default function RootLayout({
             <Newsletter />
             <Footer />
           </div>
+          <ExitIntentPopup />
         </Providers>
       </body>
     </html>

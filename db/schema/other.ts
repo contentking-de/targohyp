@@ -148,3 +148,12 @@ export const appointmentRequests = pgTable("appointment_requests", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const guideRequests = pgTable("guide_requests", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  email: varchar("email", { length: 255 }).notNull(),
+  guideType: varchar("guide_type", { length: 100 }).default("erstfinanzierer").notNull(), // 'erstfinanzierer', etc.
+  status: varchar("status", { length: 50 }).default("pending").notNull(), // 'pending', 'sent', 'failed'
+  sentAt: timestamp("sent_at"),
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+

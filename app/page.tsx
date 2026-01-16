@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, BookOpen, FileText, Scale } from "lucide-react";
+import { HeroSection } from "@/components/hero-section";
 
 export const metadata: Metadata = {
   title: "Targohyp - Ihr Finanzierungspartner für Bau und Immobilien",
@@ -13,72 +13,7 @@ export default function Home() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="relative w-full min-h-[600px] flex items-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/targohyp-baufinanzierung.jpg)' }}
-        ></div>
-
-        {/* Content Container */}
-        <div className="container mx-auto px-4 relative z-10 py-16 lg:py-24">
-          <div className="max-w-4xl bg-white rounded-lg shadow-lg p-8 lg:p-12">
-            {/* Tags */}
-            <div className="flex flex-wrap gap-0 mb-6">
-              <Link
-                href="/finanzierung"
-                className="text-sm font-medium text-targo-blue border-b-2 border-targo-blue pb-1 mr-4"
-              >
-                Finanzierung
-              </Link>
-              <Link
-                href="/rechner"
-                className="text-sm font-medium text-gray-700 hover:text-targo-blue pb-1 mr-4"
-              >
-                Rechner
-              </Link>
-              <Link
-                href="/ratgeber"
-                className="text-sm font-medium text-gray-700 hover:text-targo-blue pb-1"
-              >
-                Top-Zinssätze
-              </Link>
-            </div>
-
-            {/* Headline */}
-            <h1 className="text-3xl lg:text-4xl xl:text-5xl font-bold mb-6 leading-tight">
-              IHR FINANZIERUNGSPARTER FÜR BAU UND IMMOBILIEN
-            </h1>
-
-            {/* Description */}
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed max-w-2xl">
-              Finden Sie die passende Baufinanzierung für Ihr Vorhaben. Mit
-              unseren Rechnern, umfassenden Informationen und professioneller
-              Beratung machen wir Ihre Immobilienfinanzierung einfach und
-              transparent.
-            </p>
-
-            {/* CTA Button */}
-            <div className="flex flex-col sm:flex-row items-start sm:items-start gap-6">
-              <Button
-                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
-                asChild
-              >
-                <Link href="/finanzierungsanfrage">Jetzt von unsere Experten beraten lassen</Link>
-              </Button>
-              <div className="flex-shrink-0 sm:ml-auto sm:-mt-8">
-                <Image
-                  src="/trustsiegel.webp"
-                  alt="Trustsiegel"
-                  width={150}
-                  height={75}
-                  className="h-auto w-auto max-w-[150px]"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection />
 
       {/* About Section */}
       <section className="w-full bg-gray-50 py-16 lg:py-24">
