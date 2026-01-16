@@ -20,7 +20,7 @@ export async function GET() {
     }
 
     const userId = session.user.id;
-    const userEmail = session.user.email;
+    const userRole = session.user.role;
 
     // Lade CMS-User-Daten
     const cmsUserResults = await db
@@ -35,17 +35,42 @@ export async function GET() {
 
     const cmsUser = cmsUserResults[0];
 
+    // Prüfe, ob User aktiv ist
+    if (cmsUser.status !== "active") {
+      return NextResponse.json({ error: "Account is not active" }, { status: 403 });
+    }
+
+    // Prüfe Berechtigung: Nur super_admin und admin können alle Daten sehen
+    if (userRole !== "super_admin" && userRole !== "admin") {
+      return NextResponse.json({ error: "Insufficient permissions" }, { status: 403 });
+    }
+
     // Für Bankberater: Lade alle Kundendaten (nicht nur eigene)
     // Hier könnten wir später Filter nach Berater-Zuordnung hinzufügen
     const [allUsers, allProfiles, allDocuments, allCalculations, allComparisons, allAdvisoryRequests, allFinancingRequests, allValuations] = await Promise.all([
-      // Alle User-Daten (für Übersicht)
-      db.select().from(users),
+      // Alle User-Daten (für Übersicht) - ohne sensible Daten
+      db.select({
+        id: users.id,
+        email: users.email,
+        createdAt: users.createdAt,
+        updatedAt: users.updatedAt,
+      }).from(users),
       
-      // Alle Profil-Daten
-      db.select().from(userProfiles),
+      // Alle Profil-Daten - ohne sensible Daten
+      db.select({
+        id: userProfiles.id,
+        userId: userProfiles.userId,
+        createdAt: userProfiles.createdAt,
+        updatedAt: userProfiles.updatedAt,
+      }).from(userProfiles),
       
-      // Alle Dokumente
-      db.select().from(userDocuments),
+      // Alle Dokumente - ohne Dateipfade
+      db.select({
+        id: userDocuments.id,
+        userId: userDocuments.userId,
+        category: userDocuments.category,
+        uploadedAt: userDocuments.uploadedAt,
+      }).from(userDocuments),
       
       // Alle Berechnungen
       db.select().from(userCalculations),
@@ -53,18 +78,43 @@ export async function GET() {
       // Alle Vergleiche
       db.select().from(userComparisons),
       
-      // Alle Beratungsanfragen
-      db.select().from(advisoryRequests),
+      // Alle Beratungsanfragen - ohne sensible persönliche Daten
+      db.select({
+        id: advisoryRequests.id,
+        userId: advisoryRequests.userId,
+        preferredDate: advisoryRequests.preferredDate,
+        status: advisoryRequests.status,
+        createdAt: advisoryRequests.createdAt,
+      }).from(advisoryRequests),
       
-      // Alle Finanzierungsanfragen
-      db.select().from(financingRequests),
+      // Alle Finanzierungsanfragen - ohne sensible persönliche Daten
+      db.select({
+        id: financingRequests.id,
+        userId: financingRequests.userId,
+        financingType: financingRequests.financingType,
+        propertyType: financingRequests.propertyType,
+        status: financingRequests.status,
+        createdAt: financingRequests.createdAt,
+      }).from(financingRequests),
       
-      // Alle Immobilienbewertungen
-      db.select().from(propertyValuations),
+      // Alle Immobilienbewertungen - ohne sensible persönliche Daten
+      db.select({
+        id: propertyValuations.id,
+        userId: propertyValuations.userId,
+        propertyType: propertyValuations.propertyType,
+        status: propertyValuations.status,
+        createdAt: propertyValuations.createdAt,
+      }).from(propertyValuations),
     ]);
 
     return NextResponse.json({
-      cmsUser,
+      cmsUser: {
+        id: cmsUser.id,
+        email: cmsUser.email,
+        role: cmsUser.role,
+        status: cmsUser.status,
+        lastLogin: cmsUser.lastLogin,
+      },
       // Statistiken für alle Kunden
       stats: {
         totalUsers: allUsers.length,
@@ -75,7 +125,7 @@ export async function GET() {
         totalFinancingRequests: allFinancingRequests.length,
         totalValuations: allValuations.length,
       },
-      // Alle Kundendaten für Übersicht
+      // Alle Kundendaten für Übersicht (ohne sensible Daten)
       allUsers,
       allProfiles,
       allDocuments,
@@ -86,7 +136,8 @@ export async function GET() {
       allValuations,
     });
   } catch (error) {
-    console.error("Dashboard API error:", error);
+    // Logge Fehler ohne sensible Daten
+    console.error("Dashboard API error:", error instanceof Error ? error.message : "Unknown error");
     return NextResponse.json(
       { error: "Internal server error" },
       { status: 500 }

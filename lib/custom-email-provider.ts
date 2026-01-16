@@ -15,8 +15,9 @@ export function CustomEmailProvider(): Provider {
     name: "Email",
     maxAge: 24 * 60 * 60, // 24 hours
     async sendVerificationRequest({ identifier: email, url, provider, theme }) {
-      console.log("📧 Sende Magic Link an:", email);
-      console.log("🔗 URL:", url);
+      // Logge ohne sensible Daten (nur Domain der E-Mail)
+      const emailDomain = email.split("@")[1];
+      console.log("📧 Sende Magic Link an:", `***@${emailDomain}`);
       
       try {
         // Prüfe, ob es ein CMS-User ist
@@ -28,7 +29,8 @@ export function CustomEmailProvider(): Provider {
 
         // Wenn kein CMS-User gefunden, erstelle einen neuen mit super_admin Rolle
         if (userResults.length === 0) {
-          console.log("👤 Erstelle neuen CMS-User für:", email);
+          const emailDomain = email.split("@")[1];
+          console.log("👤 Erstelle neuen CMS-User für:", `***@${emailDomain}`);
           await db.insert(cmsUsers).values({
             email,
             role: "super_admin",

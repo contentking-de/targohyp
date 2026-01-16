@@ -15,25 +15,61 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   pages: {
     signIn: "/auth/signin",
   },
+  cookies: {
+    sessionToken: {
+      name: process.env.NODE_ENV === "production" 
+        ? "__Secure-next-auth.session-token" 
+        : "next-auth.session-token",
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+    callbackUrl: {
+      name: process.env.NODE_ENV === "production"
+        ? "__Secure-next-auth.callback-url"
+        : "next-auth.callback-url",
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+    csrfToken: {
+      name: process.env.NODE_ENV === "production"
+        ? "__Host-next-auth.csrf-token"
+        : "next-auth.csrf-token",
+      options: {
+        httpOnly: true,
+        sameSite: "lax",
+        path: "/",
+        secure: process.env.NODE_ENV === "production",
+      },
+    },
+  },
   callbacks: {
     async redirect({ url, baseUrl }) {
-      // Nach erfolgreicher Anmeldung zum Dashboard weiterleiten
-      // Wenn die URL die Sign-In-Seite oder Callback-URLs enthält, leite zum Dashboard um
-      if (url.includes("/auth/signin") || url.includes("/api/auth/callback")) {
-        return `${baseUrl}/dashboard`;
-      }
-      
-      // Wenn die URL relativ zur Base-URL ist und nicht signin/callback, verwende sie
+      // Sicherheitsprüfung: Verhindere Open Redirect Angriffe
+      // Erlaube nur URLs, die zur eigenen Domain gehören
       if (url.startsWith(baseUrl)) {
-        return url;
+        // Erlaube nur interne Pfade, keine externen URLs
+        const urlPath = new URL(url).pathname;
+        
+        // Erlaube keine Redirects zu Auth-Seiten nach erfolgreicher Anmeldung
+        if (urlPath.includes("/auth/signin") || urlPath.includes("/api/auth/callback")) {
+          return `${baseUrl}/dashboard`;
+        }
+        
+        // Erlaube nur sichere interne Pfade
+        if (urlPath.startsWith("/") && !urlPath.startsWith("//")) {
+          return url;
+        }
       }
       
-      // Externe URLs erlauben (falls nötig)
-      if (url.startsWith("http")) {
-        return url;
-      }
-      
-      // Standard: Dashboard
+      // Standard: Dashboard (für alle anderen Fälle)
       return `${baseUrl}/dashboard`;
     },
     async signIn({ user, account, profile }) {
@@ -57,7 +93,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         // Wenn kein CMS-User gefunden, erstelle einen neuen mit super_admin Rolle
         // (sollte eigentlich schon in sendVerificationRequest passieren, aber als Fallback)
         if (userResults.length === 0) {
-          console.log("➕ Erstelle neuen CMS-User für:", user.email);
+          const emailDomain = user.email.split("@")[1];
+          console.log("➕ Erstelle neuen CMS-User für:", `***@${emailDomain}`);
           await db.insert(cmsUsers).values({
             email: user.email,
             role: "super_admin",
