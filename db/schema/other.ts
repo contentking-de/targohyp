@@ -1,4 +1,4 @@
-import { pgTable, uuid, varchar, text, timestamp, pgEnum, integer, numeric } from "drizzle-orm/pg-core";
+import { pgTable, uuid, varchar, text, timestamp, pgEnum, integer, numeric, jsonb } from "drizzle-orm/pg-core";
 import { users } from "./users";
 
 export const newsletterStatusEnum = pgEnum("newsletter_status", ["pending", "confirmed", "unsubscribed"]);
@@ -155,5 +155,42 @@ export const guideRequests = pgTable("guide_requests", {
   status: varchar("status", { length: 50 }).default("pending").notNull(), // 'pending', 'sent', 'failed'
   sentAt: timestamp("sent_at"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
+});
+
+export const banksOrCreditUnions = pgTable("banks_or_credit_unions", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  
+  // Grundlegende Informationen
+  name: varchar("name", { length: 255 }).notNull(), // z.B. "UBS Schweiz"
+  legalName: varchar("legal_name", { length: 255 }), // z.B. "UBS Switzerland AG"
+  description: text("description"), // Beschreibung der Bank
+  logo: varchar("logo", { length: 500 }), // URL zum Logo
+  url: varchar("url", { length: 500 }), // URL zur Website
+  foundingDate: integer("founding_date"), // Gründungsjahr (z.B. 1862)
+  hasMap: varchar("has_map", { length: 500 }), // Google Maps URL
+  
+  // Awards (Array von Award-Strings)
+  awards: jsonb("awards"), // Array von Awards, z.B. ["Beste Privatbank der Schweiz 2025", ...]
+  
+  // Social Media Links (Array von URLs)
+  sameAs: jsonb("same_as"), // Array von Social Media URLs
+  
+  // Adresse (PostalAddress als JSON)
+  address: jsonb("address"), // { @type: "PostalAddress", streetAddress, addressLocality, postalCode, addressRegion, addressCountry }
+  
+  // Bewertungen (AggregateRating als JSON)
+  aggregateRating: jsonb("aggregate_rating"), // { @type: "AggregateRating", ratingValue, reviewCount }
+  
+  // Bediente Gebiete (Array von Countries)
+  areaServed: jsonb("area_served"), // Array von { @type: "Country", name: "Switzerland" }
+  
+  // Kontaktpunkte (Array von ContactPoints)
+  contactPoint: jsonb("contact_point"), // Array von { @type: "ContactPoint", areaServed, availableLanguage, contactType, url }
+  
+  // Mitarbeiter (Array von Employees/OrganizationRoles)
+  employee: jsonb("employee"), // Array von { @type: "Person" | "OrganizationRole", name, jobTitle, startDate, ... }
+  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
