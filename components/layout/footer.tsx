@@ -5,7 +5,7 @@ export function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-5">
           <div className="space-y-4">
             <Image
               src="/targobank-logo-baufi.svg"
@@ -104,6 +104,17 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
+          </div>
+          <div className="space-y-4">
+            <div className="flex justify-start">
+              <Image
+                src="/trustsiegel.webp"
+                alt="Trustsiegel"
+                width={150}
+                height={75}
+                className="h-auto w-auto max-w-[150px]"
+              />
+            </div>
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">

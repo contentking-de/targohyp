@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, BookOpen, FileText, Scale } from "lucide-react";
 
@@ -58,12 +59,23 @@ export default function Home() {
             </p>
 
             {/* CTA Button */}
-            <Button
-              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
-              asChild
-            >
-              <Link href="/finanzierungsanfrage">Jetzt von unsere Experten beraten lassen</Link>
-            </Button>
+            <div className="flex flex-col sm:flex-row items-start sm:items-start gap-6">
+              <Button
+                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
+                asChild
+              >
+                <Link href="/finanzierungsanfrage">Jetzt von unsere Experten beraten lassen</Link>
+              </Button>
+              <div className="flex-shrink-0 sm:ml-auto sm:-mt-8">
+                <Image
+                  src="/trustsiegel.webp"
+                  alt="Trustsiegel"
+                  width={150}
+                  height={75}
+                  className="h-auto w-auto max-w-[150px]"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
