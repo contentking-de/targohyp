@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { getArtikelContent, getAuthorInfo, getAuthorSlug } from "@/lib/ratgeber-content";
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+import { ChecklistPdfForm } from "@/components/checklist-pdf-form";
 
 interface PageProps {
   params: Promise<{
@@ -151,8 +152,12 @@ export default async function ArtikelPage({ params }: PageProps) {
         <div className="container mx-auto px-4">
           <div className="prose prose-lg max-w-none">
               {content ? (
-                <div className="space-y-8">
-                  {content.sections && content.sections.map((section, index) => {
+                <>
+                  {/* Sections Grid oder vertikal */}
+                  <div className={kategorieId === "checklisten" && artikelId === "checkliste-sanierung" && content.sections?.length === 3 
+                    ? "grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-8" 
+                    : "space-y-8"}>
+                    {content.sections && content.sections.map((section, index) => {
                     const iconMap: Record<string, any> = {
                       BookOpen,
                       Home,
@@ -229,10 +234,19 @@ export default async function ArtikelPage({ params }: PageProps) {
                         )}
                       </div>
                     );
-                  })}
+                    })}
+                  </div>
 
+                  {/* Checkliste PDF CTA - nur für Checkliste-Sanierung, über volle Breite */}
+                  {kategorieId === "checklisten" && artikelId === "checkliste-sanierung" && (
+                    <div className="mt-8 -mx-4 px-4">
+                      <ChecklistPdfForm checklistType="checkliste-sanierung" />
+                    </div>
+                  )}
+
+                  {/* FAQs */}
                   {content.faqs && content.faqs.length > 0 && (
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
+                    <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mt-8">
                       <div className="flex items-start gap-4 mb-6">
                         <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
                           <HelpCircle className="w-6 h-6 text-targo-blue" />
@@ -255,7 +269,7 @@ export default async function ArtikelPage({ params }: PageProps) {
                       </div>
                     </div>
                   )}
-                </div>
+                </>
               ) : (
                 <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
                   <p className="text-gray-600">

@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Calculator, BookOpen, FileText, Scale } from "lucide-react";
 import { HeroSection } from "@/components/hero-section";
 import { createMetadata } from "@/lib/utils";
+import { kategorien, getAllArtikel } from "@/lib/ratgeber-data";
+import { getArtikelContent } from "@/lib/ratgeber-content";
 
 export const metadata: Metadata = createMetadata({
   title: "Targohyp - Ihr Finanzierungspartner für Bau und Immobilien",
@@ -11,6 +14,24 @@ export const metadata: Metadata = createMetadata({
 }, { path: "/" });
 
 export default function Home() {
+  // Hole alle Artikel und sortiere nach Erstellungsdatum (neueste zuerst)
+  const allArtikel = getAllArtikel()
+    .map(({ kategorie, artikel }) => {
+      const content = getArtikelContent(kategorie.id, artikel.id);
+      return {
+        kategorie,
+        artikel,
+        content,
+        createdAt: content?.createdAt || artikel.createdAt || "2000-01-01",
+      };
+    })
+    .sort((a, b) => {
+      const dateA = new Date(a.createdAt).getTime();
+      const dateB = new Date(b.createdAt).getTime();
+      return dateB - dateA; // Neueste zuerst
+    })
+    .slice(0, 3); // Nimm die 3 neuesten
+
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -149,6 +170,88 @@ export default function Home() {
                 <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-targo-blue transition-colors flex-shrink-0 ml-2" />
               </Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Neueste Ratgeber-Artikel Section */}
+      <section className="w-full bg-gray-50 py-16 lg:py-24">
+        <div className="container mx-auto px-4">
+          <div className="mb-12 text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-[rgb(0,47,95)]">
+              Neueste Ratgeber-Artikel
+            </h2>
+            <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+              Bleiben Sie auf dem Laufenden mit unseren aktuellsten Artikeln rund um Baufinanzierung und Immobilien.
+            </p>
+          </div>
+
+          {allArtikel.length > 0 ? (
+            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {allArtikel.map(({ kategorie, artikel, content }) => (
+                <Link
+                  key={`${kategorie.id}-${artikel.id}`}
+                  href={`/ratgeber/${kategorie.id}/${artikel.id}`}
+                  className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-targo-blue transition-all group"
+                >
+                  {artikel.image && (
+                    <div className="relative w-full h-48 overflow-hidden">
+                      <Image
+                        src={artikel.image}
+                        alt={artikel.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className="mb-2">
+                      <span className="text-xs font-semibold text-targo-blue bg-targo-blue/10 px-3 py-1 rounded-full">
+                        {kategorie.title}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                      {artikel.title}
+                    </h3>
+                    {content?.intro && (
+                      <p className="text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                        {content.intro.length > 150 ? `${content.intro.substring(0, 150)}...` : content.intro}
+                      </p>
+                    )}
+                    <div className="flex items-center justify-between pt-4 border-t border-gray-100">
+                      <div className="flex items-center gap-2 text-sm text-gray-500">
+                        {content?.createdAt && (
+                          <span>
+                            {new Date(content.createdAt).toLocaleDateString('de-DE', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric'
+                            })}
+                          </span>
+                        )}
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-targo-blue group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div className="text-center py-12">
+              <p className="text-gray-600">Aktuell sind keine Artikel verfügbar.</p>
+            </div>
+          )}
+
+          <div className="mt-12 text-center">
+            <Button
+              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
+              asChild
+            >
+              <Link href="/ratgeber" className="flex items-center justify-center gap-2">
+                Alle Ratgeber-Artikel ansehen
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
