@@ -19,13 +19,20 @@ export default function VergleichePage() {
     },
     {
       id: 2,
+      slug: "zinsentwicklung",
+      title: "Zinsentwicklung im Zeitverlauf",
+      description: "Verfolgen Sie die historische Entwicklung der Bauzinsen und informieren Sie sich über aktuelle Zinssätze.",
+      type: "Zinsentwicklung",
+    },
+    {
+      id: 3,
       slug: "produktvergleich",
       title: "Baufinanzierungsprodukte im Vergleich",
       description: "Übersicht und Vergleich unserer verschiedenen Baufinanzierungsprodukte.",
       type: "Produktvergleich",
     },
     {
-      id: 3,
+      id: 4,
       slug: "tilgungsvergleich",
       title: "Tilgungsmodelle vergleichen",
       description: "Welches Tilgungsmodell passt zu Ihrer Situation? Ein detaillierter Vergleich.",

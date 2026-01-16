@@ -9,8 +9,10 @@ import { useState } from "react";
 
 export function Header() {
   const [isFinanzierungOpen, setIsFinanzierungOpen] = useState(false);
+  const [isVergleicheOpen, setIsVergleicheOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileFinanzierungOpen, setIsMobileFinanzierungOpen] = useState(false);
+  const [isMobileVergleicheOpen, setIsMobileVergleicheOpen] = useState(false);
 
   return (
     <header className="w-full bg-white border-b border-gray-200">
@@ -261,13 +263,70 @@ export function Header() {
               Ratgeber
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
             </Link>
-            <Link
-              href="/vergleiche"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
+            <div
+              className="relative"
+              onMouseEnter={() => setIsVergleicheOpen(true)}
+              onMouseLeave={() => setIsVergleicheOpen(false)}
             >
-              Vergleiche
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
+              <Link
+                href="/vergleiche"
+                className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group flex items-center gap-1"
+              >
+                Vergleiche
+                <ChevronDown className={`w-4 h-4 transition-transform ${isVergleicheOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {isVergleicheOpen && (
+                <>
+                  {/* Unsichtbarer Bereich zum Überbrücken der Lücke */}
+                  <div className="absolute top-full left-0 w-full h-2"></div>
+                  <div className="absolute top-full left-0 pt-2 w-80 z-50">
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
+                      <div className="py-2">
+                        <Link
+                          href="/vergleiche"
+                          className="block px-4 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                          onClick={() => setIsVergleicheOpen(false)}
+                        >
+                          Übersicht
+                        </Link>
+                        <div className="border-t border-gray-200 my-1"></div>
+                        <Link
+                          href="/vergleiche/zinsvergleich"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsVergleicheOpen(false)}
+                        >
+                          Festzins vs. variabler Zins
+                        </Link>
+                        <Link
+                          href="/vergleiche/zinsentwicklung"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsVergleicheOpen(false)}
+                        >
+                          Zinsentwicklung
+                        </Link>
+                        <Link
+                          href="/vergleiche/produktvergleich"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsVergleicheOpen(false)}
+                        >
+                          Produktvergleich
+                        </Link>
+                        <Link
+                          href="/vergleiche/tilgungsvergleich"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsVergleicheOpen(false)}
+                        >
+                          Tilgungsvergleich
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
             <SearchBox />
           </nav>
 
@@ -498,13 +557,74 @@ export function Header() {
             >
               Ratgeber
             </Link>
-            <Link
-              href="/vergleiche"
-              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Vergleiche
-            </Link>
+            {/* Vergleiche mit Dropdown */}
+            <div>
+              <button
+                className="w-full flex items-center justify-between text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+                onClick={() => setIsMobileVergleicheOpen(!isMobileVergleicheOpen)}
+                aria-expanded={isMobileVergleicheOpen}
+              >
+                <span>Vergleiche</span>
+                <ChevronDown 
+                  className={`w-4 h-4 transition-transform ${isMobileVergleicheOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {isMobileVergleicheOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                  <Link
+                    href="/vergleiche"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileVergleicheOpen(false);
+                    }}
+                  >
+                    Übersicht
+                  </Link>
+                  <Link
+                    href="/vergleiche/zinsvergleich"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileVergleicheOpen(false);
+                    }}
+                  >
+                    Festzins vs. variabler Zins
+                  </Link>
+                  <Link
+                    href="/vergleiche/zinsentwicklung"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileVergleicheOpen(false);
+                    }}
+                  >
+                    Zinsentwicklung
+                  </Link>
+                  <Link
+                    href="/vergleiche/produktvergleich"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileVergleicheOpen(false);
+                    }}
+                  >
+                    Produktvergleich
+                  </Link>
+                  <Link
+                    href="/vergleiche/tilgungsvergleich"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileVergleicheOpen(false);
+                    }}
+                  >
+                    Tilgungsvergleich
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {/* SearchBox für Mobile */}
             <div className="pt-2 border-t border-gray-200 mt-2">
