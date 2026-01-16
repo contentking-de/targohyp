@@ -7,6 +7,7 @@ import { kategorien, getKategorieById } from "@/lib/ratgeber-data";
 import { getArtikelContent } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 interface PageProps {
   params: Promise<{
@@ -49,6 +50,12 @@ export default async function KategoriePage({ params }: PageProps) {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Ratgeber", url: "/ratgeber" },
+        { name: kategorie.title, url: `/ratgeber/${kategorie.id}` }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24">
         <div className="container mx-auto px-4">

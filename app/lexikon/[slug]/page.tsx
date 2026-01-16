@@ -4,6 +4,7 @@ import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
 import { findBegriffBySlug, findVerwandteBegriffe, lexikonBegriffe } from "@/lib/lexikon-data";
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 // Generiere statische Pfade für alle Begriffe
 export async function generateStaticParams() {
@@ -64,6 +65,12 @@ export default async function LexikonDetailPage({
 
   return (
     <>
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Lexikon", url: "/lexikon" },
+        { name: begriff.begriff, url: `/lexikon/${slug}` }
+      ]} />
       {/* FAQ Schema-Markup */}
       {faqSchema && (
         <script

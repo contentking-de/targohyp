@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, TrendingUp, Building2, Calculator, Shield } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Kapitalanlage finanzieren | Immobilien als Investment | Targohyp",
@@ -84,6 +85,12 @@ export default function KapitalanlageFinanzierenPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Kapitalanlage finanzieren", url: "/finanzierung/kapitalanlage-finanzieren" }
+      ]} />
       {/* FinancialProduct Schema-Markup */}
       {financialProductsSchema.map((schema, index) => (
         <script

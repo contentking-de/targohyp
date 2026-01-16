@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, RefreshCw, TrendingUp, Shield, Calculator } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Anschlussfinanzierung - Günstige Zinsen sichern | Targohyp",
@@ -65,6 +66,12 @@ export default function AnschlussfinanzierungPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Anschlussfinanzierung", url: "/finanzierung/anschlussfinanzierung" }
+      ]} />
       {/* FinancialProduct Schema-Markup */}
       {financialProductsSchema.map((schema, index) => (
         <script

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { kategorien } from "@/lib/ratgeber-data";
 import { getArtikelContent } from "@/lib/ratgeber-content";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Ratgeber zur Baufinanzierung - Tipps & Informationen | Targohyp",
@@ -18,6 +19,11 @@ export default function RatgeberPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Ratgeber", url: "/ratgeber" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">

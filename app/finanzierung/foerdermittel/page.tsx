@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Gift, TrendingUp, Building2 } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Fördermittel für Baufinanzierung | KfW, Bafa & mehr | Targohyp",
@@ -47,6 +48,12 @@ export default function FoerdermittelPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Fördermittel", url: "/finanzierung/foerdermittel" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">

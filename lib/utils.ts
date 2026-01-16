@@ -11,6 +11,26 @@ const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}` 
   : "https://www.targohyp.de");
 
+// Breadcrumb Item Interface
+export interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
+// Generiere BreadcrumbList Schema.org Markup
+export function generateBreadcrumbListSchema(items: BreadcrumbItem[]): object {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url.startsWith("http") ? item.url : `${BASE_URL}${item.url.startsWith("/") ? item.url : `/${item.url}`}`
+    }))
+  };
+}
+
 // Helper-Funktion für Metadata mit robots noindex, nofollow, Open Graph Tags und canonical URL
 export function createMetadata(
   metadata: Omit<Metadata, "robots" | "openGraph" | "twitter" | "alternates">,

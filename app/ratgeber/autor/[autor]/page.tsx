@@ -6,6 +6,7 @@ import { getArtikelByAuthor } from "@/lib/ratgeber-data";
 import { getAuthorInfo, getAuthorNameFromSlug, getAllAuthors } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 interface PageProps {
   params: Promise<{
@@ -54,6 +55,12 @@ export default async function AutorPage({ params }: PageProps) {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Ratgeber", url: "/ratgeber" },
+        { name: `Artikel von ${authorInfo.name}`, url: `/ratgeber/autor/${autorSlug}` }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24">
         <div className="container mx-auto px-4">

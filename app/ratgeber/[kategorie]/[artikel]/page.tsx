@@ -6,6 +6,7 @@ import { kategorien, getKategorieById, getArtikelById, getAllArtikel } from "@/l
 import { notFound } from "next/navigation";
 import { getArtikelContent, getAuthorInfo, getAuthorSlug } from "@/lib/ratgeber-content";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 interface PageProps {
   params: Promise<{
@@ -55,6 +56,13 @@ export default async function ArtikelPage({ params }: PageProps) {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Ratgeber", url: "/ratgeber" },
+        { name: kategorie.title, url: `/ratgeber/${kategorie.id}` },
+        { name: artikel.title, url: `/ratgeber/${kategorie.id}/${artikel.id}` }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white pt-6 lg:pt-8 pb-8">
         <div className="container mx-auto px-4">

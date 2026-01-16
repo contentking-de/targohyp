@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { lexikonBegriffe } from "@/lib/lexikon-data";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Lexikon Baufinanzierung - Fachbegriffe erklärt | Targohyp",
@@ -21,6 +22,11 @@ export default function LexikonPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Lexikon", url: "/lexikon" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">

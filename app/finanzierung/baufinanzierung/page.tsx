@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Baufinanzierung für Ihr Eigenheim | Günstige Zinsen | Targohyp",
@@ -65,6 +66,12 @@ export default function BaufinanzierungPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Finanzierung", url: "/finanzierung" },
+        { name: "Baufinanzierung", url: "/finanzierung/baufinanzierung" }
+      ]} />
       {/* FinancialProduct Schema-Markup */}
       {financialProductsSchema.map((schema, index) => (
         <script
