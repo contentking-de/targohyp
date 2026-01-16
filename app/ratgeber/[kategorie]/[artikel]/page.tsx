@@ -54,7 +54,7 @@ export default async function ArtikelPage({ params }: PageProps) {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24 pb-8">
+      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white pt-6 lg:pt-8 pb-8">
         <div className="container mx-auto px-4">
           <Link
             href={`/ratgeber/${kategorie.id}`}
