@@ -173,7 +173,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "darlehensarten-produkte": {
-      intro: "Es gibt verschiedene Darlehensarten, die sich in ihren Konditionen, Laufzeiten und Rückzahlungsmodalitäten unterscheiden. Finden Sie heraus, welches Produkt zu Ihrer Situation passt.",
+      intro: "Es gibt verschiedene Darlehensarten, die sich in ihren Konditionen, Laufzeiten und Rückzahlungsmodalitäten unterscheiden. Finden Sie heraus, welches Produkt zu Ihrer Situation passt. Von Annuitätendarlehen über Tilgungsdarlehen bis hin zu Bauspardarlehen – jede Form hat ihre Vor- und Nachteile. Wir erklären Ihnen die Unterschiede, zeigen Ihnen, welche Produkte für welche Situationen geeignet sind und helfen Ihnen, die optimale Finanzierungsform für Ihr Vorhaben zu finden.",
       author: "Thomas Müller",
       createdAt: "2024-02-05",
       sections: [
@@ -208,7 +208,7 @@ const artikelContent: ContentMap = {
   },
   kapitalanlage: {
     "steuervorteile-vermoegensaufbau": {
-      intro: "Immobilien als Kapitalanlage bieten nicht nur langfristige Wertsteigerung, sondern auch erhebliche steuerliche Vorteile. Erfahren Sie, wie Sie diese optimal nutzen können.",
+      intro: "Immobilien als Kapitalanlage bieten nicht nur langfristige Wertsteigerung, sondern auch erhebliche steuerliche Vorteile. Erfahren Sie, wie Sie diese optimal nutzen können. Als Vermieter können Sie Zinsen, Abschreibungen und viele Nebenkosten steuerlich absetzen, was Ihre Steuerlast erheblich reduziert. Wir zeigen Ihnen, welche Kosten absetzbar sind, wie die Abschreibung funktioniert und wie Sie Ihre Immobilie steuerlich optimal strukturieren. Mit dem richtigen Wissen können Sie Ihre Rendite deutlich verbessern.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-02-12",
       sections: [
@@ -247,7 +247,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "rendite-cashflow-finanzierung": {
-      intro: "Die Renditeberechnung und der Cashflow sind entscheidende Kennzahlen für eine erfolgreiche Kapitalanlage. Lernen Sie, wie Sie diese richtig kalkulieren.",
+      intro: "Die Renditeberechnung und der Cashflow sind entscheidende Kennzahlen für eine erfolgreiche Kapitalanlage. Lernen Sie, wie Sie diese richtig kalkulieren. Die Mietrendite zeigt Ihnen die jährliche Verzinsung Ihres eingesetzten Kapitals, während der Cashflow angibt, ob die Immobilie monatlich Geld abwirft oder kostet. Wir erklären Ihnen die verschiedenen Renditearten, zeigen Ihnen, wie Sie den Cashflow berechnen und geben Ihnen Tipps für eine realistische Finanzierungsplanung. Mit diesen Kennzahlen treffen Sie fundierte Investitionsentscheidungen.",
       author: "Sarah Weber",
       createdAt: "2024-02-19",
       sections: [
@@ -288,7 +288,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "tipps-preisverhandlung": {
-      intro: "Eine erfolgreiche Preisverhandlung kann Ihnen tausende Euro sparen. Erfahren Sie bewährte Strategien und Tipps für Verhandlungen beim Immobilienkauf.",
+      intro: "Eine erfolgreiche Preisverhandlung kann Ihnen tausende Euro sparen. Erfahren Sie bewährte Strategien und Tipps für Verhandlungen beim Immobilienkauf. Die richtige Vorbereitung, sachliche Argumente und das richtige Timing sind entscheidend für den Verhandlungserfolg. Wir zeigen Ihnen, wie Sie den Marktwert ermitteln, welche Verhandlungsstrategien funktionieren und worauf Sie bei der Preisverhandlung achten sollten. Mit unseren Tipps gehen Sie selbstbewusst in die Verhandlung und erreichen den besten Preis.",
       author: "Thomas Müller",
       createdAt: "2024-02-26",
       sections: [
@@ -338,7 +338,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "rechte-pflichten-vermieter": {
-      intro: "Als Vermieter haben Sie sowohl Rechte als auch Pflichten. Ein klares Verständnis dieser Aspekte ist essentiell für eine erfolgreiche Vermietung.",
+      intro: "Als Vermieter haben Sie sowohl Rechte als auch Pflichten. Ein klares Verständnis dieser Aspekte ist essentiell für eine erfolgreiche Vermietung. Zu Ihren Rechten gehören unter anderem das Recht auf pünktliche Mietzahlung und ordnungsgemäße Nutzung der Immobilie, während Sie als Vermieter auch Pflichten wie die Gewährleistung bei Mängeln und Instandhaltungsmaßnahmen haben. Wir erklären Ihnen die wichtigsten Rechte und Pflichten, zeigen Ihnen, wie Sie diese durchsetzen können und helfen Ihnen, rechtliche Fallstricke zu vermeiden.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-03-05",
       sections: [
@@ -383,7 +383,7 @@ const artikelContent: ContentMap = {
   },
   immobilie: {
     "immobilienarten-objektwahl": {
-      intro: "Die Wahl der richtigen Immobilienart ist entscheidend für den langfristigen Erfolg Ihrer Investition. Erfahren Sie, welche Immobilientypen es gibt und worauf Sie achten sollten.",
+      intro: "Die Wahl der richtigen Immobilienart ist entscheidend für den langfristigen Erfolg Ihrer Investition. Erfahren Sie, welche Immobilientypen es gibt und worauf Sie achten sollten. Ob Eigentumswohnung, Einfamilienhaus, Mehrfamilienhaus oder Gewerbeimmobilie – jede Immobilienart hat ihre spezifischen Vor- und Nachteile sowie unterschiedliche Anforderungen an Management und Finanzierung. Wir helfen Ihnen, die passende Immobilienart für Ihre Ziele zu finden und zeigen Ihnen, worauf Sie bei der Objektwahl besonders achten sollten.",
       author: "Sarah Weber",
       createdAt: "2024-03-12",
       sections: [
@@ -416,7 +416,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "lage-standort-werttreiber": {
-      intro: "Die Lage ist einer der wichtigsten Faktoren für den Wert einer Immobilie. Erfahren Sie, welche Standortfaktoren den Wert beeinflussen und worauf Sie achten sollten.",
+      intro: "Die Lage ist einer der wichtigsten Faktoren für den Wert einer Immobilie. Erfahren Sie, welche Standortfaktoren den Wert beeinflussen und worauf Sie achten sollten. Verkehrsanbindung, Infrastruktur, Umgebung und Entwicklungspotenzial der Gegend haben erheblichen Einfluss auf den Immobilienwert. Wir zeigen Ihnen, wie Sie wertsteigernde Faktoren erkennen, welche Standortfaktoren besonders wichtig sind und wie Sie das Entwicklungspotenzial einer Gegend einschätzen können. Mit diesem Wissen treffen Sie fundierte Kaufentscheidungen.",
       author: "Thomas Müller",
       createdAt: "2024-03-19",
       sections: [
@@ -459,7 +459,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "recht-vertraege": {
-      intro: "Rechtliche Aspekte spielen bei Immobilientransaktionen eine zentrale Rolle. Ein gutes Verständnis der wichtigsten rechtlichen Grundlagen schützt Sie vor teuren Fehlern.",
+      intro: "Rechtliche Aspekte spielen bei Immobilientransaktionen eine zentrale Rolle. Ein gutes Verständnis der wichtigsten rechtlichen Grundlagen schützt Sie vor teuren Fehlern. Von Kaufverträgen über Grundbucheintragungen bis hin zu Gewährleistungsansprüchen – bei Immobilientransaktionen gibt es viele rechtliche Stolpersteine. Wir erklären Ihnen die wichtigsten rechtlichen Aspekte, zeigen Ihnen, worauf Sie bei Verträgen achten sollten und helfen Ihnen, rechtliche Risiken zu minimieren. So gehen Sie sicher durch Ihre Immobilientransaktion.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-03-26",
       sections: [
@@ -488,7 +488,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "kosten-immobilie": {
-      intro: "Neben dem Kaufpreis fallen bei einer Immobilie viele weitere Kosten an. Eine realistische Kosteneinschätzung ist essentiell für eine erfolgreiche Finanzierung.",
+      intro: "Neben dem Kaufpreis fallen bei einer Immobilie viele weitere Kosten an. Eine realistische Kosteneinschätzung ist essentiell für eine erfolgreiche Finanzierung. Kaufnebenkosten wie Grunderwerbsteuer, Notarkosten und Maklerprovision können 10-15% des Kaufpreises ausmachen, dazu kommen laufende Kosten für Versicherungen, Instandhaltung und Rücklagen. Wir zeigen Ihnen alle Kostenpositionen im Detail, erklären Ihnen, wie hoch die einzelnen Kosten sind und geben Ihnen Tipps, wie Sie Ihr Budget realistisch planen können.",
       author: "Sarah Weber",
       createdAt: "2024-04-02",
       sections: [
@@ -576,7 +576,7 @@ const artikelContent: ContentMap = {
   },
   anschlussfinanzierung: {
     "umschuldung-lohnt": {
-      intro: "Wenn Ihre Zinsbindung ausläuft, stellt sich die Frage: Umschulden oder bei der bisherigen Bank bleiben? Erfahren Sie, wann sich eine Umschuldung wirklich lohnt.",
+      intro: "Wenn Ihre Zinsbindung ausläuft, stellt sich die Frage: Umschulden oder bei der bisherigen Bank bleiben? Erfahren Sie, wann sich eine Umschuldung wirklich lohnt. Eine Umschuldung kann sich lohnen, wenn die Zinsen deutlich gesunken sind, Ihre Bonität sich verbessert hat oder Sie bessere Konditionen erhalten können. Allerdings fallen auch Kosten wie Vorfälligkeitsentschädigung und Notarkosten an. Wir zeigen Ihnen, wie Sie die Ersparnis gegen die Kosten rechnen, welche Faktoren Sie berücksichtigen sollten und helfen Ihnen, die richtige Entscheidung zu treffen.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-04-16",
       sections: [
@@ -612,7 +612,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "zinsentwicklung-was-tun": {
-      intro: "Die Zinsentwicklung am Markt kann Ihre Finanzierungsentscheidung erheblich beeinflussen. Erfahren Sie, wie Sie auf Zinsentwicklungen reagieren sollten.",
+      intro: "Die Zinsentwicklung am Markt kann Ihre Finanzierungsentscheidung erheblich beeinflussen. Erfahren Sie, wie Sie auf Zinsentwicklungen reagieren sollten. Zinsen werden von verschiedenen Faktoren wie Leitzins, Inflation und wirtschaftlicher Entwicklung beeinflusst und können sich schnell ändern. Wir erklären Ihnen, wie Sie Zinsentwicklungen verstehen, welche Strategien bei steigenden oder sinkenden Zinsen sinnvoll sind und wie Sie sich gegen Zinsschwankungen absichern können. Mit dem richtigen Timing können Sie tausende Euro sparen.",
       author: "Sarah Weber",
       createdAt: "2024-04-23",
       sections: [
@@ -653,7 +653,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "richtiger-zeitpunkt": {
-      intro: "Der richtige Zeitpunkt für Ihre Anschlussfinanzierung kann tausende Euro sparen. Erfahren Sie, wann Sie aktiv werden sollten.",
+      intro: "Der richtige Zeitpunkt für Ihre Anschlussfinanzierung kann tausende Euro sparen. Erfahren Sie, wann Sie aktiv werden sollten. Idealerweise sollten Sie sich 6-12 Monate vor Ablauf der Zinsbindung um die Anschlussfinanzierung kümmern, um ausreichend Zeit für Vergleich und Entscheidung zu haben. Wir zeigen Ihnen, welche Fristen Sie beachten müssen, wie Sie den optimalen Zeitpunkt finden und was passiert, wenn Sie nichts tun. Mit der richtigen Planung sichern Sie sich die besten Konditionen für Ihre Anschlussfinanzierung.",
       author: "Thomas Müller",
       createdAt: "2024-04-30",
       sections: [
@@ -690,7 +690,7 @@ const artikelContent: ContentMap = {
   },
   modernisierung: {
     "energetische-modernisierung": {
-      intro: "Eine energetische Modernisierung steigert nicht nur den Wert Ihrer Immobilie, sondern spart auch langfristig Energiekosten und schont die Umwelt. Erfahren Sie, welche Maßnahmen sich lohnen.",
+      intro: "Eine energetische Modernisierung steigert nicht nur den Wert Ihrer Immobilie, sondern spart auch langfristig Energiekosten und schont die Umwelt. Erfahren Sie, welche Maßnahmen sich lohnen. Von Dämmung über Heizungsmodernisierung bis hin zu Photovoltaik – es gibt viele Möglichkeiten, Ihre Immobilie energieeffizienter zu machen. Wir zeigen Ihnen die wichtigsten Modernisierungsmaßnahmen, erklären Ihnen, welche Fördermittel Sie nutzen können und helfen Ihnen, die Finanzierung Ihrer Modernisierung optimal zu planen.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-05-07",
       sections: [
@@ -735,7 +735,7 @@ const artikelContent: ContentMap = {
   },
   "studien-whitepaper": {
     "photovoltaik-studie": {
-      intro: "Unsere Studie vergleicht die Photovoltaik-Förderungen und Rahmenbedingungen in verschiedenen Ländern und zeigt die Entwicklungspotenziale für Deutschland auf.",
+      intro: "Unsere Studie vergleicht die Photovoltaik-Förderungen und Rahmenbedingungen in verschiedenen Ländern und zeigt die Entwicklungspotenziale für Deutschland auf. Wir analysieren die Förderstrukturen, Einspeisevergütungen und Marktentwicklungen in verschiedenen europäischen Ländern. Die Erkenntnisse helfen Ihnen zu verstehen, wie sich die Photovoltaik-Branche entwickelt und welche Chancen sich für Immobilienbesitzer ergeben. Erfahren Sie, welche Maßnahmen sich lohnen und wie Sie von den aktuellen Rahmenbedingungen profitieren können.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-05-14",
       sections: [
@@ -750,7 +750,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "immobilienpreisindex": {
-      intro: "Der Immobilienpreisindex Deutschland zeigt die Entwicklung der Immobilienpreise über Zeit und Regionen hinweg.",
+      intro: "Der Immobilienpreisindex Deutschland zeigt die Entwicklung der Immobilienpreise über Zeit und Regionen hinweg. Diese Studie analysiert die Preisdynamik in verschiedenen deutschen Regionen und identifiziert langfristige Trends sowie kurzfristige Schwankungen. Erfahren Sie, welche Faktoren die Preisentwicklung beeinflussen und wie sich die regionalen Unterschiede erklären lassen. Die Erkenntnisse helfen Ihnen, den richtigen Zeitpunkt für Ihre Immobilienentscheidung zu finden.",
       author: "Sarah Weber",
       createdAt: "2024-05-21",
       sections: [
@@ -765,7 +765,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "zinsentwicklung-25-jahre": {
-      intro: "Eine Analyse der Zinsentwicklung der letzten 25 Jahre zeigt langfristige Trends und hilft bei der Einschätzung zukünftiger Entwicklungen.",
+      intro: "Eine Analyse der Zinsentwicklung der letzten 25 Jahre zeigt langfristige Trends und hilft bei der Einschätzung zukünftiger Entwicklungen. Von den hohen Zinsen der 90er Jahre über historische Tiefstände bis hin zu aktuellen Marktbewegungen – diese Studie zeichnet ein umfassendes Bild der Zinszyklen. Verstehen Sie die Zusammenhänge zwischen Leitzins, Inflation und Bauzinsen. Die historische Perspektive unterstützt Sie dabei, aktuelle Zinsniveaus besser einzuordnen und fundierte Finanzierungsentscheidungen zu treffen.",
       author: "Thomas Müller",
       createdAt: "2024-05-28",
       sections: [
@@ -782,7 +782,7 @@ const artikelContent: ContentMap = {
   },
   lexikon: {
     "grunderwerbsteuer": {
-      intro: "Die Grunderwerbsteuer ist eine wichtige Steuer beim Immobilienkauf. Erfahren Sie, wie sie berechnet wird und welche Besonderheiten es gibt.",
+      intro: "Die Grunderwerbsteuer ist eine wichtige Steuer beim Immobilienkauf. Erfahren Sie, wie sie berechnet wird und welche Besonderheiten es gibt. Die Höhe variiert je nach Bundesland zwischen 3,5% und 6,5% des Kaufpreises und gehört zu den erheblichen Nebenkosten beim Immobilienkauf. Wir erklären Ihnen die Berechnungsgrundlagen, zeigen regionale Unterschiede auf und geben Tipps, wie Sie die Steuerlast optimieren können. Ein klares Verständnis hilft Ihnen, Ihr Budget realistisch zu planen.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-06-04",
       sections: [
@@ -797,7 +797,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "rueckauflassungsvormerkung": {
-      intro: "Die Rückauflassungsvormerkung ist ein wichtiger rechtlicher Begriff im Immobilienrecht. Erfahren Sie, was sie bedeutet und wann sie relevant ist.",
+      intro: "Die Rückauflassungsvormerkung ist ein wichtiger rechtlicher Begriff im Immobilienrecht. Erfahren Sie, was sie bedeutet und wann sie relevant ist. Diese Vormerkung sichert dem Verkäufer das Recht, die Immobilie zurück zu erwerben, falls bestimmte Bedingungen nicht erfüllt werden. Sie wird häufig bei Ratenkäufen oder Verkäufen mit Rückkaufrecht verwendet und kann erhebliche Auswirkungen auf Ihre Rechte als Käufer haben. Wir erklären Ihnen die rechtlichen Grundlagen und zeigen, worauf Sie bei Vertragsabschluss achten sollten.",
       author: "Dr. Michael Schmidt",
       createdAt: "2024-06-11",
       sections: [
@@ -814,7 +814,7 @@ const artikelContent: ContentMap = {
   },
   checklisten: {
     "checkliste-immokauf": {
-      intro: "Mit dieser Checkliste vergessen Sie nichts beim Immobilienkauf. Gehen Sie Schritt für Schritt vor und stellen Sie sicher, dass alle wichtigen Punkte beachtet werden.",
+      intro: "Mit dieser Checkliste vergessen Sie nichts beim Immobilienkauf. Gehen Sie Schritt für Schritt vor und stellen Sie sicher, dass alle wichtigen Punkte beachtet werden. Von der ersten Finanzierungsprüfung über die Besichtigung und Gutachten bis hin zum Kaufvertrag und der Übergabe – eine Immobilientransaktion erfordert viele Schritte. Wir führen Sie durch alle Phasen des Kaufprozesses und zeigen Ihnen, welche Unterlagen Sie benötigen, worauf Sie achten sollten und wie Sie typische Fehler vermeiden können.",
       author: "Sarah Weber",
       createdAt: "2024-06-18",
       sections: [
@@ -853,7 +853,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "checkliste-immoverkauf": {
-      intro: "Beim Verkauf einer Immobilie gibt es viele Punkte zu beachten. Diese Checkliste hilft Ihnen, nichts zu vergessen.",
+      intro: "Beim Verkauf einer Immobilie gibt es viele Punkte zu beachten. Diese Checkliste hilft Ihnen, nichts zu vergessen. Von der Vorbereitung und Bewertung über die Vermarktung bis hin zur finalen Übergabe – wir führen Sie Schritt für Schritt durch den gesamten Verkaufsprozess. Erfahren Sie, welche Unterlagen Sie benötigen, wie Sie den optimalen Verkaufspreis ermitteln und worauf Sie bei Vertragsverhandlungen achten sollten. Mit dieser Checkliste gehen Sie sicher und vorbereitet in den Verkauf Ihrer Immobilie.",
       author: "Sarah Weber",
       createdAt: "2024-06-25",
       sections: [
@@ -890,7 +890,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "checkliste-immobewertung": {
-      intro: "Eine professionelle Immobilienbewertung ist wichtig für Kauf, Verkauf oder Finanzierung. Diese Checkliste hilft bei der Vorbereitung.",
+      intro: "Eine professionelle Immobilienbewertung ist wichtig für Kauf, Verkauf oder Finanzierung. Diese Checkliste hilft bei der Vorbereitung. Eine fundierte Bewertung bildet die Grundlage für wichtige Entscheidungen und kann erhebliche finanzielle Auswirkungen haben. Wir zeigen Ihnen, welche Unterlagen Sie benötigen, wie Sie den Zustand Ihrer Immobilie optimal präsentieren und worauf Gutachter besonders achten. Mit der richtigen Vorbereitung erhalten Sie eine realistische Bewertung, die Ihre Verhandlungsbasis stärkt.",
       author: "Thomas Müller",
       createdAt: "2024-07-02",
       sections: [
@@ -917,7 +917,7 @@ const artikelContent: ContentMap = {
       ],
     },
     "checkliste-sanierung": {
-      intro: "Eine Sanierung erfordert sorgfältige Planung. Diese Checkliste hilft Ihnen, alle wichtigen Schritte zu beachten.",
+      intro: "Eine Sanierung erfordert sorgfältige Planung. Diese Checkliste hilft Ihnen, alle wichtigen Schritte zu beachten. Von der ersten Bedarfsanalyse über die Finanzierung bis hin zur finalen Abnahme – eine erfolgreiche Sanierung erfordert präzise Koordination vieler Gewerke. Wir führen Sie durch alle Phasen der Sanierung und zeigen Ihnen, wie Sie Kosten im Griff behalten, Fördermittel optimal nutzen und Qualität sicherstellen. Mit dieser Checkliste meistern Sie Ihre Sanierung strukturiert und erfolgreich.",
       author: "Thomas Müller",
       createdAt: "2024-07-09",
       sections: [

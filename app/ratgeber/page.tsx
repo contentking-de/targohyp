@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Search } from "lucide-react";
+import { ArrowRight, Search, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { kategorien } from "@/lib/ratgeber-data";
+import { getArtikelContent } from "@/lib/ratgeber-content";
 
 export const metadata = {
   title: "Ratgeber zur Baufinanzierung - Tipps & Informationen | Targohyp",
@@ -89,34 +90,56 @@ export default function RatgeberPage() {
                   {kategorie.artikel.length > 0 ? (
                     <div>
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6">
-                        {kategorie.artikel.slice(0, 3).map((artikel) => (
-                          <Link
-                            key={artikel.id}
-                            href={`/ratgeber/${kategorie.id}/${artikel.id}`}
-                            className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-targo-blue transition-all group"
-                          >
-                            {artikel.image && (
-                              <div className="relative w-full h-48 overflow-hidden">
-                                <Image
-                                  src={artikel.image}
-                                  alt={artikel.title}
-                                  fill
-                                  className="object-cover group-hover:scale-105 transition-transform duration-300"
-                                />
-                              </div>
-                            )}
-                            <div className="p-6">
-                              <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
-                                {artikel.title}
-                              </h3>
-                              {artikel.subtitle && (
-                                <p className="text-sm text-gray-600">
-                                  {artikel.subtitle}
-                                </p>
+                        {kategorie.artikel.slice(0, 3).map((artikel) => {
+                          const content = getArtikelContent(kategorie.id, artikel.id);
+                          return (
+                            <Link
+                              key={artikel.id}
+                              href={`/ratgeber/${kategorie.id}/${artikel.id}`}
+                              className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-targo-blue transition-all group"
+                            >
+                              {artikel.image && (
+                                <div className="relative w-full h-48 overflow-hidden">
+                                  <Image
+                                    src={artikel.image}
+                                    alt={artikel.title}
+                                    fill
+                                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                  />
+                                </div>
                               )}
-                            </div>
-                          </Link>
-                        ))}
+                              <div className="p-6">
+                                <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                                  {artikel.title}
+                                </h3>
+                                {content?.intro && (
+                                  <p className="text-base text-gray-600 leading-relaxed mb-3">
+                                    {content.intro.length > 150 ? `${content.intro.substring(0, 150)}...` : content.intro}
+                                  </p>
+                                )}
+                                {(content?.author || content?.createdAt) && (
+                                  <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 pt-3 border-t border-gray-100">
+                                    {content.author && (
+                                      <span className="flex items-center gap-1.5 font-semibold text-gray-700">
+                                        <User className="w-3 h-3" />
+                                        {content.author}
+                                      </span>
+                                    )}
+                                    {content.createdAt && (
+                                      <span>
+                                        {new Date(content.createdAt).toLocaleDateString('de-DE', {
+                                          year: 'numeric',
+                                          month: 'long',
+                                          day: 'numeric'
+                                        })}
+                                      </span>
+                                    )}
+                                  </div>
+                                )}
+                              </div>
+                            </Link>
+                          );
+                        })}
                       </div>
                       <Link
                         href={`/ratgeber/${kategorie.id}`}

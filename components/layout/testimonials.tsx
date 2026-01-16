@@ -68,44 +68,46 @@ export function Testimonials() {
           </p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {testimonials.map((testimonial) => (
-            <div
-              key={testimonial.id}
-              className="bg-white rounded-lg p-6 lg:p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow"
-            >
-              {/* Quote Icon */}
-              <div className="mb-4">
-                <Quote className="w-8 h-8 text-targo-blue/20" />
-              </div>
+        {/* Testimonials Horizontal Scroll */}
+        <div className="overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100">
+          <div className="flex gap-6 lg:gap-8" style={{ width: 'max-content' }}>
+            {testimonials.map((testimonial) => (
+              <div
+                key={testimonial.id}
+                className="bg-white rounded-lg p-6 lg:p-8 shadow-sm border border-gray-200 hover:shadow-md transition-shadow flex-shrink-0 w-[90vw] sm:w-[45vw] lg:w-[32vw] xl:w-[400px]"
+              >
+                {/* Quote Icon */}
+                <div className="mb-4">
+                  <Quote className="w-8 h-8 text-targo-blue/20" />
+                </div>
 
-              {/* Rating */}
-              <div className="flex gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 fill-yellow-400 text-yellow-400"
-                  />
-                ))}
-              </div>
+                {/* Rating */}
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-yellow-400 text-yellow-400"
+                    />
+                  ))}
+                </div>
 
-              {/* Text */}
-              <p className="text-gray-700 mb-6 leading-relaxed">
-                {testimonial.text}
-              </p>
-
-              {/* Author */}
-              <div className="border-t border-gray-100 pt-4">
-                <p className="font-semibold text-gray-900">
-                  {testimonial.name}
+                {/* Text */}
+                <p className="text-gray-700 mb-6 leading-relaxed">
+                  {testimonial.text}
                 </p>
-                <p className="text-sm text-gray-600">
-                  {testimonial.location} • {testimonial.date}
-                </p>
+
+                {/* Author */}
+                <div className="border-t border-gray-100 pt-4">
+                  <p className="font-semibold text-gray-900">
+                    {testimonial.name}
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {testimonial.location} • {testimonial.date}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
         {/* Trust Indicators */}

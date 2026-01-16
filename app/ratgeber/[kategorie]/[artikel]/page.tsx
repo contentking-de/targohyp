@@ -84,9 +84,9 @@ export default async function ArtikelPage({ params }: PageProps) {
               <h1 className="text-4xl lg:text-5xl font-bold mb-2">
                 {artikel.title}
               </h1>
-              {artikel.subtitle && (
-                <p className="text-lg text-gray-600 mb-4">
-                  {artikel.subtitle}
+              {content?.intro && (
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  {content.intro}
                 </p>
               )}
               {(content?.author || content?.createdAt) && (
@@ -137,14 +137,6 @@ export default async function ArtikelPage({ params }: PageProps) {
           <div className="prose prose-lg max-w-none">
               {content ? (
                 <div className="space-y-8 -mt-20">
-                  {content.intro && (
-                    <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-                      <p className="text-lg text-gray-700 leading-relaxed">
-                        {content.intro}
-                      </p>
-                    </div>
-                  )}
-
                   {content.sections && content.sections.map((section, index) => (
                     <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
                       <h2 className="text-2xl lg:text-3xl font-bold mb-4 text-gray-900">

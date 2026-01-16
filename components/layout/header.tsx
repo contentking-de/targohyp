@@ -55,22 +55,29 @@ export function Header() {
                 <HelpCircle className="w-4 h-4 flex-shrink-0" />
                 Hilfe & Kontakt
               </Link>
+              <Link
+                href="/faqs-finanzierung"
+                className="text-sm font-medium text-targo-blue hover:border-b-2 hover:border-targo-blue pb-1 flex items-center gap-1.5"
+              >
+                <HelpCircle className="w-4 h-4 flex-shrink-0" />
+                FAQs zur Finanzierung
+              </Link>
               <Button
-                className="bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-[5px] min-h-[44px] whitespace-nowrap"
+                className="bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-[10px] min-h-[44px] whitespace-nowrap"
                 asChild
               >
                 <Link href="/auth/signin" className="flex items-center gap-2">
                   <Home className="w-4 h-4 flex-shrink-0" />
-                  <span>TargoHome</span>
+                  <span className="font-bold">TargoHome</span>
                 </Link>
               </Button>
               <Button
-                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-6 py-[5px] min-h-[44px] whitespace-nowrap"
+                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-6 py-[10px] min-h-[44px] whitespace-nowrap"
                 asChild
               >
                 <Link href="/termin-vereinbaren" className="flex items-center gap-2">
                   <Calendar className="w-4 h-4 flex-shrink-0" />
-                  <span>Termin vereinbaren</span>
+                  <span className="font-bold">Termin vereinbaren</span>
                 </Link>
               </Button>
             </div>

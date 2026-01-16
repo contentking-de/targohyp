@@ -1,13 +1,41 @@
+"use client";
+
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { FileText, ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
-
-export const metadata = {
-  title: "Baufinanzierung & Immobilienfinanzierung | Targohyp",
-  description: "Übersicht aller Finanzierungsprodukte für Ihre Immobilie. Von der Baufinanzierung über Anschlussfinanzierung bis zur Immobilienfinanzierung - finden Sie die passende Lösung.",
-};
+import {
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 
 export default function FinanzierungPage() {
+  // Zinsdaten für das Chart (10 Jahre Sollzinsbindung)
+  const zinsdaten10Jahre = [
+    { datum: "Apr 25", zins: 3.50 },
+    { datum: "Jul 25", zins: 3.35 },
+    { datum: "Okt 25", zins: 3.70 },
+    { datum: "Jan 26", zins: 3.90 },
+  ];
+
+  // Custom Tooltip für das Chart
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white border border-gray-200 rounded-lg shadow-lg p-3">
+          <p className="font-semibold mb-1">{label}</p>
+          <p className="text-sm text-targo-blue">
+            {payload[0].value}%
+          </p>
+        </div>
+      );
+    }
+    return null;
+  };
   // Beispiel-Produkte (später aus Datenbank)
   const produkte = [
     {
@@ -51,6 +79,81 @@ export default function FinanzierungPage() {
             <p className="text-lg text-gray-700 leading-relaxed">
               Finden Sie die passende Baufinanzierung für Ihr Vorhaben. Vergleichen Sie unsere Produkte und finden Sie die besten Konditionen.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Zinsentwicklung Section */}
+      <section className="w-full bg-white py-16 lg:py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-12 text-center text-gray-900">
+            Baufinanzierung aktuell: Zinsen und Marktsituation
+          </h2>
+          
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+            {/* Linke Spalte: Text */}
+            <div>
+              <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-gray-900">
+                Zinseinschätzung: Wie hoch sind die Bauzinsen?
+              </h3>
+              <div className="text-gray-700 leading-relaxed mb-6 text-lg space-y-4">
+                <p>
+                  Nach dem deutlichen Zinsanstieg zum Ende des Jahres 2025 liegen die Bauzinsen zu Beginn des neuen Jahres nahe der 4-Prozent-Marke. Für die kommenden sechs Monate rechnen 60 % der im Interhyp-Bankenpanel befragten Experten mit einem stabilen Zinsniveau, während 40 % einen weiteren Anstieg für möglich halten. Die anhaltenden geopolitischen Unsicherheiten sorgen weiterhin für Zurückhaltung an den Finanzmärkten und dürften auch im Jahr 2026 ein prägender Einflussfaktor bleiben.
+                </p>
+                <p>
+                  Vor diesem Hintergrund ist die weitere Zinsentwicklung nur schwer vorhersehbar. Kreditinteressenten sollten die Marktentwicklung daher aufmerksam beobachten und eine vorausschauende Finanzierungsplanung in Betracht ziehen. Eine frühzeitige Beratung kann helfen, mögliche Risiken besser einzuschätzen.
+                </p>
+                <p className="text-sm text-gray-600">
+                  (Stand: 14.01.2026)
+                </p>
+              </div>
+              <Button
+                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
+                asChild
+              >
+                <Link href="/vergleiche/zinsentwicklung" className="flex items-center whitespace-nowrap">
+                  Mehr über Bauzinsen
+                  <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
+                </Link>
+              </Button>
+            </div>
+
+            {/* Rechte Spalte: Chart */}
+            <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 shadow-sm">
+              <div className="w-full h-[300px] lg:h-[350px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <LineChart
+                    data={zinsdaten10Jahre}
+                    margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
+                  >
+                    <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+                    <XAxis
+                      dataKey="datum"
+                      stroke="#6b7280"
+                      style={{ fontSize: "12px" }}
+                    />
+                    <YAxis
+                      stroke="#6b7280"
+                      style={{ fontSize: "12px" }}
+                      domain={[3.3, 3.95]}
+                      tickFormatter={(value) => `${value.toFixed(2)}%`}
+                    />
+                    <Tooltip content={<CustomTooltip />} />
+                    <Line
+                      type="monotone"
+                      dataKey="zins"
+                      stroke="#14b8a6"
+                      strokeWidth={3}
+                      dot={{ r: 5, fill: "#14b8a6" }}
+                      activeDot={{ r: 7 }}
+                    />
+                  </LineChart>
+                </ResponsiveContainer>
+              </div>
+              <p className="text-sm text-gray-600 mt-4 text-center">
+                Sollzinsbindung: 10 Jahre
+              </p>
+            </div>
           </div>
         </div>
       </section>

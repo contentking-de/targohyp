@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Search, ArrowLeft } from "lucide-react";
+import { ArrowRight, Search, ArrowLeft, User } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { kategorien, getKategorieById } from "@/lib/ratgeber-data";
+import { getArtikelContent } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
 
 interface PageProps {
@@ -101,38 +102,60 @@ export default async function KategoriePage({ params }: PageProps) {
         <div className="container mx-auto px-4">
           {kategorie.artikel.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {kategorie.artikel.map((artikel) => (
-                <Link
-                  key={artikel.id}
-                  href={`/ratgeber/${kategorie.id}/${artikel.id}`}
-                  className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-targo-blue transition-all group"
-                >
-                  {artikel.image && (
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <Image
-                        src={artikel.image}
-                        alt={artikel.title}
-                        fill
-                        className="object-cover group-hover:scale-105 transition-transform duration-300"
-                      />
-                    </div>
-                  )}
-                  <div className="p-6">
-                    <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
-                      {artikel.title}
-                    </h3>
-                    {artikel.subtitle && (
-                      <p className="text-sm text-gray-600 mb-3">
-                        {artikel.subtitle}
-                      </p>
+              {kategorie.artikel.map((artikel) => {
+                const content = getArtikelContent(kategorie.id, artikel.id);
+                return (
+                  <Link
+                    key={artikel.id}
+                    href={`/ratgeber/${kategorie.id}/${artikel.id}`}
+                    className="bg-white border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg hover:border-targo-blue transition-all group"
+                  >
+                    {artikel.image && (
+                      <div className="relative w-full h-48 overflow-hidden">
+                        <Image
+                          src={artikel.image}
+                          alt={artikel.title}
+                          fill
+                          className="object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
                     )}
-                    <div className="flex items-center text-sm text-targo-blue font-semibold mt-4">
-                      Weiterlesen
-                      <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <div className="p-6">
+                      <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                        {artikel.title}
+                      </h3>
+                      {content?.intro && (
+                        <p className="text-base text-gray-600 mb-3 leading-relaxed">
+                          {content.intro.length > 150 ? `${content.intro.substring(0, 150)}...` : content.intro}
+                        </p>
+                      )}
+                      {(content?.author || content?.createdAt) && (
+                        <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 mb-3 pt-3 border-t border-gray-100">
+                          {content.author && (
+                            <span className="flex items-center gap-1.5 font-semibold text-gray-700">
+                              <User className="w-3 h-3" />
+                              {content.author}
+                            </span>
+                          )}
+                          {content.createdAt && (
+                            <span>
+                              {new Date(content.createdAt).toLocaleDateString('de-DE', {
+                                year: 'numeric',
+                                month: 'long',
+                                day: 'numeric'
+                              })}
+                            </span>
+                          )}
+                        </div>
+                      )}
+                      <div className="flex items-center text-sm text-targo-blue font-semibold mt-4">
+                        Weiterlesen
+                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </div>
                     </div>
-                  </div>
-                </Link>
-              ))}
+                  </Link>
+                );
+              })}
             </div>
           ) : (
             <div className="bg-white border border-gray-200 rounded-lg p-8 text-center">
