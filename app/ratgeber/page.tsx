@@ -177,6 +177,29 @@ export default function RatgeberPage() {
         </div>
       </section>
 
+      {/* Experten und Autoren CTA */}
+      <section className="w-full bg-white py-16 border-t border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">
+              Unsere Experten und Autoren
+            </h2>
+            <p className="text-lg mb-8 text-gray-700">
+              Lernen Sie unsere erfahrenen Finanzierungsexperten kennen, die unsere Ratgeber-Artikel verfassen und Sie mit fundiertem Wissen unterstützen.
+            </p>
+            <Button
+              className="bg-targo-blue hover:bg-targo-blue/90 text-white rounded-full px-8 py-6 text-lg font-semibold"
+              asChild
+            >
+              <Link href="/ratgeber/experten-autoren" className="flex items-center whitespace-nowrap">
+                Experten und Autoren ansehen
+                <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Newsletter CTA */}
       <section className="w-full bg-gray-50 py-16">
         <div className="container mx-auto px-4">

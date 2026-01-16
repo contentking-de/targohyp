@@ -9,10 +9,12 @@ import { useState } from "react";
 
 export function Header() {
   const [isFinanzierungOpen, setIsFinanzierungOpen] = useState(false);
+  const [isRatgeberOpen, setIsRatgeberOpen] = useState(false);
   const [isVergleicheOpen, setIsVergleicheOpen] = useState(false);
   const [isImmobilienOpen, setIsImmobilienOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isMobileFinanzierungOpen, setIsMobileFinanzierungOpen] = useState(false);
+  const [isMobileRatgeberOpen, setIsMobileRatgeberOpen] = useState(false);
   const [isMobileVergleicheOpen, setIsMobileVergleicheOpen] = useState(false);
   const [isMobileImmobilienOpen, setIsMobileImmobilienOpen] = useState(false);
 
@@ -343,13 +345,49 @@ export function Header() {
                 </>
               )}
             </div>
-            <Link
-              href="/ratgeber"
-              className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group"
+            <div
+              className="relative"
+              onMouseEnter={() => setIsRatgeberOpen(true)}
+              onMouseLeave={() => setIsRatgeberOpen(false)}
             >
-              Ratgeber
-              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
-            </Link>
+              <Link
+                href="/ratgeber"
+                className="text-base font-bold text-[rgb(0,47,95)] hover:text-targo-blue transition-colors py-2 relative group flex items-center gap-1"
+              >
+                Ratgeber
+                <ChevronDown className={`w-4 h-4 transition-transform ${isRatgeberOpen ? 'rotate-180' : ''}`} />
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-targo-blue transition-all group-hover:w-full"></span>
+              </Link>
+              
+              {/* Dropdown Menu */}
+              {isRatgeberOpen && (
+                <>
+                  {/* Unsichtbarer Bereich zum Überbrücken der Lücke */}
+                  <div className="absolute top-full left-0 w-full h-2"></div>
+                  <div className="absolute top-full left-0 pt-2 w-80 z-50">
+                    <div className="bg-white border border-gray-200 rounded-lg shadow-lg">
+                      <div className="py-2">
+                        <Link
+                          href="/ratgeber"
+                          className="block px-4 py-3 text-sm font-semibold text-gray-900 hover:bg-gray-50 transition-colors"
+                          onClick={() => setIsRatgeberOpen(false)}
+                        >
+                          Übersicht
+                        </Link>
+                        <div className="border-t border-gray-200 my-1"></div>
+                        <Link
+                          href="/ratgeber/experten-autoren"
+                          className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
+                          onClick={() => setIsRatgeberOpen(false)}
+                        >
+                          Experten und Autoren
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              )}
+            </div>
             <div
               className="relative"
               onMouseEnter={() => setIsVergleicheOpen(true)}
@@ -778,13 +816,43 @@ export function Header() {
                 </div>
               )}
             </div>
-            <Link
-              href="/ratgeber"
-              className="block text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Ratgeber
-            </Link>
+            {/* Ratgeber mit Dropdown */}
+            <div>
+              <button
+                onClick={() => setIsMobileRatgeberOpen(!isMobileRatgeberOpen)}
+                className="w-full flex items-center justify-between text-base font-bold text-[rgb(0,47,95)] py-3 px-2 hover:text-targo-blue transition-colors"
+              >
+                Ratgeber
+                <ChevronDown
+                  className={`w-4 h-4 transition-transform ${isMobileRatgeberOpen ? 'rotate-180' : ''}`}
+                  aria-hidden="true"
+                />
+              </button>
+              {isMobileRatgeberOpen && (
+                <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
+                  <Link
+                    href="/ratgeber"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileRatgeberOpen(false);
+                    }}
+                  >
+                    Übersicht
+                  </Link>
+                  <Link
+                    href="/ratgeber/experten-autoren"
+                    className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false);
+                      setIsMobileRatgeberOpen(false);
+                    }}
+                  >
+                    Experten und Autoren
+                  </Link>
+                </div>
+              )}
+            </div>
             {/* Vergleiche mit Dropdown */}
             <div>
               <button

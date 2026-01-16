@@ -60,6 +60,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/ratgeber/experten-autoren"
+                  className="text-gray-600 hover:text-targo-blue transition-colors"
+                >
+                  Experten und Autoren
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/lexikon"
                   className="text-gray-600 hover:text-targo-blue transition-colors"
                 >
