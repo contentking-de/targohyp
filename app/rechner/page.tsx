@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Calculator, TrendingUp, DollarSign, Percent, Calendar, ArrowRight, Wallet, Receipt, FileText, Home } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export const metadata = createMetadata({
   title: "Baufinanzierung berechnen - Kostenlose Rechner | Targohyp",
@@ -91,9 +92,21 @@ export default function RechnerPage() {
 
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Rechner", url: "/rechner" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
+          <nav className="mb-6 text-sm">
+            <Link href="/" className="text-targo-blue hover:underline">
+              Startseite
+            </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Rechner</span>
+          </nav>
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6">
               Baufinanzierung berechnen

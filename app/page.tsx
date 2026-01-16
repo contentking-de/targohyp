@@ -130,7 +130,7 @@ export default function Home() {
 
               {/* Card 4 */}
               <Link
-                href="/kontakt"
+                href="/termin-vereinbaren"
                 className="bg-white border border-gray-200 rounded-lg p-6 hover:border-targo-blue transition-all group cursor-pointer flex items-start justify-between"
               >
                 <div className="flex items-start gap-4 flex-1">

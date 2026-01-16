@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Receipt, ArrowLeft, Download, Share2 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default function NebenkostenrechnerPage() {
   const [kaufpreis, setKaufpreis] = useState<string>("300000");
@@ -38,16 +39,21 @@ export default function NebenkostenrechnerPage() {
 
   return (
     <div className="w-full">
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Rechner", url: "/rechner" },
+        { name: "Nebenkostenrechner", url: "/rechner/nebenkostenrechner" }
+      ]} />
       {/* Header */}
       <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-8 lg:py-12">
         <div className="container mx-auto px-4">
-          <Link
-            href="/rechner"
-            className="inline-flex items-center text-targo-blue hover:text-targo-blue/80 mb-6"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück zur Rechner-Übersicht
-          </Link>
+          <nav className="mb-6 text-sm">
+            <Link href="/rechner" className="text-targo-blue hover:underline">
+              Rechner
+            </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Nebenkostenrechner</span>
+          </nav>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center">

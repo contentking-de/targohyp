@@ -3,13 +3,26 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Home, TrendingUp, MapPin, Calculator, FileText } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default function ImmobilienPage() {
   return (
     <div className="w-full">
+      {/* BreadcrumbList Schema-Markup */}
+      <BreadcrumbSchema items={[
+        { name: "Startseite", url: "/" },
+        { name: "Immobilien", url: "/immobilien" }
+      ]} />
       {/* Hero Section */}
       <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
+          <nav className="mb-6 text-sm">
+            <Link href="/" className="text-targo-blue hover:underline">
+              Startseite
+            </Link>
+            <span className="mx-2 text-gray-400">/</span>
+            <span className="text-gray-700">Immobilien</span>
+          </nav>
           <div className="max-w-3xl">
             <h1 className="text-4xl lg:text-5xl font-bold mb-6 text-[rgb(0,47,95)]">
               Immobilien – Ihr Weg zum Traumhaus

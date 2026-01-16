@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { TrendingUp, ArrowLeft, Download, Share2 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default function TilgungsrechnerPage() {
   const [darlehensbetrag, setDarlehensbetrag] = useState<string>("300000");

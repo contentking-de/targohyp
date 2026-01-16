@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Home, ArrowLeft, Download, Share2 } from "lucide-react";
+import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default function BauzinsrechnerPage() {
   const [darlehensbetrag, setDarlehensbetrag] = useState<string>("300000");
