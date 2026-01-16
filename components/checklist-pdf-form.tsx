@@ -11,6 +11,7 @@ interface ChecklistPdfFormProps {
 
 export function ChecklistPdfForm({ checklistType = "checkliste-sanierung" }: ChecklistPdfFormProps) {
   const [email, setEmail] = useState("");
+  const [agreed, setAgreed] = useState(false);
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [message, setMessage] = useState("");
 
@@ -41,6 +42,7 @@ export function ChecklistPdfForm({ checklistType = "checkliste-sanierung" }: Che
         setStatus("success");
         setMessage(data.message || "Die Checkliste wurde erfolgreich angefordert!");
         setEmail("");
+        setAgreed(false);
       } else {
         setStatus("error");
         setMessage(data.error || "Es ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut.");
@@ -79,8 +81,8 @@ export function ChecklistPdfForm({ checklistType = "checkliste-sanierung" }: Che
             />
             <Button
               type="submit"
-              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold whitespace-nowrap"
-              disabled={status === "loading"}
+              className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold whitespace-nowrap disabled:opacity-50 disabled:cursor-not-allowed"
+              disabled={status === "loading" || !agreed}
             >
               {status === "loading" ? (
                 "Wird gesendet..."
@@ -116,10 +118,20 @@ export function ChecklistPdfForm({ checklistType = "checkliste-sanierung" }: Che
             </div>
           )}
 
-          <p className="text-xs text-gray-500 text-center">
-            Mit der Anforderung stimmen Sie zu, dass wir Ihnen die Checkliste per E-Mail zusenden. 
-            Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
-          </p>
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id="agreement-checkbox"
+              checked={agreed}
+              onChange={(e) => setAgreed(e.target.checked)}
+              className="mt-0.5 w-4 h-4 text-[#bb133e] border-gray-300 rounded focus:ring-[#bb133e] focus:ring-2 cursor-pointer"
+              required
+            />
+            <label htmlFor="agreement-checkbox" className="text-xs text-gray-500 cursor-pointer">
+              Mit der Anforderung stimmen Sie zu, dass wir Ihnen die Checkliste per E-Mail zusenden. 
+              Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+            </label>
+          </div>
         </form>
       </div>
     </div>
