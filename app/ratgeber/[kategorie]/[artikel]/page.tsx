@@ -8,6 +8,7 @@ import { getArtikelContent, getAuthorInfo, getAuthorSlug } from "@/lib/ratgeber-
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 import { ChecklistPdfForm } from "@/components/checklist-pdf-form";
+import { NewsletterCTA } from "@/components/newsletter-cta";
 
 interface PageProps {
   params: Promise<{
@@ -282,6 +283,11 @@ export default async function ArtikelPage({ params }: PageProps) {
                 </div>
               )}
             </div>
+
+            {/* Newsletter CTA */}
+            {content && (
+              <NewsletterCTA />
+            )}
 
             {/* Autorenbox */}
             {authorInfo && (
