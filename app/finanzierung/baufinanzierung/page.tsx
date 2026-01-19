@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator } from "lucide-react";
+import { ArrowRight, CheckCircle2, Home, TrendingUp, Shield, Calculator, Briefcase, UserCheck, PiggyBank, Key, Building2, RefreshCw } from "lucide-react";
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
@@ -108,6 +108,74 @@ export default function BaufinanzierungPage() {
         </div>
       </section>
 
+      {/* Zielgruppen Section */}
+      <section className="w-full py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">Wie können wir Ihnen bei Ihrem Vorhaben helfen?</h2>
+          <p className="text-lg text-gray-700 mb-8 text-center">
+            Jetzt informieren und unverbindlichen Beratungstermin mit unseren Spezialisten für Finanzierungen machen
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link
+              href="/finanzierung/baufinanzierung"
+              className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-lg hover:border-targo-blue transition-all group text-center"
+            >
+              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <Key className="w-8 h-8 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-targo-blue transition-colors">
+                Erstfinanzierer
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Sie möchten Ihre erste Immobilie finanzieren und suchen nach der passenden Lösung für Ihr Eigenheim.
+              </p>
+              <div className="flex items-center justify-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/finanzierung/kapitalanlage-finanzieren"
+              className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-lg hover:border-targo-blue transition-all group text-center"
+            >
+              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <Building2 className="w-8 h-8 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-targo-blue transition-colors">
+                Kapitalanleger
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Sie möchten eine Immobilie als Kapitalanlage finanzieren und suchen nach einer renditeorientierten Lösung.
+              </p>
+              <div className="flex items-center justify-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/finanzierung/anschlussfinanzierung"
+              className="bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-lg hover:border-targo-blue transition-all group text-center"
+            >
+              <div className="w-16 h-16 bg-targo-blue/10 rounded-full flex items-center justify-center mb-6 mx-auto">
+                <RefreshCw className="w-8 h-8 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-3 group-hover:text-targo-blue transition-colors">
+                Anschlussfinanzierer
+              </h3>
+              <p className="text-gray-700 mb-6">
+                Ihre Zinsbindung läuft ab und Sie suchen nach einer neuen, günstigen Finanzierungslösung.
+              </p>
+              <div className="flex items-center justify-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Vorteile Section */}
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
@@ -169,10 +237,145 @@ export default function BaufinanzierungPage() {
         </div>
       </section>
 
+      {/* Spezielle Baufinanzierungen */}
+      <section className="w-full py-16 bg-gray-100">
+        <div className="container mx-auto px-4">
+          <h2 className="text-2xl font-bold mb-4 text-center">Spezielle Baufinanzierungen</h2>
+          <p className="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">
+            Egal ob Beamter, Selbstständiger oder ohne Eigenkapital – wir haben für jede Situation die passende Finanzierungslösung.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link
+              href="/finanzierung/baufinanzierung/beamte"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group"
+            >
+              <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center mb-4">
+                <Briefcase className="w-6 h-6 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                Baufinanzierung für Beamte
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Spezielle Konditionen und Vorteile für Beamte bei der Baufinanzierung.
+              </p>
+              <div className="flex items-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/finanzierung/baufinanzierung/selbststaendige"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group"
+            >
+              <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center mb-4">
+                <UserCheck className="w-6 h-6 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                Baufinanzierung für Selbstständige
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Flexible Finanzierungslösungen für Selbstständige und Freiberufler.
+              </p>
+              <div className="flex items-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+
+            <Link
+              href="/finanzierung/baufinanzierung/ohne-eigenkapital"
+              className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-all group"
+            >
+              <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center mb-4">
+                <PiggyBank className="w-6 h-6 text-targo-blue" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 group-hover:text-targo-blue transition-colors">
+                Baufinanzierung ohne Eigenkapital
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Finanzierungslösungen auch ohne Eigenkapital möglich.
+              </p>
+              <div className="flex items-center text-targo-blue font-semibold">
+                Mehr erfahren
+                <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Das Wichtigste zur Baufinanzierung */}
+      <section className="w-full py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold mb-12 text-center text-gray-900">Das Wichtigste zur Baufinanzierung</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Was ist machbar? */}
+            <div className="flex items-start gap-4">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Was ist machbar?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Wie viel Baufinanzierung für Sie möglich ist, hängt von Ihrem Eigenkapital, Ihrem Einkommen und den Nebenkosten ab. Eine realistische{" "}
+                  <Link href="/rechner/budgetrechner" className="underline text-targo-blue hover:text-targo-blue/80">
+                    Budgetplanung
+                  </Link>{" "}
+                  sorgt für Flexibilität und Sicherheit über die Finanzierungsdauer.
+                </p>
+              </div>
+            </div>
+
+            {/* Was kostet es? */}
+            <div className="flex items-start gap-4">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Was kostet es?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Neben den Zinsen bestimmt die Tilgungsrate die Höhe Ihrer monatlichen Rate und beeinflusst die Kosten Ihrer Finanzierung. Mit einer höheren Tilgungsrate zahlen Sie das Baudarlehen schneller zurück und sparen dadurch tausende Euro Zinsen.
+                </p>
+              </div>
+            </div>
+
+            {/* Wie wird es günstiger? */}
+            <div className="flex items-start gap-4">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Wie wird es günstiger?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  KfW-Darlehen, BAFA-Zuschüsse und regionale Förderprogramme können Ihre Finanzierung erheblich verbilligen. Die richtige Einbindung verschiedener{" "}
+                  <Link href="/finanzierung/foerdermittel" className="underline text-targo-blue hover:text-targo-blue/80">
+                    Fördermittel
+                  </Link>{" "}
+                  macht Ihre Immobilienfinanzierung oft spürbar günstiger.
+                </p>
+              </div>
+            </div>
+
+            {/* Wer hilft? */}
+            <div className="flex items-start gap-4">
+              <CheckCircle2 className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
+              <div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900">Wer hilft?</h3>
+                <p className="text-gray-700 leading-relaxed">
+                  Eine{" "}
+                  <Link href="/finanzierungsanfrage" className="underline text-targo-blue hover:text-targo-blue/80">
+                    individuelle Beratung
+                  </Link>{" "}
+                  berücksichtigt Ihre persönliche Lebenssituation und die aktuelle Marktsituation bei Zinsen und Immobilienpreisen. So finden wir gemeinsam mit Ihnen die beste Finanzierungsstrategie, die zu Ihrem Immobilienvorhaben passt.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Tools Section */}
       <section className="w-full py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8 text-center">Hilfreiche Tools</h2>
+          <h2 className="text-2xl font-bold mb-4 text-center">Hilfreiche Tools</h2>
+          <p className="text-lg text-gray-700 mb-8 text-center max-w-3xl mx-auto">
+            Nutzen Sie unsere praktischen Rechner und Vergleiche, um Ihre Baufinanzierung optimal zu planen und die besten Konditionen zu finden.
+          </p>
           <div className="grid md:grid-cols-3 gap-6">
             <Link
               href="/rechner/baufinanzierung"

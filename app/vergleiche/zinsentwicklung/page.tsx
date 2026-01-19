@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Info } from "lucide-react";
@@ -15,46 +16,141 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-export default function ZinsentwicklungPage() {
-  // Beispiel-Daten für die Zinsentwicklung (historische Daten)
-  // In einer echten Anwendung würden diese aus einer API oder Datenbank kommen
-  const zinsdaten = [
-    { datum: "Jan 2023", zins10: 3.2, zins15: 3.4, zins20: 3.6 },
-    { datum: "Apr 2023", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
-    { datum: "Jul 2023", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
-    { datum: "Okt 2023", zins10: 3.6, zins15: 3.8, zins20: 4.0 },
-    { datum: "Jan 2024", zins10: 3.4, zins15: 3.6, zins20: 3.8 },
-    { datum: "Apr 2024", zins10: 3.3, zins15: 3.5, zins20: 3.7 },
-    { datum: "Jul 2024", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
-    { datum: "Okt 2024", zins10: 3.7, zins15: 3.9, zins20: 4.1 },
-    { datum: "Jan 2025", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
-    { datum: "Apr 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
-    { datum: "Jul 2025", zins10: 3.85, zins15: 4.05, zins20: 4.25 },
-    { datum: "Okt 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
-    { datum: "Jan 2026", zins10: 3.95, zins15: 4.15, zins20: 4.35 },
-  ];
+interface ChartDataPoint {
+  datum: string;
+  zins10?: number;
+  zins15?: number;
+  zins20?: number;
+}
 
-  // Aktuelle Zinssätze für die Tabelle
-  const aktuelleZinsen = [
-    {
-      zinsbindung: "10 Jahre",
-      beleihung70: "3,56 %",
-      beleihung80: "3,67 %",
-      beleihung90: "4,00 %",
-    },
-    {
-      zinsbindung: "15 Jahre",
-      beleihung70: "3,85 %",
-      beleihung80: "3,92 %",
-      beleihung90: "4,20 %",
-    },
-    {
-      zinsbindung: "20 Jahre",
-      beleihung70: "3,97 %",
-      beleihung80: "4,07 %",
-      beleihung90: "4,30 %",
-    },
-  ];
+interface TableRow {
+  zinsbindung: string;
+  beleihung70: string;
+  beleihung80: string;
+  beleihung90: string;
+}
+
+export default function ZinsentwicklungPage() {
+  const [zinsdaten, setZinsdaten] = useState<ChartDataPoint[]>([]);
+  const [aktuelleZinsen, setAktuelleZinsen] = useState<TableRow[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [latestDate, setLatestDate] = useState<string | null>(null);
+
+  useEffect(() => {
+    async function fetchZinsdaten() {
+      try {
+        setLoading(true);
+        setError(null);
+        const response = await fetch("/api/zinsen?days=730"); // Letzte 2 Jahre
+        
+        if (!response.ok) {
+          const errorData = await response.json().catch(() => ({}));
+          throw new Error(errorData.error || `HTTP ${response.status}: Fehler beim Laden der Zinsdaten`);
+        }
+        
+        const data = await response.json();
+        
+        // Prüfe, ob die Antwort einen Fehler enthält
+        if (data.error) {
+          throw new Error(data.error);
+        }
+        
+        if (data.success) {
+          setZinsdaten(data.chartData || []);
+          setAktuelleZinsen(data.tableData || []);
+          setLatestDate(data.latestDate);
+          
+          // Wenn keine Daten vorhanden sind, verwende Fallback-Daten
+          if (data.chartData.length === 0) {
+            setZinsdaten([
+              { datum: "Jan 2023", zins10: 3.2, zins15: 3.4, zins20: 3.6 },
+              { datum: "Apr 2023", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
+              { datum: "Jul 2023", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
+              { datum: "Okt 2023", zins10: 3.6, zins15: 3.8, zins20: 4.0 },
+              { datum: "Jan 2024", zins10: 3.4, zins15: 3.6, zins20: 3.8 },
+              { datum: "Apr 2024", zins10: 3.3, zins15: 3.5, zins20: 3.7 },
+              { datum: "Jul 2024", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
+              { datum: "Okt 2024", zins10: 3.7, zins15: 3.9, zins20: 4.1 },
+              { datum: "Jan 2025", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
+              { datum: "Apr 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
+              { datum: "Jul 2025", zins10: 3.85, zins15: 4.05, zins20: 4.25 },
+              { datum: "Okt 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
+              { datum: "Jan 2026", zins10: 3.95, zins15: 4.15, zins20: 4.35 },
+            ]);
+          }
+          
+          if (data.tableData.length === 0) {
+            setAktuelleZinsen([
+              {
+                zinsbindung: "10 Jahre",
+                beleihung70: "3,56",
+                beleihung80: "3,67",
+                beleihung90: "4,00",
+              },
+              {
+                zinsbindung: "15 Jahre",
+                beleihung70: "3,85",
+                beleihung80: "3,92",
+                beleihung90: "4,20",
+              },
+              {
+                zinsbindung: "20 Jahre",
+                beleihung70: "3,97",
+                beleihung80: "4,07",
+                beleihung90: "4,30",
+              },
+            ]);
+          }
+        }
+      } catch (err) {
+        console.error("Fehler beim Laden der Zinsdaten:", err);
+        const errorMessage = err instanceof Error ? err.message : "Fehler beim Laden der Zinsdaten. Bitte versuchen Sie es später erneut.";
+        setError(errorMessage);
+        
+        // Fallback-Daten bei Fehler
+        setZinsdaten([
+          { datum: "Jan 2023", zins10: 3.2, zins15: 3.4, zins20: 3.6 },
+          { datum: "Apr 2023", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
+          { datum: "Jul 2023", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
+          { datum: "Okt 2023", zins10: 3.6, zins15: 3.8, zins20: 4.0 },
+          { datum: "Jan 2024", zins10: 3.4, zins15: 3.6, zins20: 3.8 },
+          { datum: "Apr 2024", zins10: 3.3, zins15: 3.5, zins20: 3.7 },
+          { datum: "Jul 2024", zins10: 3.5, zins15: 3.7, zins20: 3.9 },
+          { datum: "Okt 2024", zins10: 3.7, zins15: 3.9, zins20: 4.1 },
+          { datum: "Jan 2025", zins10: 3.8, zins15: 4.0, zins20: 4.2 },
+          { datum: "Apr 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
+          { datum: "Jul 2025", zins10: 3.85, zins15: 4.05, zins20: 4.25 },
+          { datum: "Okt 2025", zins10: 3.9, zins15: 4.1, zins20: 4.3 },
+          { datum: "Jan 2026", zins10: 3.95, zins15: 4.15, zins20: 4.35 },
+        ]);
+        setAktuelleZinsen([
+          {
+            zinsbindung: "10 Jahre",
+            beleihung70: "3,56",
+            beleihung80: "3,67",
+            beleihung90: "4,00",
+          },
+          {
+            zinsbindung: "15 Jahre",
+            beleihung70: "3,85",
+            beleihung80: "3,92",
+            beleihung90: "4,20",
+          },
+          {
+            zinsbindung: "20 Jahre",
+            beleihung70: "3,97",
+            beleihung80: "4,07",
+            beleihung90: "4,30",
+          },
+        ]);
+      } finally {
+        setLoading(false);
+      }
+    }
+    
+    fetchZinsdaten();
+  }, []);
 
   // Custom Tooltip für das Chart
   const CustomTooltip = ({ active, payload, label }: any) => {
@@ -189,8 +285,30 @@ export default function ZinsentwicklungPage() {
           <div className="mb-8">
             <h2 className="text-2xl font-bold mb-2">Aktuelle Zinssätze</h2>
             <p className="text-gray-600">
-              Effektiver Jahreszins nach Zinsbindung und Beleihungsauslauf (Stand: Januar 2026)
+              Effektiver Jahreszins nach Zinsbindung und Beleihungsauslauf
+              {latestDate && (
+                <> (Stand: {new Date(latestDate).toLocaleDateString('de-DE', { day: 'numeric', month: 'long', year: 'numeric' })})</>
+              )}
+              {!latestDate && <> (Stand: Januar 2026)</>}
             </p>
+            {loading && (
+              <p className="text-sm text-gray-500 mt-2">Lade Zinsdaten...</p>
+            )}
+            {error && (
+              <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+                <p className="text-sm text-yellow-800 font-semibold mb-2">Hinweis:</p>
+                <p className="text-sm text-yellow-800 mb-2">{error}</p>
+                {error.includes("Migration") || error.includes("Tabelle") ? (
+                  <div className="mt-3 text-sm text-yellow-900">
+                    <p className="font-semibold mb-1">Nächste Schritte:</p>
+                    <ol className="list-decimal list-inside space-y-1 ml-2">
+                      <li>Führen Sie die Migration aus: <code className="bg-yellow-100 px-1 rounded">npm run db:migrate</code></li>
+                      <li>Starten Sie den Scraper: <code className="bg-yellow-100 px-1 rounded">POST /api/zinsen/scrape</code></li>
+                    </ol>
+                  </div>
+                ) : null}
+              </div>
+            )}
           </div>
 
           <div className="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
@@ -218,17 +336,23 @@ export default function ZinsentwicklungPage() {
                       <td className="px-6 py-4 font-semibold">{zins.zinsbindung}</td>
                       <td className="px-6 py-4 text-center">
                         <span className="text-lg font-bold text-targo-blue">
-                          {zins.beleihung70}
+                          {typeof zins.beleihung70 === 'string' && zins.beleihung70.includes('%') 
+                            ? zins.beleihung70 
+                            : `${zins.beleihung70} %`}
                         </span>
                       </td>
                       <td className="px-6 py-4 text-center">
                         <span className="text-lg font-bold text-targo-blue">
-                          {zins.beleihung80}
+                          {typeof zins.beleihung80 === 'string' && zins.beleihung80.includes('%') 
+                            ? zins.beleihung80 
+                            : `${zins.beleihung80} %`}
                         </span>
                       </td>
                       <td className="px-6 py-4 text-center">
                         <span className="text-lg font-bold text-targo-blue">
-                          {zins.beleihung90}
+                          {typeof zins.beleihung90 === 'string' && zins.beleihung90.includes('%') 
+                            ? zins.beleihung90 
+                            : `${zins.beleihung90} %`}
                         </span>
                       </td>
                     </tr>

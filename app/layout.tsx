@@ -7,6 +7,7 @@ import { Testimonials } from "@/components/layout/testimonials";
 import { Newsletter } from "@/components/layout/newsletter";
 import { ExitIntentPopup } from "@/components/layout/exit-intent-popup";
 import { CookieConsent } from "@/components/layout/cookie-consent";
+import { FloatingCTA } from "@/components/floating-cta";
 import { Providers } from "./providers";
 import { db } from "@/db";
 import { banksOrCreditUnions } from "@/db/schema/other";
@@ -167,6 +168,7 @@ export default async function RootLayout({
           </div>
           <ExitIntentPopup />
           <CookieConsent />
+          <FloatingCTA />
         </Providers>
       </body>
     </html>

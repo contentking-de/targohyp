@@ -88,6 +88,8 @@ const employmentTypes = [
 export default function FinanzierungsanfragePage() {
   const [currentStep, setCurrentStep] = useState(1);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [consentAccepted, setConsentAccepted] = useState(false);
+  const [targohomeAccount, setTargohomeAccount] = useState(false);
   const [formData, setFormData] = useState<FormData>({
     financingType: "",
     propertyType: "",
@@ -134,7 +136,11 @@ export default function FinanzierungsanfragePage() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          consentAccepted,
+          targohomeAccount,
+        }),
       });
 
       if (!response.ok) {
@@ -177,7 +183,8 @@ export default function FinanzierungsanfragePage() {
           !!formData.phone &&
           !!formData.street &&
           !!formData.addressPostalCode &&
-          !!formData.addressCity
+          !!formData.addressCity &&
+          consentAccepted
         );
       default:
         return false;
@@ -517,6 +524,36 @@ export default function FinanzierungsanfragePage() {
                   required
                 />
               </div>
+            </div>
+            <div className="mt-6 pt-6 border-t border-gray-200 space-y-4">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={consentAccepted}
+                  onChange={(e) => setConsentAccepted(e.target.checked)}
+                  className="mt-1 w-5 h-5 text-[#bb133e] border-gray-300 rounded focus:ring-[#bb133e] focus:ring-2"
+                  required
+                />
+                <span className="text-sm text-gray-700">
+                  Ich stimme zu, dass meine Daten zur Bearbeitung meiner Anfrage gespeichert und verwendet werden. 
+                  Weitere Informationen finden Sie in unserer{" "}
+                  <a href="/datenschutz" className="text-[#bb133e] hover:underline" target="_blank" rel="noopener noreferrer">
+                    Datenschutzerklärung
+                  </a>
+                  . *
+                </span>
+              </label>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={targohomeAccount}
+                  onChange={(e) => setTargohomeAccount(e.target.checked)}
+                  className="mt-1 w-5 h-5 text-[#bb133e] border-gray-300 rounded focus:ring-[#bb133e] focus:ring-2"
+                />
+                <span className="text-sm text-gray-700">
+                  Ja, ich möchte direkt einen kostenlosen Nutzeraccount bei TargoHome eröffnen, in dem ich meine Unterlagen sicher hochladen kann.
+                </span>
+              </label>
             </div>
           </div>
         );

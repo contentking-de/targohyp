@@ -89,7 +89,7 @@ export default function ZinsvergleichPage() {
         { name: "Zinsvergleich", url: "/vergleiche/zinsvergleich" }
       ]} />
       {/* Hero Section */}
-      <section className="w-full bg-gradient-to-br from-targo-blue/5 to-white py-16 lg:py-24">
+      <section className="w-full bg-gray-100 py-16 lg:py-24">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl">
             <nav className="mb-6 text-sm">

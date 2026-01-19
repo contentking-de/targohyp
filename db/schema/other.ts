@@ -194,3 +194,27 @@ export const banksOrCreditUnions = pgTable("banks_or_credit_unions", {
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
 });
 
+export const interestRates = pgTable("interest_rates", {
+  id: uuid("id").primaryKey().defaultRandom(),
+  
+  // Zinsbindung in Jahren (10, 15, 20)
+  interestPeriod: integer("interest_period").notNull(), // 10, 15, 20
+  
+  // Beleihungsauslauf (70, 80, 90)
+  loanToValue: integer("loan_to_value").notNull(), // 70, 80, 90
+  
+  // Effektiver Jahreszins
+  annualPercentageRate: numeric("annual_percentage_rate", { precision: 5, scale: 2 }).notNull(), // z.B. 3.52
+  
+  // Datum der Zinsdaten
+  rateDate: timestamp("rate_date").notNull(), // Datum, für das die Zinsen gelten
+  
+  // Quelle (z.B. "interhyp")
+  source: varchar("source", { length: 100 }).default("interhyp").notNull(),
+  
+  // Zusätzliche Metadaten
+  metadata: jsonb("metadata"), // Zusätzliche Informationen als JSON
+  
+  createdAt: timestamp("created_at").defaultNow().notNull(),
+  updatedAt: timestamp("updated_at").defaultNow().notNull(),
+});

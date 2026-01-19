@@ -142,29 +142,6 @@ export function Header() {
                         >
                           Baufinanzierung
                         </Link>
-                        <div className="pl-4 space-y-1 border-l-2 border-gray-100 ml-2">
-                          <Link
-                            href="/finanzierung/baufinanzierung/beamte"
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
-                            onClick={() => setIsFinanzierungOpen(false)}
-                          >
-                            Baufinanzierung für Beamte
-                          </Link>
-                          <Link
-                            href="/finanzierung/baufinanzierung/selbststaendige"
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
-                            onClick={() => setIsFinanzierungOpen(false)}
-                          >
-                            Baufinanzierung für Selbstständige
-                          </Link>
-                          <Link
-                            href="/finanzierung/baufinanzierung/ohne-eigenkapital"
-                            className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
-                            onClick={() => setIsFinanzierungOpen(false)}
-                          >
-                            Baufinanzierung ohne Eigenkapital
-                          </Link>
-                        </div>
                         <Link
                           href="/finanzierung/immobilienfinanzierung"
                           className="block px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-targo-blue transition-colors"
@@ -560,38 +537,6 @@ export function Header() {
                   >
                     Baufinanzierung
                   </Link>
-                  <div className="pl-6 space-y-1 border-l-2 border-gray-100 ml-2">
-                    <Link
-                      href="/finanzierung/baufinanzierung/beamte"
-                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsMobileFinanzierungOpen(false);
-                      }}
-                    >
-                      Baufinanzierung für Beamte
-                    </Link>
-                    <Link
-                      href="/finanzierung/baufinanzierung/selbststaendige"
-                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsMobileFinanzierungOpen(false);
-                      }}
-                    >
-                      Baufinanzierung für Selbstständige
-                    </Link>
-                    <Link
-                      href="/finanzierung/baufinanzierung/ohne-eigenkapital"
-                      className="block py-2 px-2 text-sm text-gray-600 hover:text-targo-blue transition-colors"
-                      onClick={() => {
-                        setIsMobileMenuOpen(false);
-                        setIsMobileFinanzierungOpen(false);
-                      }}
-                    >
-                      Baufinanzierung ohne Eigenkapital
-                    </Link>
-                  </div>
                   <Link
                     href="/finanzierung/immobilienfinanzierung"
                     className="block py-2 px-2 text-sm text-gray-700 hover:text-targo-blue transition-colors"

@@ -15,7 +15,7 @@ export function Footer() {
               className="h-8 w-auto"
             />
             <p className="text-sm text-gray-600">
-              Ihre Content-Plattform für Baufinanzierung
+              TARGOBANK - die Experten für Bau- und Immobilienfinanzierung
             </p>
           </div>
           <div className="space-y-4">
@@ -126,7 +126,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-600">
-          <p>&copy; {new Date().getFullYear()} Targohyp. Alle Rechte vorbehalten.</p>
+          <p>&copy; {new Date().getFullYear()} TARGOBANK AG. Alle Rechte vorbehalten.</p>
         </div>
       </div>
     </footer>
