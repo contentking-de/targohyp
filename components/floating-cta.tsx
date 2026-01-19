@@ -25,7 +25,7 @@ export function FloatingCTA() {
     >
       <Link
         href="/finanzierungsanfrage"
-        className="block bg-[#bb133e] hover:bg-[#a01135] text-white px-6 py-3 rounded-tl-lg shadow-lg transition-all hover:shadow-xl group"
+        className="block bg-[#003366] hover:bg-[#002244] text-white px-6 py-3 rounded-tl-lg shadow-lg transition-all hover:shadow-xl group"
         style={{ 
           transform: 'rotate(-90deg) translateX(50%) translateY(-50%)', 
           transformOrigin: 'right center',
