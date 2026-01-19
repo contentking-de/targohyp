@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Calculator, ArrowLeft, Download, Share2 } from "lucide-react";
+import { Calculator, ArrowLeft, Download, Calendar } from "lucide-react";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 
 export default function BaufinanzierungsrechnerPage() {
@@ -251,10 +251,13 @@ export default function BaufinanzierungsrechnerPage() {
                   <Download className="w-4 h-4 mr-2" />
                   PDF exportieren
                 </Button>
-                <Button className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white">
-                  <Share2 className="w-4 h-4 mr-2" />
-                  Teilen
-                </Button>
+                <Link
+                  href="/termin-vereinbaren"
+                  className="flex-1 bg-[#bb133e] hover:bg-[#a01135] text-white inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 px-4 py-2 h-10"
+                >
+                  <Calendar className="w-4 h-4" />
+                  Beratungstermin vereinbaren
+                </Link>
               </div>
             </div>
           </div>
