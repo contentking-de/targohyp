@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 // Basis-URL für canonical Tags (kann über Umgebungsvariable überschrieben werden)
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL 
+export const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || (process.env.VERCEL_URL 
   ? `https://${process.env.VERCEL_URL}` 
   : "https://www.targohyp.de");
 

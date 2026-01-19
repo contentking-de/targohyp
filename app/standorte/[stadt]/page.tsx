@@ -7,6 +7,7 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { Metadata } from "next";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+import { BASE_URL } from "@/lib/utils";
 
 interface Standort {
   Address: string;
@@ -198,7 +199,7 @@ export default async function StandortDetailPage({ params }: { params: Promise<{
     "@type": "FinancialService",
     "name": `TARGOBANK Baufinanzierung ${city}`,
     "description": `Baufinanzierungsberatung der TARGOBANK in ${city}. Persönliche Beratung für Ihre Immobilienfinanzierung.`,
-    "url": `https://www.targohyp.de/standorte/${stadt}`,
+    "url": `${BASE_URL}/standorte/${stadt}`,
     "telephone": standort.Phone,
     "address": {
       "@type": "PostalAddress",
@@ -228,12 +229,6 @@ export default async function StandortDetailPage({ params }: { params: Promise<{
       "@type": "City",
       "name": city,
     },
-    "serviceType": [
-      "Baufinanzierung",
-      "Immobilienfinanzierung",
-      "Anschlussfinanzierung",
-      "KfW-Förderung",
-    ],
   };
 
   return (
