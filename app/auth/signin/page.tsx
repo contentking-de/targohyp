@@ -158,6 +158,69 @@ export default function SignInPage() {
           </div>
         </div>
       </section>
+
+      {/* Was ist TargoHome Section */}
+      <section className="w-full py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-2xl font-bold mb-6 text-center">Was ist TargoHome?</h2>
+            <div className="bg-white border border-gray-200 rounded-lg p-8">
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>TargoHome</strong> ist Ihr persönlicher digitaler Bereich für die Baufinanzierung. 
+                Mit Ihrem TargoHome-Account haben Sie alle wichtigen Unterlagen und Dokumente 
+                rund um Ihre Finanzierung an einem sicheren Ort.
+              </p>
+              <p className="text-gray-700 leading-relaxed mb-4">
+                <strong>Ihre Vorteile mit TargoHome:</strong>
+              </p>
+              <ul className="space-y-3 mb-6">
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">
+                    <strong>Sichere Dokumentenablage:</strong> Laden Sie alle benötigten Unterlagen 
+                    wie Gehaltsnachweise, Kaufverträge oder Grundbuchauszüge sicher hoch.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">
+                    <strong>Einfache Kommunikation:</strong> Tauschen Sie Dokumente direkt mit 
+                    Ihrem Finanzierungsberater aus – ohne E-Mail-Anhänge.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">
+                    <strong>Übersicht behalten:</strong> Sehen Sie jederzeit den Status Ihrer 
+                    Finanzierungsanfrage und welche Unterlagen noch fehlen.
+                  </span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                  <span className="text-gray-700">
+                    <strong>Passwortlose Anmeldung:</strong> Melden Sie sich bequem per Magic Link 
+                    an – kein Passwort nötig.
+                  </span>
+                </li>
+              </ul>
+              <p className="text-gray-700 leading-relaxed mb-6">
+                Ihr TargoHome-Account wird automatisch erstellt, wenn Sie eine Finanzierungsanfrage 
+                stellen und der Erstellung zustimmen. Sie können sich dann jederzeit hier anmelden, 
+                um auf Ihre Dokumente zuzugreifen.
+              </p>
+              <div className="text-center">
+                <Link 
+                  href="/targohome" 
+                  className="inline-flex items-center text-targo-blue font-semibold hover:underline"
+                >
+                  Mehr über TargoHome erfahren
+                  <ArrowRight className="ml-2 w-4 h-4" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -452,56 +452,6 @@ export function Header() {
       {isMobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-200 bg-white">
           <nav className="container mx-auto px-4 py-4 space-y-2">
-            {/* Top Navigation Links */}
-            <div className="border-b border-gray-200 pb-4 mb-4">
-              <div className="space-y-2">
-                <Link
-                  href="/standorte"
-                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <MapPin className="w-4 h-4 flex-shrink-0" />
-                  Standorte
-                </Link>
-                <Link
-                  href="/kontakt"
-                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <HelpCircle className="w-4 h-4 flex-shrink-0" />
-                  Hilfe & Kontakt
-                </Link>
-                <Link
-                  href="/faqs-finanzierung"
-                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <HelpCircle className="w-4 h-4 flex-shrink-0" />
-                  FAQs zur Finanzierung
-                </Link>
-              </div>
-              <div className="space-y-2 mt-4">
-                <Button
-                  className="w-full bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-3 min-h-[44px]"
-                  asChild
-                >
-                  <Link href="/auth/signin" className="flex items-center justify-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Home className="w-4 h-4 flex-shrink-0" />
-                    <span className="font-bold">TargoHome</span>
-                  </Link>
-                </Button>
-                <Button
-                  className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-6 py-3 min-h-[44px]"
-                  asChild
-                >
-                  <Link href="/termin-vereinbaren" className="flex items-center justify-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
-                    <Calendar className="w-4 h-4 flex-shrink-0" />
-                    <span className="font-bold">Termin vereinbaren</span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
-
             {/* Finanzierung mit Dropdown */}
             <div>
               <button
@@ -865,6 +815,56 @@ export function Header() {
                   </Link>
                 </div>
               )}
+            </div>
+
+            {/* Sekundäre Navigation */}
+            <div className="border-t border-gray-200 pt-4 mt-4">
+              <div className="space-y-2">
+                <Link
+                  href="/standorte"
+                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <MapPin className="w-4 h-4 flex-shrink-0" />
+                  Standorte
+                </Link>
+                <Link
+                  href="/kontakt"
+                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <HelpCircle className="w-4 h-4 flex-shrink-0" />
+                  Hilfe & Kontakt
+                </Link>
+                <Link
+                  href="/faqs-finanzierung"
+                  className="block text-sm text-gray-700 py-2 px-2 hover:text-targo-blue transition-colors flex items-center gap-2"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  <HelpCircle className="w-4 h-4 flex-shrink-0" />
+                  FAQs zur Finanzierung
+                </Link>
+              </div>
+              <div className="space-y-2 mt-4">
+                <Button
+                  className="w-full bg-[rgb(0,47,95)] hover:bg-[rgb(0,47,95)]/90 text-white rounded-full px-6 py-3 min-h-[44px]"
+                  asChild
+                >
+                  <Link href="/auth/signin" className="flex items-center justify-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Home className="w-4 h-4 flex-shrink-0" />
+                    <span className="font-bold">TargoHome</span>
+                  </Link>
+                </Button>
+                <Button
+                  className="w-full bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-6 py-3 min-h-[44px]"
+                  asChild
+                >
+                  <Link href="/termin-vereinbaren" className="flex items-center justify-center gap-2" onClick={() => setIsMobileMenuOpen(false)}>
+                    <Calendar className="w-4 h-4 flex-shrink-0" />
+                    <span className="font-bold">Termin vereinbaren</span>
+                  </Link>
+                </Button>
+              </div>
             </div>
 
             {/* SearchBox für Mobile */}
