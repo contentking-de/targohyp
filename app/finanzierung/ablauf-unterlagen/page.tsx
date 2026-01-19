@@ -165,7 +165,7 @@ export default function AblaufUnterlagenPage() {
                 <ClipboardList className="w-6 h-6 text-targo-blue" />
               </div>
               <h3 className="text-xl font-bold mb-2 group-hover:text-targo-blue transition-colors">
-                Checklists
+                Checkliste Finanzierung
               </h3>
               <p className="text-gray-700 mb-4">
                 Praktische Checklisten für Ihre Baufinanzierung zum Download.

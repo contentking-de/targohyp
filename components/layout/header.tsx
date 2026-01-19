@@ -176,7 +176,7 @@ export function Header() {
                             className="block px-4 py-2 text-sm text-gray-600 hover:bg-gray-50 hover:text-targo-blue transition-colors"
                             onClick={() => setIsFinanzierungOpen(false)}
                           >
-                            Checklists
+                            Checkliste Finanzierung
                           </Link>
                           <Link
                             href="/finanzierung/ablauf-unterlagen/bonitaet-schufa"
@@ -586,7 +586,7 @@ export function Header() {
                         setIsMobileFinanzierungOpen(false);
                       }}
                     >
-                      Checklists
+                      Checkliste Finanzierung
                     </Link>
                     <Link
                       href="/finanzierung/ablauf-unterlagen/bonitaet-schufa"

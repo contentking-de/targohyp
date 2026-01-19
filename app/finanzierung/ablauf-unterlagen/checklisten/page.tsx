@@ -74,8 +74,6 @@ export default function ChecklistsPage() {
             </Link>
             <span className="mx-2 text-gray-400">/</span>
             <span className="text-gray-700">Checklisten</span>
-            <span className="mx-2 text-gray-400">/</span>
-            <span className="text-gray-700">Checklisten</span>
           </nav>
           <div className="max-w-3xl">
             <div className="flex items-center gap-3 mb-4">
@@ -83,7 +81,7 @@ export default function ChecklistsPage() {
                 <ClipboardList className="w-6 h-6 text-targo-blue" />
               </div>
               <h1 className="text-4xl lg:text-5xl font-bold">
-                Checklists
+                Checklisten für Ihre Finanzierung
               </h1>
             </div>
             <p className="text-lg text-gray-700 leading-relaxed">

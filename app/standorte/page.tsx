@@ -1,4 +1,5 @@
 import { MapWrapper } from '@/components/standorte/map-wrapper';
+import { StandortListe } from '@/components/standorte/standort-liste';
 import { MapPin } from 'lucide-react';
 import { readFileSync } from 'fs';
 import { join } from 'path';
@@ -20,21 +21,6 @@ interface Standort {
     day: string;
     open_interval: string;
   }>;
-}
-
-// Funktion zum Extrahieren der Stadt aus der Adresse
-function extractCity(address: string): string {
-  // Adresse Format: "Straße, PLZ Stadt, Germany"
-  // Beispiel: "Oppelner Str. 186, 90473 Nürnberg, Germany"
-  const parts = address.split(',');
-  if (parts.length >= 2) {
-    // Nimm den Teil nach dem ersten Komma (PLZ Stadt)
-    const cityPart = parts[1].trim();
-    // Entferne die PLZ (5-stellige Zahl am Anfang)
-    const city = cityPart.replace(/^\d{5}\s*/, '').trim();
-    return city || 'Unbekannt';
-  }
-  return 'Unbekannt';
 }
 
 export default function StandortePage() {
@@ -93,45 +79,7 @@ export default function StandortePage() {
       {/* Standortliste Section */}
       <section className="w-full bg-gray-50 py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-8">Alle Standorte</h2>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {validStandorte.slice(0, 12).map((standort, index) => (
-              <div
-                key={index}
-                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <h3 className="font-bold text-lg text-targo-blue mb-3">
-                  {standort.Name} {extractCity(standort.Address)}
-                </h3>
-                <div className="space-y-2 text-sm text-gray-700">
-                  <div className="flex items-start gap-2">
-                    <MapPin className="w-4 h-4 text-targo-blue mt-0.5 flex-shrink-0" />
-                    <span>{standort.Address}</span>
-                  </div>
-                  {standort.Phone && (
-                    <div>
-                      <a
-                        href={`tel:${standort.Phone}`}
-                        className="text-targo-blue hover:underline"
-                      >
-                        {standort.Phone}
-                      </a>
-                    </div>
-                  )}
-                  {standort.Status && (
-                    <div className="text-xs text-gray-600 mt-2">
-                      {standort.Status}
-                    </div>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-          {validStandorte.length > 12 && (
-            <p className="text-center text-gray-600 mt-8">
-              Zeige 12 von {validStandorte.length} Standorten. Nutzen Sie die Karte oben, um alle Standorte zu erkunden.
-            </p>
-          )}
+          <StandortListe standorte={validStandorte} itemsPerPage={12} />
         </div>
       </section>
     </div>
