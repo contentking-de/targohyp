@@ -8,6 +8,7 @@ import { getArtikelContent } from "@/lib/ratgeber-content";
 import { notFound } from "next/navigation";
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+import { ArticleReviewBadge } from "@/components/article-review-badge";
 
 interface PageProps {
   params: Promise<{
@@ -130,9 +131,12 @@ export default async function KategoriePage({ params }: PageProps) {
                       </div>
                     )}
                     <div className="p-6">
-                      <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
-                        {artikel.title}
-                      </h3>
+                      <div className="flex items-start justify-between gap-2 mb-2">
+                        <h3 className="text-lg font-bold group-hover:text-targo-blue transition-colors">
+                          {artikel.title}
+                        </h3>
+                        <ArticleReviewBadge articleUrl={`/ratgeber/${kategorie.id}/${artikel.id}`} />
+                      </div>
                       {content?.intro && (
                         <p className="text-base text-gray-600 mb-3 leading-relaxed">
                           {content.intro.length > 150 ? `${content.intro.substring(0, 150)}...` : content.intro}

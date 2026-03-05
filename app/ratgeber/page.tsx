@@ -7,6 +7,7 @@ import { kategorien } from "@/lib/ratgeber-data";
 import { getArtikelContent } from "@/lib/ratgeber-content";
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
+import { ArticleReviewBadge } from "@/components/article-review-badge";
 
 export const metadata = createMetadata({
   title: "Ratgeber zur Baufinanzierung - Tipps & Informationen | Targohyp",
@@ -123,9 +124,12 @@ export default function RatgeberPage() {
                                 </div>
                               )}
                               <div className="p-6">
-                                <h3 className="text-lg font-bold mb-2 group-hover:text-targo-blue transition-colors">
-                                  {artikel.title}
-                                </h3>
+                                <div className="flex items-start justify-between gap-2 mb-2">
+                                  <h3 className="text-lg font-bold group-hover:text-targo-blue transition-colors">
+                                    {artikel.title}
+                                  </h3>
+                                  <ArticleReviewBadge articleUrl={`/ratgeber/${kategorie.id}/${artikel.id}`} />
+                                </div>
                                 {content?.intro && (
                                   <p className="text-base text-gray-600 leading-relaxed mb-3">
                                     {content.intro.length > 150 ? `${content.intro.substring(0, 150)}...` : content.intro}
