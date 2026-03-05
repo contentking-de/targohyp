@@ -9,6 +9,7 @@ import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 import { ChecklistPdfForm } from "@/components/checklist-pdf-form";
 import { NewsletterCTA } from "@/components/newsletter-cta";
+import { ArticleReviewButton } from "@/components/article-review-button";
 
 interface PageProps {
   params: Promise<{
@@ -128,6 +129,10 @@ export default async function ArtikelPage({ params }: PageProps) {
                         </span>
                       </div>
                     )}
+                    <ArticleReviewButton
+                      articleTitle={artikel.title}
+                      articleUrl={`/ratgeber/${kategorie.id}/${artikel.id}`}
+                    />
                   </div>
                 )}
               </div>
