@@ -9,6 +9,23 @@ export interface ArtikelContent {
     points?: string[];
     twoColumn?: boolean;
     icon?: string;
+    table?: {
+      headers: string[];
+      rows: string[][];
+    };
+    lexikonLinks?: Array<{
+      term: string;
+      slug: string;
+    }>;
+  }>;
+  ctas?: Array<{
+    afterSection: number;
+    type: "link" | "newsletter";
+    title?: string;
+    description?: string;
+    buttonText?: string;
+    buttonHref?: string;
+    icon?: string;
   }>;
   faqs?: Array<{
     question: string;
@@ -201,6 +218,100 @@ const artikelContent: ContentMap = {
         {
           question: "Was passiert, wenn ich meine Rate nicht mehr zahlen kann?",
           answer: "In solchen Fällen ist es wichtig, frühzeitig mit Ihrer Bank zu kommunizieren. Oft können Lösungen wie eine Tilgungspause oder eine Anpassung der Rate gefunden werden. Im Extremfall droht die Zwangsversteigerung der Immobilie.",
+        },
+      ],
+    },
+    "mieten-oder-kaufen": {
+      intro: "Mieten oder Kaufen? Hinter dieser scheinbar einfachen Frage steckt eine sehr persönliche Entscheidung – und eine nüchterne Rechnung. Für Einsteiger geht es darum, zu verstehen, was ihr Geld auf lange Sicht tatsächlich leistet: Miete kaufen dir Flexibilität, ein Kauf bindet dich – kann aber Vermögen aufbauen.",
+      author: "Sarah Weber",
+      createdAt: "2025-03-06",
+      sections: [
+        {
+          title: "Der richtige Blick auf die Frage",
+          content: `Viele fangen bei der Emotion an: „Ich will endlich etwas Eigenes haben." Für eine ehrliche Entscheidung ist es sinnvoll, zuerst die nüchterne Perspektive einzunehmen. Im Kern vergleichst du zwei Dinge: Auf der einen Seite steht die monatliche Miete, die du für das Wohnen bezahlst, ohne einen Gegenwert in Form von Eigentum aufzubauen. Auf der anderen Seite steht die Kreditrate plus laufende Kosten beim Kauf, von der ein Teil direkt in den Schuldenabbau und damit in dein Vermögen fließt – du trägst aber auch mehr Verantwortung und Risiko.\n\nWichtig ist, dass du nicht nur die Monatsrate des Kredits mit der Miete vergleichst. Beim Kaufen gibt es einmalige und laufende Zusatzkosten, beim Mieten gibt es dafür eine hohe Flexibilität und weniger finanzielle Überraschungen. Erst wenn du alles auf den Tisch legst, wird aus der Bauchentscheidung eine nachvollziehbare Rechnung.`,
+          icon: "Search",
+        },
+        {
+          title: "Was Mieten wirklich bedeutet",
+          content: "Wenn du mietest, zahlst du im Wesentlichen für Nutzung und Flexibilität. Deine monatliche Belastung besteht aus der Kaltmiete und den Nebenkosten, also Heizung, Wasser, Müll, Hausstrom und anderen Betriebskosten. Größere finanzielle Risiken wie ein neues Dach, eine neue Heizung oder eine Fassadensanierung trägt der Eigentümer, sie treffen dich höchstens indirekt über moderate Mieterhöhungen. Du musst keine Rücklagen für Instandhaltung des Gebäudes bilden und musst dich nicht mit Handwerkern, Versicherungen oder einer Eigentümergemeinschaft auseinandersetzen.\n\nFinanziell ist die Miete ein laufender Konsum: Monat für Monat fließt Geld ab, ohne dass du einen bleibenden Gegenstand erwirbst. Das klingt hart, ist aber nicht zwangsläufig schlecht – besonders dann, wenn du die gesparte Flexibilität bewusst nutzt. Wenn du zum Beispiel in einer Branche mit hohem Umzugsrisiko arbeitest, wenn du eine Trennung nicht ausschließen kannst oder wenn du ohnehin in wenigen Jahren die Stadt wechseln willst, kaufst du dir mit der Miete die Freiheit, ohne riesige Transaktionskosten den Wohnort zu wechseln. Und: Das Geld, das du beim Nicht-Kaufen nicht in Kaufnebenkosten und Tilgung steckst, kannst du theoretisch in andere Anlageformen stecken.",
+          icon: "Home",
+          twoColumn: true,
+          lexikonLinks: [{ term: "Tilgung", slug: "tilgung" }],
+        },
+        {
+          title: "Was Kaufen wirklich bedeutet",
+          content: `Beim Kauf tritt an die Stelle der Miete vor allem die Kreditrate, also Zins und Tilgung. Dazu kommen Kosten, über die am Anfang viele nur flüchtig nachdenken: du zahlst Grunderwerbsteuer, Notar- und Grundbuchkosten und eventuell eine Maklerprovision. Diese Nebenkosten belaufen sich in Deutschland je nach Bundesland und Konstellation grob auf sieben bis fünfzehn Prozent des Kaufpreises. Sie müssen in der Regel aus Eigenkapital bezahlt werden und sind weg – sie erhöhen zwar indirekt deinen Vermögensaufbau, fließen aber nicht in den Wert der Immobilie ein.\n\nNach dem Kauf beginnt die Phase der laufenden Verantwortung. Neben Zins und Tilgung musst du für Instandhaltung sorgen: kleine Dinge wie ein defekter Rollladen, aber auch große Posten wie eine neue Heizungsanlage oder ein neues Dach. Gerade bei Eigentumswohnungen kommt noch das Hausgeld hinzu, das Verwaltung, gemeinschaftliche Kosten und eine Rücklage abdeckt. Dazu kommen Grundsteuer und Versicherungen. Ein Teil dieser Ausgaben ersetzt die „versteckten" Kosten, die bislang dein Vermieter übernommen hat. Der andere Teil ist echter finanzieller Mehraufwand. Der entscheidende Unterschied: Mit jeder Tilgungsrate gehört dir ein bisschen mehr von deiner Immobilie, du tauschst also laufende Mietzahlungen nach und nach gegen einen wachsenden Eigentumsanteil.`,
+          icon: "Wallet",
+          twoColumn: true,
+        },
+        {
+          title: "Ein Beispiel, das die Zahlen greifbar macht",
+          content: "Stell dir vor, du stehst in einer mittelgroßen Stadt vor der Wahl. Zur Miete könntest du eine 80-Quadratmeter-Wohnung für 1.200 Euro warm bekommen. Die gleiche oder eine vergleichbare Wohnung würde im Kauf 350.000 Euro kosten. Du hast 80.000 Euro Eigenkapital gespart. Ein realistischer Zins liegt – je nach Zeitpunkt – im mittleren einstelligen Bereich; nehmen wir für das Rechenbeispiel 3,5 Prozent mit einer anfänglichen Tilgung von 2,5 Prozent an, insgesamt also sechs Prozent Rückfluss an die Bank pro Jahr.\n\nZunächst musst du die Kaufnebenkosten einplanen. Wenn wir von zehn Prozent Nebenkosten ausgehen, kommen zu den 350.000 Euro noch einmal 35.000 Euro hinzu. Insgesamt benötigst du also 385.000 Euro. Deine 80.000 Euro Eigenkapital decken diese Nebenkosten und einen Teil des Kaufpreises ab, so dass ein Kredit von 305.000 Euro übrig bleibt. Auf diesen Kredit zahlst du pro Jahr 3,5 Prozent Zinsen, also rund 10.675 Euro, und 2,5 Prozent Tilgung, also etwa 7.625 Euro. Zusammen sind das knapp 18.300 Euro im Jahr oder rund 1.525 Euro im Monat.\n\nDiese Rate ist aber noch nicht das Ende der Rechnung. Als Eigentümer musst du zusätzlich Rücklagen für Instandhaltung bilden. Eine grobe Faustregel sind ein bis eineinhalb Prozent des Immobilienwerts pro Jahr. Bei 350.000 Euro wären ein Prozent 3.500 Euro, also ungefähr 290 Euro im Monat. Für eine Wohnung kommen noch Hausgeld und Betriebskosten dazu, von denen ein Teil auf Instandhaltungsrücklagen und Gemeinschaftskosten entfällt und ein Teil deine laufenden Verbrauchskosten abbildet. Rechnen wir vorsichtig 250 Euro monatlich dafür, liegt deine gesamte monatliche Belastung als Käufer bei rund 2.065 Euro. Im Vergleich zur 1.200-Euro-Miete zahlst du also knapp 800 bis 900 Euro mehr im Monat, bekommst dafür aber Tilgung und Eigentumsaufbau.",
+          icon: "Calculator",
+        },
+        {
+          title: "Die Rolle des Preis-Mieten-Verhältnisses",
+          content: "Ein wichtiges Instrument, um einzuschätzen, ob ein Kaufpreis überhaupt in einem sinnvollen Verhältnis zur Miete steht, ist der sogenannte Kaufpreis-Miete-Faktor. Dabei teilst du den Kaufpreis durch die jährliche Kaltmiete einer vergleichbaren Wohnung. Liegt dieser Faktor eher niedrig, also grob unter zwanzig, deutet das häufig darauf hin, dass Kaufen sich eher lohnen kann – sofern Zinsen, Eigenkapital und Haltedauer passen. Bewegt sich der Wert zwischen zwanzig und fünfundzwanzig, wird es zur Detailentscheidung, bei der deine persönlichen Prämissen sehr wichtig werden. Liegt der Faktor deutlich darüber, etwa bei über fünfundzwanzig oder dreißig, spricht vieles dafür, dass der Markt teuer ist und Mieten finanziell attraktiver sein kann, wenn du flexibel bleiben möchtest.\n\nIm Beispiel mit 350.000 Euro Kaufpreis und 1.000 Euro Kaltmiete pro Monat liegt die Jahreskaltmiete bei 12.000 Euro. Der Faktor ergibt sich aus 350.000 geteilt durch 12.000, also knapp neunundzwanzig. Das ist relativ hoch und zeigt, dass du in dieser Konstellation als Käufer viel bezahlst im Vergleich zur Miete. Du kannst dir diesen Faktor wie ein Thermometer vorstellen: je höher er steigt, desto stärker musst du über Eigenkapital, persönliche Gründe für den Kauf und deine Renditeerwartung nachdenken, um die Entscheidung noch zu rechtfertigen.",
+          icon: "BarChart",
+        },
+        {
+          title: "Laufende Kosten im Überblick",
+          content: "Auch wenn du nicht mit Zahlenkolonnen überladen willst, hilft eine kompakte Gegenüberstellung, um den Charakter der Kosten zu verstehen.\n\nDer entscheidende Unterschied liegt darin, dass beim Mieten die Risiken von Reparaturen und Modernisierung beim Vermieter liegen, während du als Käufer diese Posten selbst schultern musst. Auf der anderen Seite fließt beim Kaufen ein Teil deiner monatlichen Zahlungen direkt in den Schuldenabbau und damit in dein eigenes Nettovermögen, während die Miete vollständig konsumiert wird.",
+          icon: "ListChecks",
+          table: {
+            headers: ["Kostenart", "Mieten (typisch)", "Kaufen (typisch)"],
+            rows: [
+              ["Monatliche Hauptlast", "Kaltmiete plus Nebenkosten", "Kreditrate aus Zins und Tilgung"],
+              ["Laufende Nebenkosten", "Betriebskosten laut Abrechnung", "Betriebskosten plus Hausgeld und Rücklagen"],
+              ["Instandhaltung", "vom Vermieter zu tragen", "vom Eigentümer zu tragen, Rücklage unbedingt nötig"],
+              ["Steuern und Versicherungen", "indirekt über Miete enthalten", "Grundsteuer, Gebäudeversicherung direkt zu zahlen"],
+              ["Einmalige Kosten", "Kaution, Umzug", "Kaufnebenkosten, ggf. Renovierung beim Einzug"],
+            ],
+          },
+        },
+        {
+          title: "Typische Denkfehler in der Kaufrechnerei",
+          content: `In vielen Gesprächen über Immobilienkäufe tauchen immer wieder dieselben Schönrechnungen auf. Ein sehr häufiger Fehler besteht darin, die Kaufnebenkosten zu vergessen oder massiv zu unterschätzen. Wer nur mit dem reinen Kaufpreis rechnet, übersieht, dass Grunderwerbsteuer, Notar, Grundbuch und Makler je nach Region eine fünfstellige Summe ausmachen und das Eigenkapital stark auffressen. Ein zweiter Klassiker ist, die Instandhaltung aus der Rechnung zu streichen, gerade bei Neubauten. Doch auch eine neue Immobilie altert, hat technische Anlagen und benötigt Pflege.\n\nEin dritter Fehler ist ein sehr optimistischer Blick auf die Wertentwicklung: in vielen Beispielrechnungen steigen die Immobilienpreise automatisch um drei oder vier Prozent pro Jahr, völlig unabhängig von Lage, Demografie oder Zinsumfeld. Das ist bequem, aber nicht realistisch. Und schließlich vergessen viele, ihr Eigenkapital als Alternative zu betrachten. Das Geld, das du in die Immobilie steckst, könntest du auch in andere Anlageformen investieren, etwa breit gestreute ETFs. Eine ehrliche Rechnung vergleicht also nicht nur „Miete vs. Rate", sondern auch „Wertentwicklung Immobilie vs. Wertentwicklung anderer Anlagen".`,
+          icon: "AlertTriangle",
+        },
+        {
+          title: "Zahlen sind nicht alles: die weichen Faktoren",
+          content: "Selbst die sauberste Tabelle ersetzt nicht dein Lebensgefühl. Eigentum gibt vielen Menschen ein starkes Sicherheits- und Zugehörigkeitsgefühl: das eigene Zuhause, in dem niemand dir wegen Eigenbedarf kündigen kann, in dem du Wände einreißen oder eine Küche nach Maß einbauen darfst, ohne jemanden zu fragen. Gerade mit Familie, Kindern und einem stabilen Arbeitsplatz in einer Region kann dieses Gefühl sehr wertvoll sein und sich stärker anfühlen als jede Zahl in einer Excel-Liste.\n\nAuf der anderen Seite kann eine hohe Verschuldung psychisch belasten. Wer mit einem sechsstelligen Kreditbetrag schlecht schläft, wird selbst bei mathematischer Überlegenheit der Kaufvariante nicht glücklich werden. Mieten wiederum kann sich unglaublich befreiend anfühlen: Du kannst schneller auf Jobchancen reagieren, leichter die Stadt wechseln oder dich trennen, ohne zuerst eine Immobilie verkaufen zu müssen. All diese Aspekte lassen sich in Euro nur schwer ausdrücken, sollten aber bei deiner Entscheidung denselben Stellenwert wie Zinsen und Faktoren bekommen.",
+          icon: "Brain",
+        },
+      ],
+      ctas: [
+        {
+          afterSection: 2,
+          type: "link",
+          title: "Noch unsicher, ob Du kaufen oder doch weiter mieten solltest?",
+          description: "Lass Dich von unseren Experten beraten – persönlich, unverbindlich und auf Deine Situation zugeschnitten.",
+          buttonText: "Beratungstermin vereinbaren",
+          buttonHref: "/termin-vereinbaren",
+          icon: "Calendar",
+        },
+        {
+          afterSection: 4,
+          type: "link",
+          title: "Du brauchst konkrete Zahlen und eine Vergleichsbasis?",
+          description: "Dann nutze unseren kostenlosen Kauf/Miet-Rechner und finde heraus, welche Variante für Dich günstiger ist.",
+          buttonText: "Zum Kauf/Miet-Rechner",
+          buttonHref: "/rechner/mieten-kaufen-rechner",
+          icon: "Calculator",
+        },
+      ],
+      faqs: [
+        {
+          question: "Lohnt sich Kaufen immer mehr als Mieten?",
+          answer: "Nein, das hängt stark von den individuellen Umständen ab. Faktoren wie Kaufpreis-Miete-Verhältnis, Eigenkapital, Zinsniveau, persönliche Flexibilitätsbedürfnisse und die geplante Haltedauer spielen eine entscheidende Rolle. In teuren Märkten mit hohem Kaufpreis-Miete-Faktor kann Mieten finanziell attraktiver sein.",
+        },
+        {
+          question: "Wie viel Eigenkapital brauche ich mindestens zum Kaufen?",
+          answer: "Als Minimum sollten Sie die Kaufnebenkosten (ca. 7–15 % des Kaufpreises) aus Eigenkapital bestreiten können. Idealerweise bringen Sie darüber hinaus 10–20 % des Kaufpreises mit, um bessere Kreditkonditionen zu erhalten und das Risiko zu senken.",
+        },
+        {
+          question: "Was ist der Kaufpreis-Miete-Faktor und wie interpretiere ich ihn?",
+          answer: "Der Kaufpreis-Miete-Faktor ergibt sich aus dem Kaufpreis geteilt durch die Jahreskaltmiete einer vergleichbaren Wohnung. Unter 20 deutet auf einen günstigen Kaufmarkt hin, zwischen 20 und 25 ist es eine Detailentscheidung, über 25–30 ist der Markt eher teuer und Mieten kann attraktiver sein.",
         },
       ],
     },

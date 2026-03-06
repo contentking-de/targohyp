@@ -112,7 +112,15 @@ export default async function KategoriePage({ params }: PageProps) {
         <div className="container mx-auto px-4">
           {kategorie.artikel.length > 0 ? (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {kategorie.artikel.map((artikel) => {
+              {[...kategorie.artikel]
+                .sort((a, b) => {
+                  const contentA = getArtikelContent(kategorie.id, a.id);
+                  const contentB = getArtikelContent(kategorie.id, b.id);
+                  const dateA = contentA?.createdAt ? new Date(contentA.createdAt).getTime() : 0;
+                  const dateB = contentB?.createdAt ? new Date(contentB.createdAt).getTime() : 0;
+                  return dateB - dateA;
+                })
+                .map((artikel) => {
                 const content = getArtikelContent(kategorie.id, artikel.id);
                 return (
                   <Link

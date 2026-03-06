@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, BookOpen, ExternalLink } from "lucide-react";
-import { findBegriffBySlug, findVerwandteBegriffe, lexikonBegriffe } from "@/lib/lexikon-data";
+import { ArrowLeft, ArrowRight, BookOpen, ExternalLink, List, MessageCircle } from "lucide-react";
+import { findBegriffBySlug, findVerwandteBegriffe, lexikonBegriffe, createSlug } from "@/lib/lexikon-data";
 import type { Metadata } from "next";
 import { createMetadata } from "@/lib/utils";
 import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
@@ -96,14 +96,9 @@ export default async function LexikonDetailPage({
               <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center">
                 <BookOpen className="w-6 h-6 text-targo-blue" />
               </div>
-              <div>
-                <h1 className="text-3xl lg:text-4xl font-bold mb-2">
-                  {begriff.begriff}
-                </h1>
-                <span className="inline-block text-sm font-semibold text-targo-blue bg-targo-blue/10 px-3 py-1 rounded-full">
-                  {begriff.kategorie}
-                </span>
-              </div>
+              <h1 className="text-3xl lg:text-4xl font-bold">
+                {begriff.begriff}
+              </h1>
             </div>
           </div>
         </div>
@@ -117,7 +112,7 @@ export default async function LexikonDetailPage({
               {/* Hauptinhalt */}
               <div className="lg:col-span-2">
                 {/* Definition */}
-                <div className="bg-white border-4 border-[#003366] rounded-lg p-6 lg:p-8 mb-8">
+                <div id="definition" className="bg-white border-4 border-[#003366] rounded-lg p-6 lg:p-8 mb-8">
                   <h2 className="text-2xl font-bold mb-4 text-gray-900">Definition: {begriff.begriff}</h2>
                   <p className="text-lg text-gray-700 leading-relaxed">
                     {begriff.definition}
@@ -126,7 +121,7 @@ export default async function LexikonDetailPage({
 
                 {/* Beschreibung */}
                 {begriff.beschreibung && (
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
+                  <div id="erklaerung" className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-4 text-gray-900">Ausführliche Erklärung</h2>
                     <p className="text-gray-700 leading-relaxed whitespace-pre-line">
                       {begriff.beschreibung}
@@ -134,9 +129,26 @@ export default async function LexikonDetailPage({
                   </div>
                 )}
 
+                {/* Sektionen */}
+                {begriff.sektionen && begriff.sektionen.length > 0 && (
+                  begriff.sektionen.map((sektion, sektionIndex) => (
+                    <div key={sektionIndex} id={createSlug(sektion.ueberschrift)} className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
+                      <h2 className="text-2xl font-bold mb-4 text-gray-900">{sektion.ueberschrift}</h2>
+                      <ul className="space-y-3">
+                        {sektion.inhalt.map((absatz, absatzIndex) => (
+                          <li key={absatzIndex} className="flex items-start gap-3">
+                            <span className="text-targo-blue font-bold mt-1">•</span>
+                            <span className="text-gray-700 leading-relaxed">{absatz}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))
+                )}
+
                 {/* Details */}
                 {begriff.details && begriff.details.length > 0 && (
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
+                  <div id="wichtige-details" className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-4 text-gray-900">Wichtige Details</h2>
                     <ul className="space-y-3">
                       {begriff.details.map((detail, index) => (
@@ -151,7 +163,7 @@ export default async function LexikonDetailPage({
 
                 {/* FAQs */}
                 {begriff.faqs && begriff.faqs.length > 0 && (
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
+                  <div id="haeufige-fragen" className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8 mb-8">
                     <h2 className="text-2xl font-bold mb-6 text-gray-900">Häufige Fragen: {begriff.begriff}</h2>
                     <div className="space-y-6">
                       {begriff.faqs.map((faq, index) => (
@@ -170,7 +182,7 @@ export default async function LexikonDetailPage({
 
                 {/* Verwandte Begriffe */}
                 {verwandteBegriffe.length > 0 && (
-                  <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
+                  <div id="verwandte-begriffe" className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
                     <h2 className="text-2xl font-bold mb-4 text-gray-900">Verwandte Begriffe</h2>
                     <div className="grid gap-4 md:grid-cols-2">
                       {verwandteBegriffe.map((verwandterBegriff) => (
@@ -196,28 +208,73 @@ export default async function LexikonDetailPage({
                 )}
               </div>
 
-              {/* Sidebar */}
+              {/* Sidebar – Inhaltsverzeichnis */}
               <div className="lg:col-span-1">
-                <div className="bg-white border border-gray-200 rounded-lg p-6 sticky top-20">
-                  <h3 className="text-lg font-bold mb-4 text-gray-900">Kategorie</h3>
-                  <span className="inline-block text-sm font-semibold text-targo-blue bg-targo-blue/10 px-3 py-1 rounded-full mb-6">
-                    {begriff.kategorie}
-                  </span>
+                <nav className="bg-white border border-gray-200 rounded-lg p-6 sticky top-20">
+                  <div className="flex items-center gap-2 mb-4">
+                    <List className="w-5 h-5 text-targo-blue" />
+                    <h3 className="text-lg font-bold text-gray-900">Inhalt</h3>
+                  </div>
+                  <ul className="space-y-1">
+                    <li>
+                      <a href="#definition" className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                        Definition
+                      </a>
+                    </li>
+                    {begriff.beschreibung && (
+                      <li>
+                        <a href="#erklaerung" className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                          Ausführliche Erklärung
+                        </a>
+                      </li>
+                    )}
+                    {begriff.sektionen?.map((sektion, i) => (
+                      <li key={i}>
+                        <a href={`#${createSlug(sektion.ueberschrift)}`} className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                          {sektion.ueberschrift}
+                        </a>
+                      </li>
+                    ))}
+                    {begriff.details && begriff.details.length > 0 && (
+                      <li>
+                        <a href="#wichtige-details" className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                          Wichtige Details
+                        </a>
+                      </li>
+                    )}
+                    {begriff.faqs && begriff.faqs.length > 0 && (
+                      <li>
+                        <a href="#haeufige-fragen" className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                          Häufige Fragen
+                        </a>
+                      </li>
+                    )}
+                    {verwandteBegriffe.length > 0 && (
+                      <li>
+                        <a href="#verwandte-begriffe" className="block text-sm text-gray-600 hover:text-targo-blue hover:bg-targo-blue/5 rounded px-3 py-2 transition-colors">
+                          Verwandte Begriffe
+                        </a>
+                      </li>
+                    )}
+                  </ul>
 
-                  <div className="pt-6 border-t border-gray-200">
-                    <h3 className="text-lg font-bold mb-4 text-gray-900">Weitere Informationen</h3>
-                    <p className="text-sm text-gray-600 mb-4">
-                      Haben Sie Fragen zu diesem Begriff oder benötigen Sie eine persönliche Beratung?
+                  <div className="mt-6 bg-gray-100 rounded-lg p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <MessageCircle className="w-5 h-5 text-targo-blue" />
+                      <h4 className="font-bold text-gray-900">Beratung gewünscht?</h4>
+                    </div>
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                      Unsere Experten beantworten Ihre Fragen rund um die Baufinanzierung – kostenlos und unverbindlich.
                     </p>
                     <Link
                       href="/kontakt"
-                      className="inline-flex items-center text-targo-blue hover:text-targo-blue/80 font-semibold text-sm"
+                      className="flex items-center justify-center gap-2 w-full bg-[#003366] text-white font-semibold text-sm px-4 py-2.5 rounded-lg hover:bg-[#002244] transition-colors"
                     >
                       Kontakt aufnehmen
-                      <ArrowLeft className="ml-2 w-4 h-4 rotate-180" />
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
-                </div>
+                </nav>
               </div>
             </div>
           </div>

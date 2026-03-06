@@ -5,6 +5,11 @@ export interface FAQ {
   antwort: string;
 }
 
+export interface ContentSection {
+  ueberschrift: string;
+  inhalt: string[];
+}
+
 export interface LexikonBegriff {
   slug: string;
   begriff: string;
@@ -12,6 +17,7 @@ export interface LexikonBegriff {
   definition: string;
   beschreibung?: string;
   details?: string[];
+  sektionen?: ContentSection[];
   verwandteBegriffe?: string[];
   faqs?: FAQ[];
 }
@@ -160,15 +166,99 @@ export const lexikonBegriffe: LexikonBegriff[] = [
     slug: "tilgung",
     begriff: "Tilgung",
     kategorie: "Tilgung",
-    definition: "Die Rückzahlung des aufgenommenen Kredits in regelmäßigen Raten.",
-    beschreibung: "Die Tilgung ist der Teil Ihrer monatlichen Rate, der zur Rückzahlung des aufgenommenen Darlehens dient. Sie wird in Prozent pro Jahr angegeben (z.B. 2% p.a.). Eine höhere Tilgung führt zu einer schnelleren Schuldentilgung und damit zu geringeren Gesamtzinskosten, erhöht aber auch die monatliche Belastung.",
-    details: [
-      "Wird in Prozent pro Jahr angegeben",
-      "Höhere Tilgung = schnellere Schuldentilgung",
-      "Mindestens 1-2% p.a. üblich",
-      "Beeinflusst die monatliche Rate"
+    definition: "Tilgung ist im Kern die (meist vertraglich geregelte) teilweise oder vollständige Rückzahlung einer bestehenden Schuld, insbesondere eines Kredits oder einer Anleihe, in Geldform.",
+    beschreibung: "Unter Tilgung versteht man die Rückzahlung des aufgenommenen Kapitals, also der eigentlichen Kreditsumme (Nominalbetrag), nicht der Zinsen. Tilgungsleistungen sind von den Zinszahlungen zu unterscheiden: Zinsen sind das Entgelt für die Überlassung des Kapitals, Tilgung reduziert die Restschuld. Der Begriff wird vor allem in der Kreditwirtschaft (Darlehen, Hypotheken, Konsumentenkredite) und bei festverzinslichen Wertpapieren (Anleihen) verwendet.\n\nEin einfaches Beispiel: Bei einer Monatsrate von 500 Euro können etwa 300 Euro auf die Tilgung und 200 Euro auf die Zinsen entfallen; nur die 300 Euro verringern die Restschuld.",
+    sektionen: [
+      {
+        ueberschrift: "Funktionen der Tilgung",
+        inhalt: [
+          "Schuldenabbau: Tilgung führt zur schrittweisen oder einmaligen Reduzierung der Verbindlichkeiten eines Schuldners.",
+          "Planbarkeit: Über Tilgungspläne werden Höhe und Fälligkeit der Rückzahlungen festgelegt und sind damit ein zentrales Instrument der Finanz- und Liquiditätsplanung.",
+          "Bonität und Handlungsfähigkeit: Eine fortschreitende Tilgung verbessert in der Regel die Verschuldungskennzahlen und erweitert zukünftige Finanzierungsspielräume.",
+          "In der öffentlichen Haushaltswirtschaft ist Tilgung zudem Bestandteil der Verschuldungs- und Entschuldungsstrategie von Gebietskörperschaften (z.B. Kommunen)."
+        ]
+      },
+      {
+        ueberschrift: "Ordentliche und außerordentliche Tilgung",
+        inhalt: [
+          "Ordentliche Tilgung: Planmäßige Rückzahlung gemäß Kredit- oder Anleihevertrag. Die Raten bzw. Tilgungsbeträge und Fälligkeiten sind im Tilgungsplan festgelegt.",
+          "Außerordentliche Tilgung: Nicht planmäßige, zusätzliche Rückzahlung, z.B. Sondertilgungen oder vorzeitige Rückführung des gesamten Kredits. Häufig nur in bestimmten Grenzen und ggf. gegen Vorfälligkeitsentschädigung möglich.",
+          "Sondertilgungen erlauben es Kreditnehmern, die Restschuld schneller zu senken und Zinskosten über die Laufzeit zu sparen."
+        ]
+      },
+      {
+        ueberschrift: "Tilgungsarten bei Krediten",
+        inhalt: [
+          "Ratentilgung (Tilgungsdarlehen): Bei klassischen Tilgungsdarlehen bleibt der Tilgungsbetrag pro Periode gleich, während die Zinsbelastung im Zeitablauf sinkt, sodass die Gesamtbelastung (Rate) abnimmt. Beispiel: Ein Kredit von 120.000 Euro wird in 48 gleichen Tilgungsraten zu je 2.500 Euro zurückgezahlt; der Zins wird jeweils auf die abnehmende Restschuld berechnet.",
+          "Annuitätendarlehen: Beim Annuitätendarlehen bleibt die Gesamtjahres- oder Monatsrate (Annuität) konstant; sie setzt sich aus Zins- und Tilgungsanteil zusammen. Mit fortschreitender Zeit sinkt der Zinsanteil und der Tilgungsanteil steigt, weil die Restschuld kontinuierlich abnimmt. Annuitätendarlehen sind im Immobilienbereich die gängigste Kreditform, da sie für den Kreditnehmer gut planbare, gleichbleibende Raten bieten.",
+          "Endfälliges Darlehen: Beim endfälligen Darlehen werden während der Laufzeit in der Regel nur Zinsen gezahlt; die Tilgung des gesamten Kapitals erfolgt in einer Summe am Laufzeitende. Dieses Modell wird oft mit einem gesonderten Spar- oder Anlagevertrag (z.B. Lebensversicherung, Bausparvertrag) kombiniert, aus dem die Endtilgung gespeist werden soll.",
+          "Tilgung mit Balloonzahlung: Bei einer Tilgung mit Balloonzahlung werden über die Laufzeit nur geringe oder gar keine Tilgungsbeträge gezahlt; am Ende steht eine größere Schlussrate (›Ballon‹). Vorteil sind niedrigere laufende Raten, Nachteil ist das Risiko, die hohe Abschlusszahlung nicht darstellen zu können."
+        ]
+      },
+      {
+        ueberschrift: "Tilgungsformen bei Anleihen",
+        inhalt: [
+          "Bei festverzinslichen Wertpapieren (Anleihen) kann die Tilgung einmalig am Ende der Laufzeit (›Bullet-Tilgung‹) oder über Auslosungen von Teilbeträgen erfolgen.",
+          "Häufig kauft der Emittent Anleihen über den Markt zurück oder lost Serien/Nummern zur Tilgung aus einem Tilgungsfonds aus.",
+          "Vom Einlösungstermin ab wird das getilgte Stück nicht mehr verzinst; ein Versäumen des Einlösungstermins führt daher zu Zinsverlusten für den Anleger.",
+          "Bei Prämien- oder Losanleihen ist die Tilgung oft mit einer Verlosung von Gewinnen (Prämien) verbunden."
+        ]
+      },
+      {
+        ueberschrift: "Berechnung von Tilgung und Tilgungsrate",
+        inhalt: [
+          "Die Tilgungsrate (Tilgungssatz) gibt an, welcher Prozentsatz der ursprünglichen Kreditsumme pro Jahr zurückgezahlt wird.",
+          "Berechnung: jährliche Tilgungszahlung ÷ ursprünglicher Kreditbetrag × 100.",
+          "Beispiel: Bei einem Kredit von 10.000 Euro und einer jährlichen Tilgung von 500 Euro beträgt die Tilgungsrate 5 %.",
+          "Ein höherer anfänglicher Tilgungssatz führt zu einer schnelleren Entschuldung, erhöht aber die laufende finanzielle Belastung."
+        ]
+      },
+      {
+        ueberschrift: "Tilgung und Finanzplanung",
+        inhalt: [
+          "Die Wahl von Tilgungsart, Tilgungsrate und Laufzeit bestimmt maßgeblich die Gesamtkosten eines Kredits und die Liquiditätsbelastung pro Periode.",
+          "Tilgungspläne werden in der Unternehmens- wie in der privaten Finanzplanung genutzt, um Zahlungsströme zu prognostizieren und Risiken (z.B. Zinsänderungs- oder Anschlussfinanzierungsrisiken) zu steuern.",
+          "Insbesondere zum Ende von Zinsbindungsfristen bei langfristigen Darlehen (z.B. Immobilienfinanzierung) spielt die Frage, ob die Tilgung erhöht oder durch Sondertilgungen ergänzt werden kann, eine zentrale Rolle."
+        ]
+      },
+      {
+        ueberschrift: "Tilgung im öffentlichen Haushalt",
+        inhalt: [
+          "In der öffentlichen Finanzwirtschaft bezeichnet Tilgung die Rückzahlung von Investitionskrediten oder Kassenkrediten der Gebietskörperschaften (z.B. Gemeinden, Länder).",
+          "Sie ist im Haushaltsplan eigenständig auszuweisen und beeinflusst die Entwicklung des Schuldenstands und der Zinsausgaben öffentlicher Haushalte."
+        ]
+      },
+      {
+        ueberschrift: "Tilgung im weiteren (sprachlichen) Sinn",
+        inhalt: [
+          "Außerhalb der Finanzwelt wird der Begriff ›Tilgung‹ auch in anderen Fachkontexten verwendet, etwa in der Linguistik bzw. im NLP (Neuro-Linguistisches Programmieren) für das Auslassen von Informationen in sprachlichen Äußerungen.",
+          "Dort bezeichnet Tilgung das Weglassen bestimmter sprachlicher Elemente (z.B. unbestimmte Verben, fehlende Referenzen), was zu Informationsverlust oder Unschärfe führt."
+        ]
+      }
     ],
-    verwandteBegriffe: ["Annuität", "Tilgungsrate", "Restschuld"]
+    verwandteBegriffe: ["Annuität", "Tilgungsrate", "Restschuld", "Sondertilgung", "Vorfälligkeitsentschädigung", "Tilgungsplan"],
+    faqs: [
+      {
+        frage: "Was ist der Unterschied zwischen Tilgung und Zinsen?",
+        antwort: "Tilgung ist die Rückzahlung des aufgenommenen Kapitals (Nominalbetrag) und reduziert die Restschuld. Zinsen hingegen sind das Entgelt für die Überlassung des Kapitals und verringern die Schuld nicht. Bei einer Monatsrate von 500 Euro können z.B. 300 Euro auf die Tilgung und 200 Euro auf die Zinsen entfallen."
+      },
+      {
+        frage: "Welche Tilgungsart ist bei einer Immobilienfinanzierung am gängigsten?",
+        antwort: "Das Annuitätendarlehen ist im Immobilienbereich die gängigste Kreditform. Die monatliche Rate bleibt konstant, wobei der Zinsanteil im Laufe der Zeit sinkt und der Tilgungsanteil steigt. Das bietet dem Kreditnehmer gut planbare, gleichbleibende Raten."
+      },
+      {
+        frage: "Was bringt eine höhere Tilgungsrate?",
+        antwort: "Ein höherer anfänglicher Tilgungssatz führt zu einer schnelleren Entschuldung und damit zu geringeren Gesamtzinskosten über die Laufzeit. Allerdings erhöht sich dadurch auch die laufende monatliche Belastung."
+      },
+      {
+        frage: "Was ist eine Sondertilgung und wann lohnt sie sich?",
+        antwort: "Eine Sondertilgung ist eine zusätzliche, nicht planmäßige Rückzahlung auf den Kredit. Sie erlaubt es, die Restschuld schneller zu senken und Zinskosten über die Laufzeit zu sparen. Häufig sind Sondertilgungen nur in bestimmten Grenzen und ggf. gegen Vorfälligkeitsentschädigung möglich."
+      },
+      {
+        frage: "Was ist der Unterschied zwischen Ratentilgung und Annuitätendarlehen?",
+        antwort: "Bei der Ratentilgung bleibt der Tilgungsbetrag pro Periode gleich, während die Gesamtrate (Tilgung + Zinsen) im Zeitablauf sinkt. Beim Annuitätendarlehen bleibt die Gesamtrate konstant, wobei sich das Verhältnis von Zins- zu Tilgungsanteil zugunsten der Tilgung verschiebt."
+      }
+    ]
   },
   {
     slug: "zinsbindungsfrist",

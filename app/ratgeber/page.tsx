@@ -105,7 +105,16 @@ export default function RatgeberPage() {
                   {kategorie.artikel.length > 0 ? (
                     <div>
                       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 mb-6">
-                        {kategorie.artikel.slice(0, 3).map((artikel) => {
+                        {[...kategorie.artikel]
+                          .sort((a, b) => {
+                            const contentA = getArtikelContent(kategorie.id, a.id);
+                            const contentB = getArtikelContent(kategorie.id, b.id);
+                            const dateA = contentA?.createdAt ? new Date(contentA.createdAt).getTime() : 0;
+                            const dateB = contentB?.createdAt ? new Date(contentB.createdAt).getTime() : 0;
+                            return dateB - dateA;
+                          })
+                          .slice(0, 3)
+                          .map((artikel) => {
                           const content = getArtikelContent(kategorie.id, artikel.id);
                           return (
                             <Link

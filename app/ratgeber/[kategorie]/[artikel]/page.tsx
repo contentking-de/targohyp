@@ -1,3 +1,4 @@
+import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ArrowRight, BookOpen, Home, Wallet, TrendingUp, Lock, Receipt, ClipboardCheck, Search, ListChecks, RefreshCw, CheckCircle, Calculator, Scale, FileText, CreditCard, ArrowDown, PiggyBank, Target, Building2, BarChart, ArrowLeftRight, DollarSign, Handshake, Zap, Shield, FileCheck, ClipboardList, MapPin, Navigation, Star, AlertTriangle, XCircle, ShieldCheck, AlertCircle, Calendar, Clock, Hammer, Wrench, Brain, Lightbulb, LineChart, Percent, Building, HelpCircle } from "lucide-react";
@@ -10,6 +11,53 @@ import { BreadcrumbSchema } from "@/components/breadcrumb-schema";
 import { ChecklistPdfForm } from "@/components/checklist-pdf-form";
 import { NewsletterCTA } from "@/components/newsletter-cta";
 import { ArticleReviewButton } from "@/components/article-review-button";
+
+function renderContentWithLinks(
+  text: string,
+  lexikonLinks?: Array<{ term: string; slug: string }>
+): React.ReactNode {
+  if (!lexikonLinks || lexikonLinks.length === 0) return text;
+
+  const parts: React.ReactNode[] = [];
+  let remaining = text;
+  const usedTerms = new Set<string>();
+
+  while (remaining.length > 0) {
+    let earliestMatch: { index: number; term: string; slug: string } | null = null;
+
+    for (const link of lexikonLinks) {
+      if (usedTerms.has(link.term)) continue;
+      const idx = remaining.indexOf(link.term);
+      if (idx !== -1 && (earliestMatch === null || idx < earliestMatch.index)) {
+        earliestMatch = { index: idx, term: link.term, slug: link.slug };
+      }
+    }
+
+    if (!earliestMatch) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (earliestMatch.index > 0) {
+      parts.push(remaining.slice(0, earliestMatch.index));
+    }
+
+    parts.push(
+      <Link
+        key={`lexikon-${earliestMatch.slug}`}
+        href={`/lexikon/${earliestMatch.slug}`}
+        className="text-targo-blue font-bold underline decoration-dotted underline-offset-2 hover:decoration-solid hover:text-targo-blue/80 transition-colors"
+      >
+        {earliestMatch.term}
+      </Link>
+    );
+
+    usedTerms.add(earliestMatch.term);
+    remaining = remaining.slice(earliestMatch.index + earliestMatch.term.length);
+  }
+
+  return parts;
+}
 
 interface PageProps {
   params: Promise<{
@@ -167,7 +215,7 @@ export default async function ArtikelPage({ params }: PageProps) {
                       ? "grid gap-6 md:grid-cols-2 mb-8"
                       : "space-y-8"
                   }>
-                    {content.sections && content.sections.map((section, index) => {
+                    {content.sections && (() => {
                     const iconMap: Record<string, any> = {
                       BookOpen,
                       Home,
@@ -213,38 +261,156 @@ export default async function ArtikelPage({ params }: PageProps) {
                       Percent,
                       Building,
                     };
-                    const IconComponent = section.icon ? iconMap[section.icon] : null;
-                    
-                    return (
-                      <div key={index} className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
-                        <div className="flex items-start gap-4 mb-4">
-                          {IconComponent && (
-                            <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                              <IconComponent className="w-6 h-6 text-targo-blue" />
+
+                    const renderSection = (section: NonNullable<typeof content.sections>[number], index: number) => {
+                      const IconComponent = section.icon ? iconMap[section.icon] : null;
+                      return (
+                        <div className="bg-white border border-gray-200 rounded-lg p-6 lg:p-8">
+                          <div className="flex items-start gap-4 mb-4">
+                            {IconComponent && (
+                              <div className="w-12 h-12 bg-targo-blue/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <IconComponent className="w-6 h-6 text-targo-blue" />
+                              </div>
+                            )}
+                            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+                              {section.title}
+                            </h2>
+                          </div>
+                          {section.content && (
+                            <div className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
+                              {renderContentWithLinks(section.content, section.lexikonLinks)}
                             </div>
                           )}
-                          <h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
-                            {section.title}
-                          </h2>
+                          {section.table && (
+                            <div className="mt-4 overflow-x-auto">
+                              <table className="w-full text-sm sm:text-base border-collapse">
+                                <thead>
+                                  <tr className="bg-targo-blue/5">
+                                    {section.table.headers.map((header, hIdx) => (
+                                      <th key={hIdx} className="text-left px-4 py-3 font-semibold text-gray-900 border-b-2 border-targo-blue/20">
+                                        {header}
+                                      </th>
+                                    ))}
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  {section.table.rows.map((row, rIdx) => (
+                                    <tr key={rIdx} className={rIdx % 2 === 0 ? "bg-white" : "bg-gray-50"}>
+                                      {row.map((cell, cIdx) => (
+                                        <td key={cIdx} className={`px-4 py-3 border-b border-gray-200 text-gray-700 ${cIdx === 0 ? "font-medium" : ""}`}>
+                                          {cell}
+                                        </td>
+                                      ))}
+                                    </tr>
+                                  ))}
+                                </tbody>
+                              </table>
+                            </div>
+                          )}
+                          {section.points && section.points.length > 0 && (
+                            <ul className="mt-4 space-y-3">
+                              {section.points.map((point, pointIndex) => (
+                                <li key={pointIndex} className="flex items-start gap-3">
+                                  <span className="text-targo-blue font-bold mt-1">•</span>
+                                  <span className="text-gray-700">{point}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
-                        {section.content && (
-                          <div className="text-base sm:text-lg text-gray-700 leading-relaxed whitespace-pre-line">
-                            {section.content}
+                      );
+                    };
+
+                    const renderCta = (index: number) => {
+                      const ctaAfterThis = content.ctas?.find(cta => cta.afterSection === index);
+                      if (!ctaAfterThis) return null;
+                      if (ctaAfterThis.type === "link") {
+                        const CtaIcon = ctaAfterThis.icon ? iconMap[ctaAfterThis.icon] : null;
+                        return (
+                          <div className="bg-gray-100 border border-gray-200 rounded-lg p-6 lg:p-8 text-center">
+                            <div className="max-w-2xl mx-auto">
+                              {CtaIcon && (
+                                <div className="w-14 h-14 bg-targo-blue/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                                  <CtaIcon className="w-7 h-7 text-targo-blue" />
+                                </div>
+                              )}
+                              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                                {ctaAfterThis.title}
+                              </h3>
+                              {ctaAfterThis.description && (
+                                <p className="text-gray-700 mb-6 text-base lg:text-lg">
+                                  {ctaAfterThis.description}
+                                </p>
+                              )}
+                              <Button
+                                className="bg-[#bb133e] hover:bg-[#a01135] text-white rounded-full px-8 py-6 text-lg font-semibold"
+                                asChild
+                              >
+                                <Link href={ctaAfterThis.buttonHref || "#"} className="inline-flex items-center">
+                                  {ctaAfterThis.buttonText}
+                                  <ArrowRight className="ml-2 w-5 h-5 flex-shrink-0" />
+                                </Link>
+                              </Button>
+                            </div>
                           </div>
-                        )}
-                        {section.points && section.points.length > 0 && (
-                          <ul className="mt-4 space-y-3">
-                            {section.points.map((point, pointIndex) => (
-                              <li key={pointIndex} className="flex items-start gap-3">
-                                <span className="text-targo-blue font-bold mt-1">•</span>
-                                <span className="text-gray-700">{point}</span>
-                              </li>
+                        );
+                      }
+                      if (ctaAfterThis.type === "newsletter") {
+                        return (
+                          <div className="bg-gray-100 border border-gray-200 rounded-lg p-6 lg:p-8">
+                            <div className="max-w-2xl mx-auto text-center mb-4">
+                              <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2">
+                                {ctaAfterThis.title}
+                              </h3>
+                              {ctaAfterThis.description && (
+                                <p className="text-gray-700 text-base lg:text-lg">
+                                  {ctaAfterThis.description}
+                                </p>
+                              )}
+                            </div>
+                            <NewsletterCTA />
+                          </div>
+                        );
+                      }
+                      return null;
+                    };
+
+                    const elements: React.ReactNode[] = [];
+                    const sections = content.sections!;
+                    let i = 0;
+                    while (i < sections.length) {
+                      if (sections[i].twoColumn) {
+                        const groupStart = i;
+                        const group: number[] = [];
+                        while (i < sections.length && sections[i].twoColumn) {
+                          group.push(i);
+                          i++;
+                        }
+                        elements.push(
+                          <div key={`grid-${groupStart}`} className="grid gap-6 md:grid-cols-2">
+                            {group.map(idx => (
+                              <React.Fragment key={idx}>
+                                {renderSection(sections[idx], idx)}
+                              </React.Fragment>
                             ))}
-                          </ul>
-                        )}
-                      </div>
-                    );
-                    })}
+                          </div>
+                        );
+                        const lastIdx = group[group.length - 1];
+                        const ctaEl = renderCta(lastIdx);
+                        if (ctaEl) elements.push(<React.Fragment key={`cta-${lastIdx}`}>{ctaEl}</React.Fragment>);
+                      } else {
+                        elements.push(
+                          <React.Fragment key={i}>
+                            {renderSection(sections[i], i)}
+                          </React.Fragment>
+                        );
+                        const ctaEl = renderCta(i);
+                        if (ctaEl) elements.push(<React.Fragment key={`cta-${i}`}>{ctaEl}</React.Fragment>);
+                        i++;
+                      }
+                    }
+                    return elements;
+                    })()}
                   </div>
 
                   {/* Checkliste PDF CTA - für alle Checklisten-Artikel, über volle Breite */}
