@@ -29,7 +29,7 @@ export const kategorien: Kategorie[] = [
       { id: "grundlagen-ablauf", title: "Grundlagen & Ablauf der Immobilienfinanzierung", subtitle: "Definitionen und Begriff, Relevante Gesetze", image: "/pexels-pixabay-259165.jpg" },
       { id: "budget-leistbarkeit", title: "Budget & Leistbarkeit", subtitle: "Kaufen oder mieten? …", image: "/pexels-pixabay-259249.jpg" },
       { id: "darlehensarten-produkte", title: "Darlehensarten & Produkte", image: "/pexels-pixabay-259251.jpg" },
-      { id: "mieten-oder-kaufen", title: "Mieten oder Kaufen? Die ehrliche Rechnung für Einsteiger", subtitle: "Was dein Geld auf lange Sicht tatsächlich leistet", image: "/pexels-pixabay-259249.jpg" },
+      { id: "mieten-oder-kaufen", title: "Mieten oder Kaufen? Die ehrliche Rechnung für Einsteiger", subtitle: "Was Ihr Geld auf lange Sicht tatsächlich leistet", image: "/pexels-pixabay-259249.jpg" },
     ],
   },
   {
